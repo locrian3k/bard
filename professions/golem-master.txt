@@ -1,0 +1,2 @@
+#nop { THIS ALIAS WILL CREATE A PACKMULE GOLEM, PROVIDED THAT YOU HAVE AT LEAST 3 CORPSES (and name it Ionian) }
+#alias {makepackmule} {#3 unwrap;golemize corpse torso;golemize corpse head;golemize corpse limbs;golem build packmule;golem name Ionian};
