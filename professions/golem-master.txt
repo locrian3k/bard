@@ -5,7 +5,9 @@
   golemize corpse head;
   golemize corpse limbs;
   golem build packmule;
-  golem name Ionian;
+  #delay {4} {
+    golem packmule name Ionian;
+  };
   #delay {5} {
     #showme {<306>Golem Master Update: Congratulations, you have created a Packmule named Ionian. <golem help> for more commands.<000>}
   };
@@ -18,7 +20,9 @@
   golemize corpse head;
   golemize corpse limbs;
   golem build watcher;
-  golem name Aeolian;
+  #delay {4} {
+    golem blob name Aeolian;
+  };
   #delay {5} {
     #showme {<306>Golem Master Update: Congratulations, you have created a Watcher named Aeolian. <golem help> for more commands.<000>}
   };
