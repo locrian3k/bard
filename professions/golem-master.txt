@@ -1,5 +1,44 @@
+#nop { THIS FILE IS SPECIFICALLY FOR THE GOLEM MASTER PROFESSION }
+
+#nop { ===================================================================================================== }
+#nop { ==== NOTE : ALL GOLEMS HAVE BEEN PERSONALLY NAMED, YOU'LL NEED TO FIND/REPLACE FOR INDIVIDUALITY ==== }
+#nop { Find/Replace for: Ionian,ionian,Aeolian,aeolian,Dorian,dorian,Phrygian,phrygian,Mixolydian,mixolydian }
+#nop { ===================================================================================================== }
+
+#nop { THIS ALIAS WILL SHOW A BRIEF HELP FILE SYSTEM FOR THIS FILE }
+#alias {gmhelp} {#showme
+  <306>CREATE A GOLEM:<088>\n
+  List all golems          = golem\n
+  Create a packmule golem  = gmpackmule\n
+  Create a watcher golem   = gmwatcher\n
+  Create a companion golem = gmcompanion\n
+  Create an explorer golem = gmexplorer\n
+  Create a party golem     = gmparty\n
+  \n
+  <306>Packmule:             Watcher:<088>\n
+  Help file       = gmp      Help file = gmw\n
+  Golem get all   = gga\n
+  Golem inventory = gi\n
+  Golem sell      = ggs\n
+  \n
+  <306>Companion:            Explorer:<088>\n
+  Help file       = gmc      Help file = gme\n
+  \n
+  <306>Party:<088>\n
+  Help file       = gmp
+};
+
+#alias {gmp} {golem ionian help};
+#alias {gga} {golem ionian get all};
+#alias {gi} {golem ionian inventory};
+#alias {ggs} {golem ionian sell};
+#alias {gmw} {golem aeolian help};
+#alias {gmc} {golem dorian help};
+#alias {gme} {golem phrygian help};
+#alias {gmp} {golem mixolydian help};
+
 #nop { THIS ALIAS WILL CREATE A PACKMULE GOLEM, PROVIDED THAT YOU HAVE AT LEAST 3 CORPSES (and name it Ionian) }
-#alias {makepackmule} {
+#alias {gmpackmule} {
   #3 unwrap;
   golemize corpse torso;
   golemize corpse head;
@@ -9,12 +48,13 @@
     golem packy name Ionian;
   };
   #delay {5} {
-    #showme {<306>Golem Master Update: Congratulations, you have created a Packmule named Ionian. <golem help> for more commands.<000>}
+    #showme {<306>Golem Master Update: Congratulations, you have created a Packmule named Ionian. <golem ionian help> for more commands.<000>}
   };
 };
 
+
 #nop { THIS ALIAS WILL CREATE A WATCHER GOLEM, PROVIDED THAT YOU HAVE AT LEAST 3 CORPSES (and name it Aeolian) }
-#alias {makewatcher} {
+#alias {gmwatcher} {
   #3 unwrap;
   golemize corpse torso;
   golemize corpse head;
@@ -24,15 +64,16 @@
     golem blob name Aeolian;
   };
   #delay {5} {
-    #showme {<306>Golem Master Update: Congratulations, you have created a Watcher named Aeolian. <golem help> for more commands.<000>}
+    #showme {<306>Golem Master Update: Congratulations, you have created a Watcher named Aeolian. <golem aeolian help> for more commands.<000>}
   };
   golem aeolian watch;
   #highlight {The blob golem will start watching} {reverse cyan};
   #highlight {%1 reports:} {reverse blink cyan};
 };
 
+
 #nop { THIS ALIAS WILL CREATE A COMPANION GOLEM, PROVIDED THAT YOU HAVE AT LEAST 3 CORPSES (and name it Dorian) }
-#alias {makecompanion} {
+#alias {gmcompanion} {
   #3 unwrap;
   golemize corpse torso;
   golemize corpse head;
@@ -43,5 +84,37 @@
   };
   #delay {5} {
     #showme {<306>Golem Master Update: Congratulations, you have created a Companion named Dorian. <golem help> for more commands.<000>}
+  };
+};
+
+
+#nop { THIS ALIAS WILL CREATE AN EXPLORER GOLEM, PROVIDED THAT YOU HAVE AT LEAST 3 CORPSES (and name it Phrygian) }
+#alias {gmexplorer} {
+  #3 unwrap;
+  golemize corpse torso;
+  golemize corpse head;
+  golemize corpse limbs;
+  golem build explorer;
+  #delay {4} {
+    golem chizzit name Phrygian;
+  };
+  #delay {5} {
+    #showme {<306>Golem Master Update: Congratulations, you have created an Explorer named Phrygian. <golem phrygian help> for more commands.<000>}
+  };
+};
+
+
+#nop { THIS ALIAS WILL CREATE A PARTY GOLEM, PROVIDED THAT YOU HAVE AT LEAST 3 CORPSES (and name it Mixolydian) }
+#alias {gmparty} {
+  #3 unwrap;
+  golemize corpse torso;
+  golemize corpse head;
+  golemize corpse limbs;
+  golem build explorer;
+  #delay {4} {
+    golem spuds name Mixolydian;
+  };
+  #delay {5} {
+    #showme {<306>Golem Master Update: Congratulations, you have created a Party golem named Mixolydian. <golem mixolydian help> for more commands.<000>}
   };
 };
