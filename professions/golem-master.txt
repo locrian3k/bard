@@ -6,7 +6,7 @@
   golemize corpse limbs;
   golem build packmule;
   #delay {4} {
-    golem packmule name Ionian;
+    golem packy name Ionian;
   };
   #delay {5} {
     #showme {<306>Golem Master Update: Congratulations, you have created a Packmule named Ionian. <golem help> for more commands.<000>}
