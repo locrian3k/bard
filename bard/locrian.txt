@@ -28,7 +28,7 @@
 #PATHDIR          {d}                     {u}                          {32}
 
 #nop { THIS WILL RE-READ THIS FILE WHICH IS BENEFICIAL WHEN YOU ADD SOMETHING. YOU'LL NEED TO #END AND RELOG BACK IN IF YOU MODIFY SOMETHING ALREADY HERE }
-#alias {source} {#read locrian/locrian.txt}
+#alias {source} {#read tintin/bard/locrian.txt}
 
 
 #nop { THIS ACTION WILL ADD IN THE TYPE OF RESISTANCE THAT IS LISTED ON BOTH YOUR <SCORE> AND <EQ> COMMANDS }
