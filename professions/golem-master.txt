@@ -7,6 +7,6 @@
   golem build packmule;
   golem name Ionian;
   #delay {5} {
-    #showme {To rename your golem, type <golem name [insert new name here]>}
+    #showme {<456>To rename your golem, <golem name [insert new name here]><000>}
   };
 };
