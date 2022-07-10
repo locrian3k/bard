@@ -15,7 +15,7 @@
 #CONFIG           {VERBATIM CHAR}         {\}
 #CONFIG           {VERBOSE}               {OFF}
 #CONFIG           {WORDWRAP}              {ON}
-#CONFIG		  	  {COLOR PATCH}           {ON}
+#CONFIG		  {COLOR PATCH}           {ON}
 #PATHDIR          {n}                     {s}                          {1}
 #PATHDIR          {e}                     {w}                          {2}
 #PATHDIR          {ne}                    {sw}                         {3}
@@ -26,6 +26,9 @@
 #PATHDIR          {sw}                    {ne}                         {12}
 #PATHDIR          {u}                     {d}                          {16}
 #PATHDIR          {d}                     {u}                          {32}
+
+#nop { THIS WILL CREATE A TYPING SECTION }
+#split 0 1;
 
 #nop { THIS WILL RE-READ THIS FILE WHICH IS BENEFICIAL WHEN YOU ADD SOMETHING. YOU'LL NEED TO #END AND RELOG BACK IN IF YOU MODIFY SOMETHING ALREADY HERE }
 #alias {source} {#read tintin/bard/locrian.txt}
