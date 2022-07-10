@@ -34,8 +34,11 @@
 #alias {source} {#read tintin/bard/locrian.txt}
 
 
-#nop { THIS ACTION WILL ADD IN THE TYPE OF RESISTANCE THAT IS LISTED ON BOTH YOUR <SCORE> AND <EQ> COMMANDS }
-#read tintin/quality-of-life
+#nop { READING THIS FILE WILL ADD IN AN ENCUMBERANCE METER }
+#read tintin/quality-of-life/encumberance.txt
+
+#nop { READING THIS FILE WILL ADD IN THE TYPE OF RESISTANCE THAT IS LISTED ON BOTH YOUR <SCORE> AND <EQ> COMMANDS }
+#read tintin/quality-of-life/resistances.txt
 
 
 #nop { ENTRANCE AND EXIT MESSAGES FOR HIGH MORTAL WHICH DISAPPEAR WHEN YOU DIE }
