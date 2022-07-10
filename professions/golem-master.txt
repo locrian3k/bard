@@ -7,6 +7,19 @@
   golem build packmule;
   golem name Ionian;
   #delay {5} {
-    #showme {<406>To rename your golem, <golem name [insert new name here]><000>}
+    #showme {<306>Golem Master Update: Congratulations, you have created a Packmule named Ionian. <golem help> for more commands.<000>}
+  };
+};
+
+#nop { THIS ALIAS WILL CREATE A WATCHER GOLEM, PROVIDED THAT YOU HAVE AT LEAST 3 CORPSES (and name it Aeolian) }
+#alias {makewatcher} {
+  #3 unwrap;
+  golemize corpse torso;
+  golemize corpse head;
+  golemize corpse limbs;
+  golem build watcher;
+  golem name Aeolian;
+  #delay {5} {
+    #showme {<306>Golem Master Update: Congratulations, you have created a Watcher named Aeolian. <golem help> for more commands.<000>}
   };
 };
