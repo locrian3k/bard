@@ -7,6 +7,7 @@
 
 #nop { THIS ALIAS WILL SHOW A BRIEF HELP FILE SYSTEM FOR THIS FILE }
 #alias {gmhelp} {#showme
+  \n
   <306>CREATE A GOLEM:<088>\n
   List all golems          = golem\n
   Create a packmule golem  = gmpackmule\n
