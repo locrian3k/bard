@@ -79,66 +79,67 @@
 	#nop { S P E L L S };
 	
 	#var hs Off;
-	#alias {hson} {cast hardened skin;#var hs On;}
+	#alias {hson} {#var hs On;}
 	#alias {hsoff} {#var hs Off;}
 	
 	#var cc Off;
-	#action {ccon} {#var cc On;}
-	#action {ccoff} {#var cc Off;}
+	#var ccready yes;
+	#alias {ccon} {#var cc On;}
+	#alias {ccoff} {#var cc Off;}
 	#action {Your claws shimmer and fade from your hands.} {#var ccready no};
 	#action {Your hands have not yet recovered.} {#var ccready no};
 	#action {Your hands have healed somewhat.} {#var ccready yes};
 	
 	#var pn Off;
-	#action {pnon} {#var pn On;}
-	#action {pnoff} {#var pn Off;}
+	#alias {pnon} {#var pn On;}
+	#alias {pnoff} {#var pn Off;}
 	
 	#var pe Off;
-	#action {peon} {#var pe On;}
-	#action {peoff} {#var pe Off;}
+	#alias {peon} {#var pe On;}
+	#alias {peoff} {#var pe Off;}
 	
 	#var pg Off;
-	#action {pgon} {#var pg On;}
-	#action {pgoff} {#var pg Off;}
+	#alias {pgon} {#var pg On;}
+	#alias {pgoff} {#var pg Off;}
 	
 	#var pf Off;
-	#action {pfon} {#var pf On;}
-	#action {pfoff} {#var pf Off;}
+	#alias {pfon} {#var pf On;}
+	#alias {pfoff} {#var pf Off;}
 	
 	#var ph Off;
-	#action {phon} {#var ph On;}
-	#action {phoff} {#var ph Off;}
+	#alias {phon} {#var ph On;}
+	#alias {phoff} {#var ph Off;}
 	
 	#var mb Off;
-	#action {mbon} {#var mb On;}
-	#action {mboff} {#var mb Off;}
+	#alias {mbon} {#var mb On;}
+	#alias {mboff} {#var mb Off;}
 	
 	#var blinkspell Off;
-	#action {blinkon} {#var blinkspell On;}
-	#action {blinkoff} {#var blinkspell Off;}
+	#alias {blinkon} {#var blinkspell On;}
+	#alias {blinkoff} {#var blinkspell Off;}
 	
 	#nop { S O N G S };
 	
 	#var om Off;
-	#action {omon} {#var om On;}
-	#action {omoff} {#var om Off;}
+	#alias {omon} {#var om On;}
+	#alias {omoff} {#var om Off;}
 	
 	#var lb Off;
-	#action {lbon} {#var lb On;}
-	#action {lboff} {#var lb Off;}
+	#alias {lbon} {#var lb On;}
+	#alias {lboff} {#var lb Off;}
 	
 	#var irock Off;
-	#action {rockon} {#var irock On;}
-	#action {rockoff} {#var irock Off;}
+	#alias {rockon} {#var irock On;}
+	#alias {rockoff} {#var irock Off;}
 	
 	#var lucidity Off;
-	#action {slon} {#var lucidity On;}
-	#action {sloff} {#var lucidity Off;}
+	#alias {slon} {#var lucidity On;}
+	#alias {sloff} {#var lucidity Off;}
 	
 	#var ag Off;
-	#action {agon} {#var ag On;}
-	#action {agoff} {#var ag Off;}
+	#alias {agon} {#var ag On;}
+	#alias {agoff} {#var ag Off;}
 	
 	#var vsong Off;
-	#action {von} {#var vsong On;}
-	#action {voff} {#var vsong Off;}
+	#alias {von} {#var vsong On;}
+	#alias {voff} {#var vsong Off;}
