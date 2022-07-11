@@ -15,7 +15,7 @@
 #CONFIG           {VERBATIM CHAR}         {\}
 #CONFIG           {VERBOSE}               {OFF}
 #CONFIG           {WORDWRAP}              {ON}
-#CONFIG		  {COLOR PATCH}           {ON}
+#CONFIG		  	  {COLOR PATCH}           {ON}
 #PATHDIR          {n}                     {s}                          {1}
 #PATHDIR          {e}                     {w}                          {2}
 #PATHDIR          {ne}                    {sw}                         {3}
@@ -35,7 +35,7 @@
 
 
 #nop { READING THIS FILE WILL ADD IN AN ENCUMBERANCE METER }
-#read tintin/quality-of-life/encumberance.txt
+#read tintin/quality-of-life/encumbrance.txt
 
 #nop { READING THIS FILE WILL ADD IN THE TYPE OF RESISTANCE THAT IS LISTED ON BOTH YOUR <SCORE> AND <EQ> COMMANDS }
 #read tintin/quality-of-life/resistances.txt
