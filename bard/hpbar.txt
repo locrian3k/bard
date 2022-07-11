@@ -106,11 +106,17 @@
 	
 	#var spells1 %4;
 	
-	#regex $spells1 {HS:%d} {#var hskin &1};
+	#regex $spells1 ${hskincolor} {#var hskin &1};
+	#var hskincolor HS
         #if {$hskin == 0 && "$hs" == "On"} {cast hardened skin};
+	#if {$hskin != "0"}{#var hskincolor <119>};
+    	#if {$hskin > "0"}{#var hskincolor <129>};
 
-        #regex $spells1 {CC:%S} {#var catsclaw &1};
+        #regex $spells1 ${catsclawcolor} {#var catsclaw &1};
+	#var catsclawcolor CC
         #if {"$catsclaw" == "Off" && "$ccready" == "yes" && "$cc" == "On"} {cast cats claw};
+	#if {$catsclaw != "Off"}{#var catsclawcolor <119>};
+    	#if {$catsclaw == "Off"}{#var catsclawcolor <129>};
 	
 	#regex $spells1 {\bPN:%d} {#var pneutral &1};
         #if {$pneutral == 0 && "$pn" == "On"} {cast protection from neutral};
@@ -187,9 +193,9 @@
 
     #regex {$coffinbar} {\bc:\[%d\]} {#var coincur &1};
 
-    #showme {<109>C:$coffincur/$coffinmax c:$coincur Sm:$smilecur/$smilemax\% <${perfpre}${performcolor}${perfinfo} ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V [${encolor}${ens}]}{-3};
+    #showme {<109>C:$coffincur/$coffinmax c:$coincur Sm:$smilecur/$smilemax\% ${perfpre}${performcolor}${perfinfo} ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V [${encolor}${ens}]}{-3};
     
-    #nop {#showme {<109>C:$coffincur/$coffinmax <239>c:$coincur <dff>Sm:$smilecur/$smilemax\% <139>${perfpre}${performcolor}${perfinfo}<139>> ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V<089> <279>[${encolor}${ens}<279>]<fac>}{-3};};
+    #nop {#showme {<109>C:$coffincur/$coffinmax <239>c:$coincur <dff>Sm:$smilecur/$smilemax\% <139>${perfpre}${performcolor}${perfinfo}<139> ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V<089> <279>[${encolor}${ens}<279>]<fac>}{-3};};
 
     #NOP { All your message colors and the showme here, but need to stay inside the Coffin HP BAR action };
 
