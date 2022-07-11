@@ -195,7 +195,7 @@
 
     #showme {<109>C:$coffincur/$coffinmax c:$coincur Sm:$smilecur/$smilemax\% <${perfpre}${performcolor}${perfinfo} ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V [${encolor}${ens}]}{-3};
     
-    #nop {#showme {<109>C:$coffincur/$coffinmax <239>c:$coincur <dff>Sm:$smilecur/$smilemax\% <139><${perfpre}${performcolor}${perfinfo}<139>> ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V<089> <279>[${encolor}${ens}<279>]<fac>}{-3};}
+    #nop {#showme {<109>C:$coffincur/$coffinmax <239>c:$coincur <dff>Sm:$smilecur/$smilemax\% <139><${perfpre}${performcolor}${perfinfo}<139>> ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V<089> <279>[${encolor}${ens}<279>]<fac>}{-3};};
 
     #NOP { All your message colors and the showme here, but need to stay inside the Coffin HP BAR action };
 
