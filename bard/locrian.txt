@@ -55,3 +55,22 @@
         setmmin strums a chord on her guitar;
         setmmout intensely focuses on her guitar solo and vanishes;
 } {10};
+
+#nop {========================================================================};
+#nop {====================== V A R I A B L E S ===============================};
+#nop {========================================================================};
+	#nop { M E L E E };
+	#var combatrounds 0;
+	#var dmgtaken 0;
+	#var hitsmade 0'
+	#var spused 0;
+	#var dodgedrounds 0;
+	#var g2nearned 0;
+	#var numberhits 0;
+	#var numberdmg 0;
+	#var numberdmgcount 0;
+	#var erad 0;
+	#var whom 0;
+	
+	#nop { S O N G S };
+	#var om On;
