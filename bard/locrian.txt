@@ -79,8 +79,8 @@
 	#nop { S P E L L S };
 	
 	#var hs Off;
-	#action {hson} {cast hardened skin;#var hs On;}
-	#action {hsoff} {#var hs Off;}
+	#alias {hson} {cast hardened skin;#var hs On;}
+	#alias {hsoff} {#var hs Off;}
 	
 	#var cc Off;
 	#action {ccon} {#var cc On;}
