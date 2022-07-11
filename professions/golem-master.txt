@@ -11,7 +11,7 @@
 #nop { THIS ALIAS WILL SHOW A BRIEF HELP SYSTEM FOR THIS FILE }
 #alias {gmhelp} {#showme
   \n
-  <160>G   O   L   E   M    M   A   S   T   E   R<088>\n
+  <160>G O L E M    M A S T E R<088>\n
   <160>------------------------------------------<088>\n
   <306>CREATE A GOLEM:<088>\n
   List all golems          = golem\n
