@@ -134,7 +134,7 @@
         #if {"$blink" == "Off" && "$blinkspell" == "On"} {cast blink};
 
 	#var songs1 %5;
-	#showme {<ddf>$spells1<109>}{-4};
+	#showme {$hskincolor $catsclawcolor}{-4};
     };
 
 #NOP {Coffin:6/18 Sm:[2/57%] <> c:[135]};
