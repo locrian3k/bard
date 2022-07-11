@@ -80,9 +80,9 @@
     #showme {<306>Golem Master Update: Congratulations, you have created a Watcher named Aeolian. <gmw> for more commands.<000>}
   };
   golem aeolian watch;
+  #highlight {The blob golem will start watching} {reverse cyan};
+  #highlight {%1 reports:} {reverse blink cyan};
 };
-#highlight {The blob golem will start watching} {reverse cyan};
-#highlight {%1 reports:} {reverse blink cyan};
 
 
 #nop { THIS ALIAS WILL CREATE A COMPANION GOLEM, PROVIDED THAT YOU HAVE AT LEAST 3 CORPSES (and name it Dorian) }
