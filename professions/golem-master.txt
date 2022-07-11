@@ -15,13 +15,13 @@
   Create an explorer golem = gmexplorer\n
   Create a party golem     = gmparty\n
   \n
-  <306>Packmule:             Watcher:<088>\n
+  <306>Packmule:                  Watcher:<088>\n
   Help file       = gmp      Help file = gmw\n
   Golem get all   = gga\n
   Golem inventory = gi\n
   Golem sell      = ggs\n
   \n
-  <306>Companion:            Explorer:<088>\n
+  <306>Companion:                 Explorer:<088>\n
   Help file       = gmc      Help file = gme\n
   \n
   <306>Party:<088>\n
