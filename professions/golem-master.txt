@@ -31,7 +31,7 @@
   <160>-------------------------------------<088>\n
 };
 
-#alias {gmp} {golem ionian help};
+#alias {gmi} {golem ionian help};
 #alias {gga} {golem ionian get all};
 #alias {gi} {golem ionian inventory};
 #alias {ggs} {golem ionian sell};
@@ -51,7 +51,7 @@
     golem packy name Ionian;
   };
   #delay {5} {
-    #showme {<306>Golem Master Update: Congratulations, you have created a Packmule named Ionian. <golem ionian help> for more commands.<000>}
+    #showme {<306>Golem Master Update: Congratulations, you have created a Packmule named Ionian. <gmi> for more commands.<000>}
   };
 };
 
@@ -67,7 +67,7 @@
     golem blob name Aeolian;
   };
   #delay {5} {
-    #showme {<306>Golem Master Update: Congratulations, you have created a Watcher named Aeolian. <golem aeolian help> for more commands.<000>}
+    #showme {<306>Golem Master Update: Congratulations, you have created a Watcher named Aeolian. <gmw> for more commands.<000>}
   };
   golem aeolian watch;
   #highlight {The blob golem will start watching} {reverse cyan};
@@ -86,7 +86,7 @@
     golem charlie name Dorian;
   };
   #delay {5} {
-    #showme {<306>Golem Master Update: Congratulations, you have created a Companion named Dorian. <golem help> for more commands.<000>}
+    #showme {<306>Golem Master Update: Congratulations, you have created a Companion named Dorian. <gmc> for more commands.<000>}
   };
 };
 
@@ -102,7 +102,7 @@
     golem chizzit name Phrygian;
   };
   #delay {5} {
-    #showme {<306>Golem Master Update: Congratulations, you have created an Explorer named Phrygian. <golem phrygian help> for more commands.<000>}
+    #showme {<306>Golem Master Update: Congratulations, you have created an Explorer named Phrygian. <gme> for more commands.<000>}
   };
 };
 
@@ -118,6 +118,6 @@
     golem spuds name Mixolydian;
   };
   #delay {5} {
-    #showme {<306>Golem Master Update: Congratulations, you have created a Party golem named Mixolydian. <golem mixolydian help> for more commands.<000>}
+    #showme {<306>Golem Master Update: Congratulations, you have created a Party golem named Mixolydian. <gmp> for more commands.<000>}
   };
 };
