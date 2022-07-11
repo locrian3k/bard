@@ -72,5 +72,21 @@
 	#var erad 0;
 	#var whom 0;
 	
+	#nop { S P E L L S };
+	#var hs Off;
+	#var cc Off;
+	#var pn Off;
+	#var pe Off;
+	#var pg Off;
+	#var pf Off;
+	#var ph Off;
+	#var mb Off;
+	#var blinkspell Off;
+	
 	#nop { S O N G S };
-	#var om On;
+	#var om Off;
+	#var lb Off;
+	#var irock Off;
+	#var lucidity Off;
+	#var ag Off;
+	#var vsong Off;
