@@ -158,7 +158,7 @@
         #if {"$rock" == "Off"} {#var rockcolor <109>};
         #if {"$rock" != "Off"} {#var rockcolor <dcf>};
 
-        #regex $songs1 {\bR:%S} {#var silent &1};
+        #regex $songs1 {\bSL:%S} {#var silent &1};
         #if {"$silent" == "Off" && "$lucidity" == "On" && $voicecur > 70 && $karmacur > 800} {perform silent lucidity};
         #if {"$silent" == "Off"} {#var silentcolor <109>};
         #if {"$silent" != "Off"} {#var silentcolor <dcf>};
