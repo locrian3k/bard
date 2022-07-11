@@ -27,14 +27,15 @@
 #PATHDIR          {u}                     {d}                          {16}
 #PATHDIR          {d}                     {u}                          {32}
 
-#nop { THIS WILL CREATE A TYPING SECTION }
-#split 0 1;
+#nop { THIS WILL SPLIT YOUR SCREEN INTO MULTIPLE SECTIONS }
+#nop { Example of what numbers go where for the split you desire: #split {top bar} {bottom bar} {left bar} {right bar} {input bar}}
+	#split {0} {0} {0} {0} {5};
 
 #nop { THIS WILL RE-READ THIS FILE WHICH IS BENEFICIAL WHEN YOU ADD SOMETHING. YOU'LL NEED TO #END AND RELOG BACK IN IF YOU MODIFY SOMETHING ALREADY HERE }
 #alias {source} {#read tintin/bard/locrian.txt}
 
 
-#nop { READING THIS FILE WILL ADD IN AN ENCUMBERANCE METER }
+#nop { READING THIS FILE WILL ADD IN AN ENCUMBERANCE METER WHEN YOU CHECK INVENTORY }
 #read tintin/quality-of-life/encumbrance.txt
 
 #nop { READING THIS FILE WILL ADD IN THE TYPE OF RESISTANCE THAT IS LISTED ON BOTH YOUR <SCORE> AND <EQ> COMMANDS }
@@ -43,11 +44,11 @@
 #nop { WHEN READING HELP FILES, ETC. THIS SHOULD ENABLE YOUR CHARACTER TO READ THE ENTIRE FILE INSTEAD OF SMALL BATCHES }
 #read tintin/quality-of-life/setmod.txt
 
-#nop { THIS ALIAS WILL CREATE A PACKMULE GOLEM, PROVIDED THAT YOU HAVE AT LEAST 3 CORPSES (and name it Ionian) }
+#nop { READING THIS FILE WILL BRING IN GOLEM MASTER INFORMATION - gmhelp }
 #read tintin/professions/golem-master.txt
 
 
-#nop { ENTRANCE AND EXIT MESSAGES FOR HIGH MORTAL WHICH DISAPPEAR WHEN YOU DIE }
+#nop { ENTRANCE AND EXIT MESSAGES FOR HIGH MORTAL, WHICH DISAPPEAR WHEN YOU DIE }
 #delay {EnterMess} {
         setmin strums a chord on her guitar;
         setmout breaks a guitar string;
