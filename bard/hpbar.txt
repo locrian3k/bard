@@ -107,9 +107,9 @@
 	#var spells1 %4;
 	
 	#regex $spells1 {HS:%d} {#var hskin &1};
-        #if {"$hskin" == "Off" && "$hs" == "On"} {cast hardened skin};
-	#if {"$hskin" == "Off"} {#var hskincolor <109>};
-    	#if {$hskin != "Off"}{#var hskincolor <129>};
+        #if {"$hskin" == "0" && "$hs" == "On"} {cast hardened skin};
+	#if {"$hskin" == "0"} {#var hskincolor <109>};
+    	#if {$hskin != "0"}{#var hskincolor <129>};
 
         #regex $spells1 {CC:%d} {#var catsclaw &1};
         #if {"$catsclaw" == "Off" && "$ccready" == "yes" && "$cc" == "On"} {cast cats claw};
@@ -143,13 +143,13 @@
 	
         #regex $spells1 {\bMB:%S} {#var mindblank &1};
         #if {"$mindblank" == "Off" && "$mb" == "On"} {cast mind blank};
-	#if {"$mindblank" == "0"} {#var mbcolor <109>};
-    	#if {$mindblank != "0"}{#var mbcolor <129>};
+	#if {"$mindblank" == "Off"} {#var mbcolor <109>};
+    	#if {$mindblank != "Off"}{#var mbcolor <129>};
 	
         #regex $spells1 {\bB:%S} {#var blink &1};
         #if {"$blink" == "Off" && "$blinkspell" == "On"} {cast blink};
-	#if {"$blink" == "0"} {#var bcolor <109>};
-    	#if {$blink != "0"}{#var bcolor <129>};
+	#if {"$blink" == "Off"} {#var bcolor <109>};
+    	#if {$blink != "Off"}{#var bcolor <129>};
 
 	#var songs1 %5;
 	#showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F ${phcolor}H ${mbcolor}MB ${bcolor}B}{-4};
