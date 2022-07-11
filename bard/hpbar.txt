@@ -105,33 +105,26 @@
 #ACT {^\[%4\] \[%5\]} {
 	
 	#var spells1 %4;
-        #regex $spells1 {\bHS} {#var hskin &1};
-        #if {$hskin == 0 && "$hs" == "On"} {cast hardened skin};
-	#if {hskin == 0}      {#var hskincolor <faa>}     {#var hskincolor <279>};
-
-        #regex $spells1 {\bCC} {#var catsclaw &1};
-        #if {"$catsclaw" == "Off" && "$ccready" == "yes" && "$cc" == "On"} {cast cats claw};
-	#if {$catsclaw == Off}      {#var catsclawcolor <faa>}     {#var catsclawcolor <279>};
 	
-	#regex $spells1 {\bPN} {#var pneutral &1};
+	#regex $spells1 {HS:%d} {#var hskin &1};
+        #if {$hskin == 0 && "$hs" == "On"} {cast hardened skin};
+
+        #regex $spells1 {CC:%S} {#var catsclaw &1};
+        #if {"$catsclaw" == "Off" && "$ccready" == "yes" && "$cc" == "On"} {cast cats claw};
+	
+	#regex $spells1 {\bPN:%d} {#var pneutral &1};
         #if {$pneutral == 0 && "$pn" == "On"} {cast protection from neutral};
-
-        #regex $spells1 {\bPE} {#var pevil &1};
+        #regex $spells1 {\bPE:%d} {#var pevil &1};
         #if {$pevil == 0 && "$pe" == "On"} {cast protection from evil};
-
-        #regex $spells1 {\bPG {#var pgood &1};
+        #regex $spells1 {\bPG:%d} {#var pgood &1};
         #if {$pgood == 0 && "$pg" == "On"} {cast protection from good};
-
-        #regex $spells1 {\bPF} {#var pfrost &1};
+        #regex $spells1 {\bPF:%d} {#var pfrost &1};
         #if {$pfrost == 0 && "$pf" == "On"} {cast protection from frost};
-
-        #regex $spells1 {\bPH} {#var pheat &1};
+        #regex $spells1 {\bPH:%d} {#var pheat &1};
         #if {$pheat == 0 && "$ph" == "On"} {cast protection from heat};
-
-        #regex $spells1 {\bMB} {#var mindblank &1};
+        #regex $spells1 {\bMB:%S} {#var mindblank &1};
         #if {"$mindblank" == "Off" && "$mb" == "On"} {cast mind blank};
-
-        #regex $spells1 {\bB} {#var blink &1};
+        #regex $spells1 {\bB:%S} {#var blink &1};
         #if {"$blink" == "Off" && "$blinkspell" == "On"} {cast blink};
 
 	#var songs1 %5;
