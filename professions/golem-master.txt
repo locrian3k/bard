@@ -12,7 +12,7 @@
 #alias {gmhelp} {#showme
   \n
   <160>G O L E M    M A S T E R<088>\n
-  <160>------------------------------------------<088>\n
+  <160>--------------------------------------<088>\n
   <306>CREATE A GOLEM:<088>\n
   List all golems          = golem\n
   Create a packmule golem  = gmpackmule\n
@@ -38,7 +38,7 @@
   \n
   <306>Party     - Mixolydian:<088>\n
   Help file = gmp\n
-  <160>------------------------------------------<088>\n
+  <160>--------------------------------------<088>\n
 };
 
 #alias {gmi} {golem ionian help};
