@@ -5,6 +5,9 @@
 #nop { Find/Replace for: Ionian,ionian,Aeolian,aeolian,Dorian,dorian,Phrygian,phrygian,Mixolydian,mixolydian }
 #nop { ===================================================================================================== }
 
+#nop { THIS ACTION WILL REMIND YOU OF WHAT THE HELP FILE COMMAND IS FOR THIS FILE WHEN YOU LOOK AT THE GOLEM_MASTER HELP FILE }
+#action {{^You can also do the commands: golem_master recover, score, spammy}} {#showme <306>TYPE gmhelp FOR MORE COMMANDS}
+
 #nop { THIS ALIAS WILL SHOW A BRIEF HELP SYSTEM FOR THIS FILE }
 #alias {gmhelp} {#showme
   \n
