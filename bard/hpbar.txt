@@ -106,13 +106,13 @@
 	
 	#var spells1 %4;
 	
-	#regex $spells1 ${hskincolor} {#var hskin &1};
+	#regex $spells1 {HS:%d} {#var hskin &1};
 	#var hskincolor HS;
         #if {$hskin == 0 && "$hs" == "On"} {cast hardened skin};
 	#if {$hskin != "0"}{#var hskincolor <119>};
     	#if {$hskin > "0"}{#var hskincolor <129>};
 
-        #regex $spells1 ${catsclawcolor} {#var catsclaw &1};
+        #regex $spells1 {CC:%d} {#var catsclaw &1};
 	#var catsclawcolor CC;
         #if {"$catsclaw" == "Off" && "$ccready" == "yes" && "$cc" == "On"} {cast cats claw};
 	#if {$catsclaw != "Off"}{#var catsclawcolor <119>};
