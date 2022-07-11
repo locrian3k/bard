@@ -8,6 +8,7 @@
 #nop { THIS ALIAS WILL SHOW A BRIEF HELP FILE SYSTEM FOR THIS FILE }
 #alias {gmhelp} {#showme
   \n
+  <306>---------------<088>\n
   <306>CREATE A GOLEM:<088>\n
   List all golems          = golem\n
   Create a packmule golem  = gmpackmule\n
@@ -26,7 +27,8 @@
   Help file       = gmc      Help file = gme\n
   \n
   <306>Party:<088>\n
-  Help file       = gmp
+  Help file       = gmp\n
+  <306>---------------<088>\n
 };
 
 #alias {gmp} {golem ionian help};
