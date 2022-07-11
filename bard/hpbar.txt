@@ -106,10 +106,10 @@
 	
 	#var spells1 %4;
         #regex $spells1 {HS:%d} {#var hskin &1};
-        #if {$hskin == 0 && "$idlebot" == "Off"} {cast hardened skin};
+        #if {$hskin == 0 && "$hs" == "On"} {cast hardened skin};
 
         #regex $spells1 {CC:%S} {#var catsclaw &1};
-        #if {"$catsclaw" == "Off" && "$ccready" == "yes" && "$idlebot" == "Off"} {cast cats claw};
+        #if {"$catsclaw" == "Off" && "$ccready" == "yes" && "$cc" == "On"} {cast cats claw};
 
 	#var songs1 %5;
 
@@ -122,67 +122,64 @@
 
     #var coffinbar %1;
 
-	    #regex $songs1 {\bOM:%S} {#var omuse &1};
+	#regex $songs1 {\bOM:%S} {#var omuse &1};
         #if {"$omuse" == "Off" && "$om" == "On" && $voicecur > 20 && $karmacur > 400} {perform o muse};
         #if {"$omuse" == "Off"} {#var omusecolor <109>};
         #if {"$omuse" != "Off"} {#var omusecolor <dcf>};
-
-        #regex $songs1 {\bLB:%S} {#var leader &1};
-        #if {"$omuse" == "Off" && "$idlebot" == "Off" && $voicecur > 20 && $coffincur == 0 && $karmacur < 300} {perform leader of the band};
-        #if {"$omuse" == "Off"} {#var omusecolor <109>};
-        #if {"$omuse" != "Off"} {#var omusecolor <dcf>};
-
-        #regex $songs1 {\bR:%S} {#var rock &1};
-        #if {"$rock" == "Off" && "$idlebot" == "Off" && $voicecur > 70 && $karmacur > 800} {perform i am a rock};
+	
+	#regex $songs1 {\bLB:%S} {#var leader &1};
+	#if {"$leaderoftheband" == "Off" && "$lb" == "On" && $voicecur > 20 && $coffincur == 0 && $karmacur < 300} {perform leader of the band};
+        #if {"$leader" == "Off"} {#var leadercolor <109>};
+        #if {"$leader" != "Off"} {#var leadercolor <dcf>};
+	
+	#regex $songs1 {\bR:%S} {#var rock &1};
+        #if {"$rock" == "Off" && "$irock" == "On" && $voicecur > 70 && $karmacur > 800} {perform i am a rock};
         #if {"$rock" == "Off"} {#var rockcolor <109>};
         #if {"$rock" != "Off"} {#var rockcolor <dcf>};
 
+        #regex $songs1 {\bR:%S} {#var silent &1};
+        #if {"$silent" == "Off" && "$lucidity" == "On" && $voicecur > 70 && $karmacur > 800} {perform silent lucidity};
+        #if {"$silent" == "Off"} {#var silentcolor <109>};
+        #if {"$silent" != "Off"} {#var silentcolor <dcf>};
+
         #regex $songs1 {\bAG:%S} {#var grace &1};
-        #if {"$grace" == "Off" && "$idlebot" == "Off" && $voicecur > 50 && $karmacur > 400} {perform amazing grace};
-	    #if {"$grace" == "Off"} {#var gracecolor <109>};
+        #if {"$grace" == "Off" && "$ag" == "On" && $voicecur > 50 && $karmacur > 400} {perform amazing grace};
+	#if {"$grace" == "Off"} {#var gracecolor <109>};
         #if {"$grace" != "Off"} {#var gracecolor <dcf>};
-
-        #regex $spells1 {\bPN:%d} {#var pneutral &1};
-        #if {$pneutral == 0 && "$idlebot" == "Off"} {cast protection from neutral};
-
-        #regex $spells1 {\bPE:%d} {#var pevil &1};
-        #if {$pevil == 0 && "$idlebot" == "Off"} {cast protection from evil};
-
-        #regex $spells1 {\bPG:%d} {#var pgood &1};
-        #if {$pgood == 0 && "$idlebot" == "Off"} {cast protection from good};
-
-        #regex $spells1 {\bPF:%d} {#var pfrost &1};
-        #if {$pfrost == 0 && "$idlebot" == "Off"} {cast protection from frost};
-
-        #regex $spells1 {\bPH:%d} {#var pheat &1};
-        #if {$pheat == 0 && "$idlebot" == "Off"} {cast protection from heat};
-
-        #regex $spells1 {\bMB:%S} {#var mindblank &1};
-        #if {"$mindblank" == "Off" && "$idlebot" == "Off"} {cast mind blank};
-
-        #regex $spells1 {\bB:%S} {#var blink &1};
-        #if {"$blink" == "Off" && "$idlebot" == "Off"} {cast blink};
-
-        #regex $songs1 {\bLB:%S} {#var leader &1};
-        #if {"$leader" == "Off"} {#var leadercolor <109>};
-        #if {"$leader" != "Off"} {#var leadercolor <dcf>};
-
-	    #regex $songs1 {\bDW:%S} {#var devil &1};
+	
+	#regex $songs1 {\bDW:%S} {#var devil &1};
         #if {"$devil" == "Off"} {#var devilcolor <109>};
         #if {"$devil" != "Off"} {#var devilcolor <dcf>};
 
-	    #regex $songs1 {\bD:%S} {#var dworry &1};
+	#regex $songs1 {\bD:%S} {#var dworry &1};
         #if {"$dworry" == "Off"} {#var dworrycolor <109>};
         #if {"$dworry" != "Off"} {#var dworrycolor <dcf>};
 
         #regex $songs1 {\bV:%S} {#var vamp &1};
-        #if {"$vamp" == "Off" && "$idlebot" == "Off" && $voicecur > 50 && $karmacur > 400} {perform vampire};
+        #if {"$vamp" == "Off" && "$vsong" == "On" && $voicecur > 50 && $karmacur > 400} {perform vampire};
         #if {"$vamp" == "Off"} {#var vampcolor <109>};
         #if {"$vamp" != "Off"} {#var vampcolor <dcf>};
 
-	    #regex $songs1 {\bSL:%S} {#var silent &1};
-        #if {"$silent" == "Off"} {#var silentcolor <109>};
-        #if {"$silent" != "Off"} {#var silentcolor <dcf>};	
+        #regex $spells1 {\bPN:%d} {#var pneutral &1};
+        #if {$pneutral == 0 && "$pn" == "On"} {cast protection from neutral};
+
+        #regex $spells1 {\bPE:%d} {#var pevil &1};
+        #if {$pevil == 0 && "$pe" == "On"} {cast protection from evil};
+
+        #regex $spells1 {\bPG:%d} {#var pgood &1};
+        #if {$pgood == 0 && "$pg" == "On"} {cast protection from good};
+
+        #regex $spells1 {\bPF:%d} {#var pfrost &1};
+        #if {$pfrost == 0 && "$pf" == "On"} {cast protection from frost};
+
+        #regex $spells1 {\bPH:%d} {#var pheat &1};
+        #if {$pheat == 0 && "$ph" == "On"} {cast protection from heat};
+
+        #regex $spells1 {\bMB:%S} {#var mindblank &1};
+        #if {"$mindblank" == "Off" && "$mb" == "On"} {cast mind blank};
+
+        #regex $spells1 {\bB:%S} {#var blink &1};
+        #if {"$blink" == "Off" && "$blinkspell" == "On"} {cast blink};
     
     #regex {$coffinbar} {^%d/%d} {#var coffincur &1;#var coffinmax &2};
  
@@ -196,7 +193,9 @@
 
     #regex {$coffinbar} {\bc:\[%d\]} {#var coincur &1};
 
-    #showme {<109>C:$coffincur/$coffinmax <239>c:$coincur <dff>Sm:$smilecur/$smilemax\% <139><${perfpre}${performcolor}${perfinfo}<139>> ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V<089> <279>[${encolor}${ens}<279>]<fac>}{-3};
+    #showme {<109>C:$coffincur/$coffinmax c:$coincur Sm:$smilecur/$smilemax\% <${perfpre}${performcolor}${perfinfo} ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V [${encolor}${ens}]}{-3};
+    
+    #nop {#showme {<109>C:$coffincur/$coffinmax <239>c:$coincur <dff>Sm:$smilecur/$smilemax\% <139><${perfpre}${performcolor}${perfinfo}<139>> ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V<089> <279>[${encolor}${ens}<279>]<fac>}{-3};}
 
     #NOP { All your message colors and the showme here, but need to stay inside the Coffin HP BAR action };
 
@@ -217,7 +216,7 @@
     #if {$MissedRainbow > 0}    {#var rainbowcolor <faa>}   {#var rainbowcolor <279>};
     #if {$rhythmicaction > 0}   {#var racolor <faa>}        {#var racolor <279>};
 
-	#showme {
+    #showme {
     <cfa>T<088>$tellscolor$MissedTells 
     <fac>C<088>$clanchatcolor$MissedClanChat 
     <fca>G<088>$guildchatcolor$MissedGuildChat 
