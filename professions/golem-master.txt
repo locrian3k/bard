@@ -17,14 +17,14 @@
   Create an explorer golem = gmexplorer\n
   Create a party golem     = gmparty\n
   \n
-  <306>Packmule - Ionian:         Watcher - Aeolian:<088>\n
-  Help file       = gmi      Help file = gmw\n
+  <306>Packmule - Ionian:    Watcher - Aeolian:<088>\n
+  Help file       = gmi Help file = gmw\n
   Golem get all   = gga\n
   Golem inventory = gi\n
   Golem sell      = ggs\n
   \n
-  <306>Companion - Dorian:        Explorer - Phrygian:<088>\n
-  Help file       = gmc      Help file = gme\n
+  <306>Companion - Dorian:   Explorer - Phrygian:<088>\n
+  Help file       = gmc Help file = gme\n
   \n
   <306>Party - Mixolydian:<088>\n
   Help file       = gmp\n
