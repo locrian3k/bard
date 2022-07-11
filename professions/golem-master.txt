@@ -5,7 +5,7 @@
 #nop { Find/Replace for: Ionian,ionian,Aeolian,aeolian,Dorian,dorian,Phrygian,phrygian,Mixolydian,mixolydian }
 #nop { ===================================================================================================== }
 
-#nop { THIS ALIAS WILL SHOW A BRIEF HELP FILE SYSTEM FOR THIS FILE }
+#nop { THIS ALIAS WILL SHOW A BRIEF HELP SYSTEM FOR THIS FILE }
 #alias {gmhelp} {#showme
   \n
   <306>---------------<088>\n
