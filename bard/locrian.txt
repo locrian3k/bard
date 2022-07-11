@@ -29,7 +29,7 @@
 
 #nop { THIS WILL SPLIT YOUR SCREEN INTO MULTIPLE SECTIONS }
 #nop { Example of what numbers go where for the split you desire: #split {top bar} {bottom bar} {left bar} {right bar} {input bar}}
-	#split {0} {1} {0} {0} {5};
+	#split {0} {5} {0} {0} {5};
 
 #nop { THIS WILL RE-READ THIS FILE WHICH IS BENEFICIAL WHEN YOU ADD SOMETHING. YOU'LL NEED TO #END AND RELOG BACK IN IF YOU MODIFY SOMETHING ALREADY HERE }
 #alias {source} {#read tintin/bard/locrian.txt}
