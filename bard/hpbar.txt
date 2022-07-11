@@ -79,7 +79,7 @@
     #if {%9 < 400000 && %9 > 100000} {#var g2ncolor <cba>};
     #if {%9 <= 100000} {#var g2ncolor <fda>};
 	
-	#if {"%12" != ""} {#var ens %12;#var combat yes} {#var ens None;#var combat no};
+    #if {"%12" != ""} {#var ens %12;#var combat yes} {#var ens None;#var combat no};
     #if {"$combat" == "yes"} {#math {combatrounds} {$combatrounds + 1}};
     #if {"%12" == ""} {#var enemypercent None}{#var encolor <088>};
     #if {"%12" == "T:per"}{#var encolor <129>};
@@ -136,10 +136,10 @@
 
 	#var songs1 %5;
 	#showme {<ddf>$spells1<109>}{-4};
-    }
+    };
 
-#NOP {Coffin:6/18 Sm:[2/57%] <> c:[135]}
-#GAG {^Coffin:%1}
+#NOP {Coffin:6/18 Sm:[2/57%] <> c:[135]};
+#GAG {^Coffin:%1};
 #ACT {^Coffin:%1} {
 
     #var coffinbar %1;
