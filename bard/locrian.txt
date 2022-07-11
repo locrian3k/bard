@@ -74,51 +74,71 @@
 	#var erad 0;
 	#var whom 0;
 	
+	
+	
 	#nop { S P E L L S };
+	
 	#var hs Off;
-	#action {hson} {#var hs On;}
+	#action {hson} {cast hardened skin;#var hs On;}
 	#action {hsoff} {#var hs Off;}
+	
 	#var cc Off;
 	#action {ccon} {#var cc On;}
 	#action {ccoff} {#var cc Off;}
+	#action {Your claws shimmer and fade from your hands.} {#var ccready no};
+	#action {Your hands have not yet recovered.} {#var ccready no};
+	#action {Your hands have healed somewhat.} {#var ccready yes};
+	
 	#var pn Off;
 	#action {pnon} {#var pn On;}
 	#action {pnoff} {#var pn Off;}
+	
 	#var pe Off;
 	#action {peon} {#var pe On;}
 	#action {peoff} {#var pe Off;}
+	
 	#var pg Off;
 	#action {pgon} {#var pg On;}
 	#action {pgoff} {#var pg Off;}
+	
 	#var pf Off;
 	#action {pfon} {#var pf On;}
 	#action {pfoff} {#var pf Off;}
+	
 	#var ph Off;
 	#action {phon} {#var ph On;}
 	#action {phoff} {#var ph Off;}
+	
 	#var mb Off;
 	#action {mbon} {#var mb On;}
 	#action {mboff} {#var mb Off;}
+	
 	#var blinkspell Off;
 	#action {blinkon} {#var blinkspell On;}
 	#action {blinkoff} {#var blinkspell Off;}
 	
 	#nop { S O N G S };
+	
 	#var om Off;
 	#action {omon} {#var om On;}
 	#action {omoff} {#var om Off;}
+	
 	#var lb Off;
 	#action {lbon} {#var lb On;}
 	#action {lboff} {#var lb Off;}
+	
 	#var irock Off;
 	#action {rockon} {#var irock On;}
 	#action {rockoff} {#var irock Off;}
+	
 	#var lucidity Off;
 	#action {slon} {#var lucidity On;}
 	#action {sloff} {#var lucidity Off;}
+	
 	#var ag Off;
 	#action {agon} {#var ag On;}
 	#action {agoff} {#var ag Off;}
+	
 	#var vsong Off;
 	#action {von} {#var vsong On;}
 	#action {voff} {#var vsong Off;}
