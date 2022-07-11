@@ -105,11 +105,11 @@
 #ACT {^\[%4\] \[%5\]} {
 	
 	#var spells1 %4;
-        #regex $spells1 {HS} {#var hskin &1};
+        #regex $spells1 {\bHS} {#var hskin &1};
         #if {$hskin == 0 && "$hs" == "On"} {cast hardened skin};
-	#if {$spells1 == 0}      {#var hskincolor <faa>}     {#var hskincolor <279>};
+	#if {hskin == 0}      {#var hskincolor <faa>}     {#var hskincolor <279>};
 
-        #regex $spells1 {CC} {#var catsclaw &1};
+        #regex $spells1 {\bCC} {#var catsclaw &1};
         #if {"$catsclaw" == "Off" && "$ccready" == "yes" && "$cc" == "On"} {cast cats claw};
 	#if {$catsclaw == Off}      {#var catsclawcolor <faa>}     {#var catsclawcolor <279>};
 	
