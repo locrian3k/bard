@@ -105,14 +105,36 @@
 #ACT {^\[%4\] \[%5\]} {
 	
 	#var spells1 %4;
-        #regex $spells1 {HS:%d} {#var hskin &1};
+        #regex $spells1 {HS} {#var hskin &1};
         #if {$hskin == 0 && "$hs" == "On"} {cast hardened skin};
+	#if {$spells1 == 0}      {#var hskincolor <faa>}     {#var hskincolor <279>};
 
-        #regex $spells1 {CC:%S} {#var catsclaw &1};
+        #regex $spells1 {CC} {#var catsclaw &1};
         #if {"$catsclaw" == "Off" && "$ccready" == "yes" && "$cc" == "On"} {cast cats claw};
+	#if {$catsclaw == Off}      {#var catsclawcolor <faa>}     {#var catsclawcolor <279>};
+	
+	#regex $spells1 {\bPN} {#var pneutral &1};
+        #if {$pneutral == 0 && "$pn" == "On"} {cast protection from neutral};
+
+        #regex $spells1 {\bPE} {#var pevil &1};
+        #if {$pevil == 0 && "$pe" == "On"} {cast protection from evil};
+
+        #regex $spells1 {\bPG {#var pgood &1};
+        #if {$pgood == 0 && "$pg" == "On"} {cast protection from good};
+
+        #regex $spells1 {\bPF} {#var pfrost &1};
+        #if {$pfrost == 0 && "$pf" == "On"} {cast protection from frost};
+
+        #regex $spells1 {\bPH} {#var pheat &1};
+        #if {$pheat == 0 && "$ph" == "On"} {cast protection from heat};
+
+        #regex $spells1 {\bMB} {#var mindblank &1};
+        #if {"$mindblank" == "Off" && "$mb" == "On"} {cast mind blank};
+
+        #regex $spells1 {\bB} {#var blink &1};
+        #if {"$blink" == "Off" && "$blinkspell" == "On"} {cast blink};
 
 	#var songs1 %5;
-
 	#showme {<ddf>$spells1<109>}{-4};
     }
 
@@ -159,27 +181,6 @@
         #if {"$vamp" == "Off" && "$vsong" == "On" && $voicecur > 50 && $karmacur > 400} {perform vampire};
         #if {"$vamp" == "Off"} {#var vampcolor <109>};
         #if {"$vamp" != "Off"} {#var vampcolor <dcf>};
-
-        #regex $spells1 {\bPN:%d} {#var pneutral &1};
-        #if {$pneutral == 0 && "$pn" == "On"} {cast protection from neutral};
-
-        #regex $spells1 {\bPE:%d} {#var pevil &1};
-        #if {$pevil == 0 && "$pe" == "On"} {cast protection from evil};
-
-        #regex $spells1 {\bPG:%d} {#var pgood &1};
-        #if {$pgood == 0 && "$pg" == "On"} {cast protection from good};
-
-        #regex $spells1 {\bPF:%d} {#var pfrost &1};
-        #if {$pfrost == 0 && "$pf" == "On"} {cast protection from frost};
-
-        #regex $spells1 {\bPH:%d} {#var pheat &1};
-        #if {$pheat == 0 && "$ph" == "On"} {cast protection from heat};
-
-        #regex $spells1 {\bMB:%S} {#var mindblank &1};
-        #if {"$mindblank" == "Off" && "$mb" == "On"} {cast mind blank};
-
-        #regex $spells1 {\bB:%S} {#var blink &1};
-        #if {"$blink" == "Off" && "$blinkspell" == "On"} {cast blink};
     
     #regex {$coffinbar} {^%d/%d} {#var coffincur &1;#var coffinmax &2};
  
@@ -195,7 +196,7 @@
 
     #showme {<109>C:$coffincur/$coffinmax c:$coincur Sm:$smilecur/$smilemax\% <${perfpre}${performcolor}${perfinfo} ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V [${encolor}${ens}]}{-3};
     
-    #nop {#showme {<109>C:$coffincur/$coffinmax <239>c:$coincur <dff>Sm:$smilecur/$smilemax\% <139><${perfpre}${performcolor}${perfinfo}<139>> ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V<089> <279>[${encolor}${ens}<279>]<fac>}{-3};};
+    #nop {#showme {<109>C:$coffincur/$coffinmax <239>c:$coincur <dff>Sm:$smilecur/$smilemax\% <139>${perfpre}${performcolor}${perfinfo}<139>> ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V<089> <279>[${encolor}${ens}<279>]<fac>}{-3};};
 
     #NOP { All your message colors and the showme here, but need to stay inside the Coffin HP BAR action };
 
