@@ -18,7 +18,7 @@
   Create a party golem     = gmparty\n
   \n
   <306>Packmule:                  Watcher:<088>\n
-  Help file       = gmp      Help file = gmw\n
+  Help file       = gmi      Help file = gmw\n
   Golem get all   = gga\n
   Golem inventory = gi\n
   Golem sell      = ggs\n
