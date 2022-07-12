@@ -188,10 +188,12 @@
         #if {"$grace" != "Off"} {#var gracecolor <dcf>};
 	
 	#regex $songs1 {\bDW:%S} {#var devil &1};
+	#if {"$devil" == "Off" && "$devilsong" == "On"} {perform devil went down to georgia};
         #if {"$devil" == "Off"} {#var devilcolor <109>};
         #if {"$devil" != "Off"} {#var devilcolor <dcf>};
 
 	#regex $songs1 {\bD:%S} {#var dworry &1};
+	#if {"$dworry" == "Off" && "$worry" == "On"} {perform don't worry be happy};
         #if {"$dworry" == "Off"} {#var dworrycolor <109>};
         #if {"$dworry" != "Off"} {#var dworrycolor <dcf>};
 
