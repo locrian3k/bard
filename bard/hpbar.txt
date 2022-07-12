@@ -142,7 +142,7 @@
     	#if {$pheat != "0"}{#var phcolor <129>};
 	
         #regex $spells1 {MB:%S} {#var mindblank &1};
-        #if {$mindblank == "Off" && "$mb" == "On"} {cast mind blank};
+        #if {$mindblank == "Off" && "$mb" == "On"} {cast mind blank;#delay {2}};
 	#if {$mindblank == "Off"} {#var mbcolor <109>};
     	#if {$mindblank != "Off"}{#var mbcolor <129>};
 	
