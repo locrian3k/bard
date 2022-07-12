@@ -154,7 +154,7 @@
 	#if {"$mindblank" == "Off" && "$mb" == "On"} {#var pgcolor <bac>};
     	#if {"$mindblank" != "Off"} {#var mbcolor <eaf>};
 	
-        #regex $spells1 {%sB:%S} {#var blink &1};
+        #regex $spells1 {\bB:%S} {#var blink &1};
         #if {"$blink" == "Off" && "$blinkspell" == "On" && $perfinfo == "D♭"} {cast blink};
 	#if {"$blink" == "Off" && "$blinkspell" == "Off"} {#var bcolor <109>};
 	#if {"$blink" == "Off" && "$blinkspell" == "On"} {#var pgcolor <bac>};
