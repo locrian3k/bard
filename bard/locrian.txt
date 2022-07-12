@@ -146,7 +146,7 @@
 	#nop {Don't Worry Be Happy };
 	#var worry Off;
 		#alias {dwon} {#var worry On;}
-		#alias dwoff} {#var worry Off;}
+		#alias {dwoff} {#var worry Off;}
 	#nop { Vampire };
 	#var vsong Off;
 		#alias {von} {#var vsong On;}
