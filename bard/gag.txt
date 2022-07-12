@@ -1,0 +1,1 @@
+#gag {You can't cast a spell while singing!};
