@@ -112,7 +112,7 @@
     	#if {"$hskin" != "0"}{#var hskincolor <129>};
 
         #regex $spells1 {CC:%d} {#var catsclaw &1};
-        #if {"$catsclaw" == "Off" && "$ccready" == "yes" && "$cc" == "On"} {cast cats claw};
+        #if {$catsclaw == "Off" && "$ccready" == "yes" && "$cc" == "On"} {cast cats claw};
 	#if {$catsclaw == "Off"} {#var catsclawcolor <109>};
     	#if {$catsclaw != "Off"}{#var catsclawcolor <129>};
 	
@@ -122,43 +122,43 @@
     	#if {$pneutral != "0"}{#var pncolor <129>};
 	
         #regex $spells1 {PE:%d} {#var pevil &1};
-        #if {"$pevil"== 0 && "$pe" == "On"} {cast protection from evil};
-	#if {"$pevil" == "0"} {#var pecolor <109>};
-    	#if {"$pevil" != "0"}{#var pecolor <129>};
+        #if {$pevil== 0 && "$pe" == "On"} {cast protection from evil};
+	#if {$pevil == "0"} {#var pecolor <109>};
+    	#if {$pevil != "0"}{#var pecolor <129>};
 	
         #regex $spells1 {PG:%d} {#var pgood &1};
-        #if {"$pgood" == 0 && "$pg" == "On"} {cast protection from good};
-	#if {"$pgood" == "0"} {#var pgcolor <109>};
-    	#if {"$pgood" != "0"}{#var pgcolor <129>};
+        #if {$pgood == 0 && "$pg" == "On"} {cast protection from good};
+	#if {$pgood == "0"} {#var pgcolor <109>};
+    	#if {$pgood != "0"}{#var pgcolor <129>};
 	
         #regex $spells1 {PF:%d} {#var pfrost &1};
-        #if {"$pfrost" == 0 && "$pf" == "On"} {cast protection from frost};
-	#if {"$pfrost" == "0"} {#var pfcolor <109>};
-    	#if {"$pfrost" != "0"}{#var pfcolor <129>};
+        #if {$pfrost == 0 && "$pf" == "On"} {cast protection from frost};
+	#if {$pfrost == "0"} {#var pfcolor <109>};
+    	#if {$pfrost != "0"}{#var pfcolor <129>};
 	
         #regex $spells1 {PH:%d} {#var pheat &1};
-        #if {"$pheat" == 0 && "$ph" == "On"} {cast protection from heat};
-	#if {"$pheat" == "0"} {#var phcolor <109>};
-    	#if {"$pheat" != "0"}{#var phcolor <129>};
+        #if {$pheat == 0 && "$ph" == "On"} {cast protection from heat};
+	#if {$pheat == "0"} {#var phcolor <109>};
+    	#if {$pheat != "0"}{#var phcolor <129>};
 	
         #regex $spells1 {MB:%S} {#var mindblank &1};
-        #if {"$mindblank" == "Off" && "$mb" == "On"} {cast mind blank};
-	#if {"$mindblank" == "Off"} {#var mbcolor <109>};
-    	#if {"$mindblank" != "Off"}{#var mbcolor <129>};
+        #if {$mindblank == "Off" && "$mb" == "On"} {cast mind blank};
+	#if {$mindblank == "Off"} {#var mbcolor <109>};
+    	#if {$mindblank != "Off"}{#var mbcolor <129>};
 	
         #regex $spells1 {B:%S} {#var blink &1};
-        #if {"$blink" == "Off" && "$blinkspell" == "On"} {cast blink};
-	#if {"$blink" == "Off"} {#var bcolor <109>};
-    	#if {"$blink" != "Off"}{#var bcolor <129>};
+        #if {$blink == "Off" && "$blinkspell" == "On"} {cast blink};
+	#if {$blink == "Off"} {#var bcolor <109>};
+    	#if {$blink != "Off"}{#var bcolor <129>};
 	
 	#regex $spells1 {HR:%S} {#var harmonicreg &1};
-        #if {"$harmonicreg" == "No" && "$harmonicregeneration" == "On"} {cast harmonic regeneration};
-	#if {"$harmonicreg" == "No"} {#var hrcolor <109>};
-    	#if {"$harmonicreg" != "No"}{#var hrcolor <129>};
+        #if {$harmonicreg == "No" && "$harmonicregeneration" == "On"} {cast harmonic regeneration};
+	#if {$harmonicreg == "No"} {#var hrcolor <109>};
+    	#if {$harmonicreg != "No"}{#var hrcolor <129>};
 	
 	#nop {  #regex $spells1 {FR:%S} {#var frain &1};                                   };
-        #nop {  #if {"$frain" == "Off" && "$focusrainbow" == "On" && $perfinfo == "D♭"} {cast focus the rainbow}; };
-	#nop {  #if {"$frain" == "Off"} {#var frcolor <109>};                                };
+        #nop {  #if {$frain == "Off" && "$focusrainbow" == "On" && $perfinfo == "D♭"} {cast focus the rainbow}; };
+	#nop {  #if {$frain == "Off"} {#var frcolor <109>};                                };
     	#nop {  #if {$frain != "Off"}{#var frcolor <129>};	                             };
 
 	#var songs1 %5;
@@ -202,7 +202,7 @@
 	
 	#nop { CHANGE TO THIS ONE WHEN YOU GET FOCUS THE RAINBOW #showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F 		${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR ${frcolor}FR}{-4}; };
 	
-	#showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F ${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR ${perfpre}${performcolor}${perfinfo} <088>${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V}{-4};
+	#showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F ${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR <088>${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V ${perfpre}${performcolor}${perfinfo}}{-4};
     };
 
 #NOP {Coffin:6/18 Sm:[2/57%] <> c:[135]};
