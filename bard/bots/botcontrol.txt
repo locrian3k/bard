@@ -100,9 +100,9 @@
         #var botting on;
         #var smurfbot On;
         #var whereami Smurfs-100;
-        #class {bots} {read} {locrian/bots/bardsmurfbot.txt};
+        #class {bots} {read} {tintin/bard/bots/bardsmurfbot.txt};
         scaler 100;
-        #showme {<120>You may now proceed to play slaughter smurfs.<088>};idleoff;psclear;smurfbot;
+        #showme {<120>You may now proceed to play slaughter smurfs.<088>};allon;psclear;smurfbot;
         }
 
 #alias {majon} {
