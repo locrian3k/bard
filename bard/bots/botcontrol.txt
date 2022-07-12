@@ -1,1 +1,241 @@
+#NOP { DUNGEON CHECKER }
+#alias {dungeons} {
+        #var zellicastle Clear;
+        #var smurfland Clear;
+        #var chessboard Clear;
+        #var puppymill Clear;
+        #var hoteltrans Clear;
+        #var rimalkins Clear;
+        #var treehouse Clear;
+        #var anchorman Clear;
+    #var whereami Clear;
+    #send dungeons;
+        #send keep ticket;
+        }
+#act {- Zelligar's Castle} {#var zellicastle Active}
+#act {- Smurfland} {#var smurfland Active}
+#act {- Puppy Mill} {#var puppymill Active}
+#act {- Chess Board} {#var chessboard Active}
+#act {- Hotel Transylvania} {#var hoteltrans Active}
+#act {- Rimalkins} {#var rimalkins Active}
+#act {- Terra's Terrific Tree} {#var treehouse Active}
+#act {- Anchorman} {#var anchorman Active}
 
+#NOP {===== B O T S =====}
+
+#action {Locrian yells at you:} {pstats;psclear};
+
+#alias {puppyon} {
+        #var botting on;
+        #var puppybot On;
+        #var whereami Puppies-30;
+        #class {bots} {read} {locrian/bots/bardpuppybot.txt};
+        scaler 30;
+ #showme {<120>You may now proceed to play rescue puppies.<088>};idleoff;psclear;puppybot;
+        }
+
+#alias {spiriton} {
+        #var botting on;
+        #var spiritbot On;
+        #var whereami Spirit Angels;
+        #class {bots} {read} {locrian/bots/spiritbot.txt};
+        #showme {<120>Killing angels, you evil person.<088>};idleoff;psclear;spiritbot;
+        }
+
+#alias {aegison} {
+        #var botting on;
+        #var aegisbot On;
+        #var whereami Aegis-76;
+        #class {bots} {read} {locrian/bots/aegisbot.txt};
+        scaler 76;
+        #showme {<120>You may now proceed to kill zombies and robots.<088>};idleoff;psclear;aegisbot;
+        }
+
+#alias {anchoron} {
+        #var botting on;
+        #var anchormanbot On;
+        #var whereami Anchorman;
+        #class {bots} {read} {locrian/bots/anchormanbot.txt};
+        scaler 81;
+ #showme {<120>You may now proceed to kill newsy people.<088>};idleoff;psclear;anchormanbot;
+        }
+
+#alias {androidon} {
+        #var botting on;
+        #var androidbot On;
+        #var whereami Android-81;
+        #class {bots} {read} {locrian/bots/androidbot.txt};
+        scaler 81;
+        #showme {<120>You may now proceed to kill Google things.<088>};idleoff;psclear;androidbot;
+        }
+
+#alias {alphaon} {
+        #var botting on;
+        #var alphabot On;
+        #var whereami Alphabet-150;
+        #class {bots} {read} {locrian/bots/bardalphabot.txt};
+        scaler 150;
+        #showme {<120>You may now proceed to spell things.<088>};idleoff;psclear;alphabot;
+        }
+
+#alias {chesson} {
+        #var botting on;
+        #var chessbot On;
+        #var whereami Chess-110;
+        #class {bots} {read} {locrian/bots/bardchessbot.txt};
+        scaler 110;
+        #showme {<120>You may now proceed to play chess<088>};idleoff;psclear;chessbot;
+        }
+
+#alias {iceon} {
+        #var botting on;
+        #var icebot On;
+        #var whereami Ice;
+        #class {bots} {read} {locrian/bots/icybluebot.txt};
+        scaler 30;
+        #showme {<120>You may now proceed to slaughter a village.<088>};idleoff;psclear;icebot;
+        }
+
+#alias {smurfon} {
+        #var botting on;
+        #var smurfbot On;
+        #var whereami Smurfs-100;
+        #class {bots} {read} {locrian/bots/bardsmurfbot.txt};
+        scaler 100;
+        #showme {<120>You may now proceed to play slaughter smurfs.<088>};idleoff;psclear;smurfbot;
+        }
+
+#alias {majon} {
+        #var botting on;
+        #var majbot On;
+        #var whereami Mahjongg-70;
+        #class {bots} {read} {locrian/bots/bardmajbot.txt};
+        scaler 70;
+        #showme {<120>You may now proceed to kill Mahjongg (3 hour reset)<088>};idleoff;psclear;majbot;
+                }
+
+#alias {golemson} {
+        #var botting on;
+                #var golembot On;
+        #var whereami Golems-81;
+        #class {bots} {read} {locrian/bots/bardgolembot.txt};
+        scaler 81;
+        #showme {<120>You may now proceed to kill golems (2 hour reset)<088>};idleoff;psclear;golembot;
+                }
+
+#alias {leavegolem} {s;s;s;s;e;e;e;enter;#12 e;portal;h}
+
+#alias {secbot} {
+        #var botting on;
+        #var sectionbot On;
+        #var whereami SectionZ-75;
+        #class {bots} {read} {locrian/bots/Xsecbot.txt};
+        scaler 75;
+        #showme {<120>You may now proceed to kill Section Z things.<088>};idleoff;psclear;secbotX;
+        }
+
+#alias {zombieson} {
+        #var botting on;
+        #var zombiebot On;
+        #var whereami Zombies-70;
+ #class {bots} {read} {locrian/bots/bardzombiebot.txt};
+        scaler 70;
+        #showme {<120>You may now proceed to slaughter zombies.<088>};idleoff;psclear;zombiebot;
+        }
+
+#NOP {========== CRAFTING ==========}
+
+#read fennec/Crafting/enchantcheck.txt
+#read fennec/Crafting/blacksmithcheck.txt
+
+#alias {craftlist} {#var crafting On;#class {craftclass} {read} {fennec/Crafting/recipecheck.txt};craftlist2;#class craftclass kill;#var crafting Off}
+
+#alias {frags} {#foreach {ascension;blasting;compassion;damnation;destruction;knowledge;light;might;rage;rejuvenation;shadow;soul;the unseen;water;willy} {type} {
+        unstash all fragment of $type;
+        #10 assemble fragment of $type;
+        stash all;
+        unstash all essence of $type;
+        #5 assemble essence of $type;
+        stash all;
+    }
+}
+
+#alias {enchant} {
+    #var botting on;
+    #var enchantbot On;
+#class {bots} {read} {fennec/Crafting/Craft-Enchanting.txt};
+    #showme {<120>You may now proceed to Enchant<088>};
+    enchantbot;
+    }
+
+#alias {blacksmith} {
+    #var botting on;
+    #var blacksmithbot On;
+    #class {bots} {read} {fennec/Crafting/Craft-Blacksmithing.txt};
+    #showme {<120>You may now proceed to Blacksmith<088>};
+    blacksmithbot;
+    }
+
+#alias {mine1} {
+    #var botting on;
+    #var minebot On;
+    #class {bots} {read} {fennec/Crafting/minebot.txt};
+    #showme {<129>Commence Mining<088>};
+    minebot;
+    }
+
+#alias {mine2} {
+    #var botting on;
+    #var minebot On;
+    #class {bots} {read} {fennec/Crafting/minebotlvl2.txt};
+    #showme {<129>Commence Mining<088>};
+    minebot;
+    }
+
+#alias {mine3} {
+    #var botting on;
+    #var minebot On;
+    #class {bots} {read} {fennec/Crafting/minebotlvl3.txt};
+    #showme {<129>Commence Mining<088>};
+    minebot;
+    }
+
+#alias {mine4} {
+    #var botting on;
+    #var minebot On;
+ #class {bots} {read} {fennec/Crafting/minebotlvl4.txt};
+    #showme {<129>Commence Mining<088>};
+    minebot;
+    }
+
+
+#alias {nobot}
+        {#var smurfbot Off;
+        #var chessbot Off;
+        #var puppybot Off;
+        #var puppyrescuebot Off;
+        #var majbot Off;
+        #var alphabot Off;
+        #var golembot Off;
+        #var sectionbot Off;
+        #var zombiebot Off;
+        #var crafting Off;
+        #var minebot Off;
+        #var spiritbot Off;
+        #var enchantbot Off;
+        #var blacksmithbot Off;
+        #var androidbot Off;
+        #var icebot Off;
+        #class bots kill;
+        #var whereami Clear;
+        #var botting off;#read locrian/bardcorpses/locrianonlycorpses.txt;
+        idleon}
+
+#action {You cannot go} {#if {"$botting" == "On"} {nobot;#showme <120>Something is screwed up, fix your bot.<088>}}
+#action {Pstat Time : %1} {#var pstattime %1}
+
+#var whom 0
+#act {Cast on whom?} {
+        #if {$whom < 4 && "$botting" == "on"} {#math {whom} {$whom + 1}};
+        #if {$whom >= 4 && "$botting" == "on"} {#var whom 0;get coins};
+        }
