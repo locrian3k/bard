@@ -156,13 +156,13 @@
 	#if {"$harmonicreg" == "No"} {#var hrcolor <109>};
     	#if {"$harmonicreg" != "No"}{#var hrcolor <129>};
 	
-	#nop {  #regex $spells1 {\bFR:%S} {#var frain &1};                                   }
-        #nop {  #if {"$frain" == "Off" && "$focusrainbow" == "On"} {cast focus the rainbow}; }
-	#nop {  #if {"$frain" == "Off"} {#var frcolor <109>};                                }
-    	#nop {  #if {$frain != "Off"}{#var frcolor <129>};	                             }
+	#nop {  #regex $spells1 {\bFR:%S} {#var frain &1};                                   };
+        #nop {  #if {"$frain" == "Off" && "$focusrainbow" == "On"} {cast focus the rainbow}; };
+	#nop {  #if {"$frain" == "Off"} {#var frcolor <109>};                                };
+    	#nop {  #if {$frain != "Off"}{#var frcolor <129>};	                             };
 
 	#var songs1 %5;
-	#nop { CHANGE TO THIS ONE WHEN YOU GET FOCUS THE RAINBOW #showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F 		${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR ${frcolor}FR}{-4}; }
+	#nop { CHANGE TO THIS ONE WHEN YOU GET FOCUS THE RAINBOW #showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F 		${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR ${frcolor}FR}{-4}; };
 	#showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F ${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR}{-4};
     };
 
