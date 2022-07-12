@@ -1,0 +1,19 @@
+#showme {<129>Activating corpse actions.  You will wrap/bury every corpse only killed by you.<088>}
+#action {You are already attacking that} {rcnow}
+
+#action {%w dealt the killing blow} {
+		
+		#math numberdmgoverall {$numberdmgcount / $combatrounds};
+
+		#showme {<acf>Total Rounds: <cfa>$combatrounds <acf>Damage Taken: <cfa>$dmgtaken <acf> Hits: <cfa>$hitsmade <acf>SP Used: <cfa>$spused<acf> <acf>G2N Earned: <cfa>$g2nused ($g2noverall) <acf>Dodged: <cfa>$dodgedrounds <acf> Numdmg: $numberdmgcount ($numberdmgoverall) Erad: $erad};
+
+		#format {combattime} {%t} {%m/%d/%y - %I:%M %p};
+
+		#system echo "$combattime :: Where: $whereami Rounds: $combatrounds Dmg Taken: $dmgtaken Hits: $hitsmade SP Used: $spused G2N Earned: $g2nused ($g2noverall) Dodged: $dodgedrounds Num dmg: $numberdmgcount Erad: $erad" >> /home/amy/locrian/combatlog.txt;
+		#var combatrounds 0;#var dmgtaken 0;#var hitsmade 0;#var spused 0;#var g2nused 0;#var g2noverall 0;#var dodgedrounds 0;#var numberhits 0;#var numberdmg 0;#var dogdmg 0;#var numberdmgcount 0;#var numberdmgoverall 0;#var erad 0;
+}
+
+#action {%1 tugs on your sleeve persistently} {unwrap};
+
+ktrig rhythmic actions 1 cease/wrap/perform dirge/divvy coins/get all/get coins
+ktrig ON
