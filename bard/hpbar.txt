@@ -95,7 +95,7 @@
 #if {$hpchange == 0} {#var hpchangec <088>};
 #if {$g2nchange == 0} {#var g2nchangec <088>};
 
-#showme {<bae>H:<088>${hpcolor}$hpcur<bae>/$hpmax<179>(${hpchangec}${hpchange}<179>) <aae>S:${spcolor}$spcur<aae>/$spmax<179>(${spchangec}${spchange}<179>) <ada>K:${karmacolor}$karmacur<ada>/$karmamax <139>V:${voicecolor}$voicecur<179>(${perfpre}${performcolor}${perfinfo}<179>) <fca>G:<179>(${g2nchangec}${g2nchange}<179>)}{-5};
+#showme {<bae>H:<088>${hpcolor}$hpcur<bae>/$hpmax<179>(${hpchangec}${hpchange}<179>)<aae>S:${spcolor}$spcur<aae>/$spmax<179>(${spchangec}${spchange}<179>)<ada>K:${karmacolor}$karmacur<ada>/$karmamax<139>V:${voicecolor}$voicecur<179>(${perfpre}${performcolor}${perfinfo}<179>)<fca>G:<179>(${g2nchangec}${g2nchange}<179>)}{-5};
 }
 
 
@@ -195,7 +195,7 @@
         #if {"$rock" != "Off"} {#var rockcolor <dcf>};
 
         #regex $songs1 {\bSL:%S} {#var silent &1};
-        #if {"$silent" == "Off" && "$lucidity" == "On" && $voicecur > 70 && $karmacur > 800 && $perfinfo == "D♭"} {perform silent lucidity};
+        #if {"$silent" == "Off" && "$lucidity" == "On" && $voicecur > 70 && $karmacur > 530 && $perfinfo == "D♭"} {perform silent lucidity};
         #if {"$silent" == "Off" && "$lucidity" == "Off"} {#var silentcolor <109>};
 	#if {"$silent" == "Off" && "$lucidity" == "On"} {#var silentcolor <bac>};
         #if {"$silent" != "Off"} {#var silentcolor <dcf>};
