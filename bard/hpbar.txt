@@ -142,17 +142,17 @@
     	#if {$pheat != "0"}{#var phcolor <129>};
 	
         #regex $spells1 {MB:%S} {#var mindblank &1};
-        #if {"$mindblank" == "Off" && "$mb" == "On"} {cast mind blank};
+        #if {"$mindblank" == "Off" && "$mb" == "On" && $perfinfo == "D♭"} {cast mind blank};
 	#if {$mindblank == "Off"} {#var mbcolor <109>};
     	#if {$mindblank != "Off"} {#var mbcolor <129>};
 	
         #regex $spells1 {B:%S} {#var blink &1};
-        #if {"$blink" == "Off" && "$blinkspell" == "On"} {cast blink};
+        #if {"$blink" == "Off" && "$blinkspell" == "On" && $perfinfo == "D♭"} {cast blink};
 	#if {$blink == "Off"} {#var bcolor <109>};
     	#if {$blink != "Off"}{#var bcolor <129>};
 	
 	#regex $spells1 {HR:%S} {#var harmonicreg &1};
-        #if {"$harmonicreg" == "No" && "$harmonicregeneration" == "On"} {cast harmonic regeneration};
+        #if {"$harmonicreg" == "No" && "$harmonicregeneration" == "On" && $perfinfo == "D♭"} {cast harmonic regeneration};
 	#if {$harmonicreg == "No"} {#var hrcolor <109>};
     	#if {$harmonicreg != "No"}{#var hrcolor <129>};
 	
