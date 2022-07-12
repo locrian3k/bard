@@ -141,13 +141,13 @@
 	#if {$pheat == "0"} {#var phcolor <109>};
     	#if {$pheat != "0"}{#var phcolor <129>};
 	
-        #regex $spells1 {MB:%w} {#var mindblank &1};
-        #if {$mindblank == "Off" && "$mb" == "On" && $perfinfo == "D♭"} {cast mind blank};
+        #regex $spells1 {MB:%S} {#var mindblank &1};
+        #if {$mindblank == "Off" && "$mb" == "On"} {cast mind blank};
 	#if {$mindblank == "Off"} {#var mbcolor <109>};
     	#if {$mindblank != "Off"}{#var mbcolor <129>};
 	
         #regex $spells1 {B:%S} {#var blink &1};
-        #if {$blink == "Off" && "$blinkspell" == "On" && $perfinfo == "D♭"} {cast blink};
+        #if {$blink == "Off" && "$blinkspell" == "On"} {cast blink};
 	#if {$blink == "Off"} {#var bcolor <109>};
     	#if {$blink != "Off"}{#var bcolor <129>};
 	
