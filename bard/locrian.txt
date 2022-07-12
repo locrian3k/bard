@@ -75,79 +75,79 @@
 	#var whom 0;
 	
 	
+	#nop { S P E L L S  A N D  S O N G S };
+	#alias {allon} {#var hs On;#var cc On;#var pn On;#var pe On;#var pg On;#var pf On;#var ph On;#var mb On;#var blinkspell On;#var harmonicregeneration On;#var focusrainbow On;#var om On;#var lb On;#var irock On;#var lucidity On;#var ag On;#var vsong On;#var devilsong On;#var worry On};
+	#alias {alloff} {#var hs Off;#var cc Off;#var pn Off;#var pe Off;#var pg Off;#var pf Off;#var ph Off;#var mb Off;#var blinkspell Off;#var harmonicregeneration Off;#var focusrainbow Off;#var om Off;#var lb Off;#var irock Off;#var lucidity Off;#var ag Off;#var vsong Off;#var devilsong Off;#var worry Off};
 	
 	#nop { S P E L L S };
-	
 	#var hs Off;
-	#alias {hson} {#var hs On;}
-	#alias {hsoff} {#var hs Off;}
-	
+		#alias {hson} {#var hs On;}
+		#alias {hsoff} {#var hs Off;}
 	#var cc Off;
 	#var ccready yes;
-	#alias {ccon} {#var cc On;}
-	#alias {ccoff} {#var cc Off;}
-	#action {Your claws shimmer and fade from your hands.} {#var ccready no};
-	#action {Your hands have not yet recovered.} {#var ccready no};
-	#action {Your hands have healed somewhat.} {#var ccready yes};
-	
+		#alias {ccon} {#var cc On;}
+		#alias {ccoff} {#var cc Off;}
+		#action {Your claws shimmer and fade from your hands.} {#var ccready no};
+		#action {Your hands have not yet recovered.} {#var ccready no};
+		#action {Your hands have healed somewhat.} {#var ccready yes};
 	#var pn Off;
-	#alias {non} {#var pn On;}
-	#alias {noff} {#var pn Off;}
-	
+		#alias {non} {#var pn On;}
+		#alias {noff} {#var pn Off;}
 	#var pe Off;
-	#alias {eon} {#var pe On;}
-	#alias {eoff} {#var pe Off;}
-	
+		#alias {eon} {#var pe On;}
+		#alias {eoff} {#var pe Off;}
 	#var pg Off;
-	#alias {gon} {#var pg On;}
-	#alias {goff} {#var pg Off;}
-	
+		#alias {gon} {#var pg On;}
+		#alias {goff} {#var pg Off;}	
 	#var pf Off;
-	#alias {fon} {#var pf On;}
-	#alias {foff} {#var pf Off;}
-	
+		#alias {fon} {#var pf On;}
+		#alias {foff} {#var pf Off;}
 	#var ph Off;
-	#alias {hon} {#var ph On;}
-	#alias {hoff} {#var ph Off;}
-	
+		#alias {hon} {#var ph On;}
+		#alias {hoff} {#var ph Off;}
 	#var mb Off;
-	#alias {mbon} {#var mb On;}
-	#alias {mboff} {#var mb Off;}
-	
+		#alias {mbon} {#var mb On;}
+		#alias {mboff} {#var mb Off;}
 	#var blinkspell Off;
-	#alias {bon} {#var blinkspell On;}
-	#alias {boff} {#var blinkspell Off;}
-	
+		#alias {bon} {#var blinkspell On;}
+		#alias {boff} {#var blinkspell Off;}
 	#var harmonicregeneration Off;
-	#alias {hron} {#var harmonicregeneration On;}
-	#alias {hroff} {#var harmonicregeneration Off;}
-	
+		#alias {hron} {#var harmonicregeneration On;}
+		#alias {hroff} {#var harmonicregeneration Off;}
 	#var focusrainbow Off;
-	#alias {fron} {#var focusrainbow On;}
-	#alias {froff} {#var focusrainbow Off;}
+		#alias {fron} {#var focusrainbow On;}
+		#alias {froff} {#var focusrainbow Off;}
 	
 	#nop { S O N G S };
-	
+	#nop { O Muse };
 	#var om Off;
-	#alias {omon} {#var om On;}
-	#alias {omoff} {#var om Off;}
-	
+		#alias {omon} {#var om On;}
+		#alias {omoff} {#var om Off;}
+	#nop { Leader of the Band };
 	#var lb Off;
-	#alias {lbon} {#var lb On;}
-	#alias {lboff} {#var lb Off;}
-	
+		#alias {lbon} {#var lb On;}
+		#alias {lboff} {#var lb Off;}
+	#nop { I am a Rock };
 	#var irock Off;
-	#alias {ron} {#var irock On;}
-	#alias {roff} {#var irock Off;}
-	
+		#alias {ron} {#var irock On;}
+		#alias {roff} {#var irock Off;}
+	#nop { Silent Lucidity };
 	#var lucidity Off;
-	#alias {slon} {#var lucidity On;}
-	#alias {sloff} {#var lucidity Off;}
-	
+		#alias {slon} {#var lucidity On;}
+		#alias {sloff} {#var lucidity Off;}
+	#nop { Amazing Grace };
 	#var ag Off;
-	#alias {agon} {#var ag On;}
-	#alias {agoff} {#var ag Off;}
-	
+		#alias {agon} {#var ag On;}
+		#alias {agoff} {#var ag Off;}
+	#nop { Devil Went Down to Georgia };
+	#var devil Off;
+		#alias {don} {#var devilsong On;}
+		#alias {doff} {#var devilsong Off;}
+	#nop {Don't Worry Be Happy };
+	#var worry Off;
+		#alias {dwon} {#var worry On;}
+		#alias dwoff} {#var worry Off;}
+	#nop { Vampire };
 	#var vsong Off;
-	#alias {von} {#var vsong On;}
-	#alias {voff} {#var vsong Off;}
+		#alias {von} {#var vsong On;}
+		#alias {voff} {#var vsong Off;}
