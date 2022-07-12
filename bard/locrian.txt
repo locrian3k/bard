@@ -89,6 +89,7 @@
 		#alias {ccoff} {#var cc Off;}
 		#action {Your claws shimmer and fade from your hands.} {#var ccready no};
 		#action {Your hands have not yet recovered.} {#var ccready no};
+		#action {There's no point, you have magical claws already.} {#var ccready no};
 		#action {Your hands have healed somewhat.} {#var ccready yes};
 	#var pn Off;
 		#alias {non} {#var pn On;}
