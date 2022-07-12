@@ -76,7 +76,7 @@
 	
 	
 	#nop { S P E L L S  A N D  S O N G S };
-	#alias {allon} {#var om On;#var lb On;#var irock On;#var lucidity On;#var ag On;#var vsong On;#var hs On;#var cc On;#var pn On;#var pe On;#var pg On;#var pf On;#var ph On;#var mb On;#var blinkspell On;};
+	#alias {allon} {#var om On;#var lb On;#var irock On;#var lucidity On;#var ag On;#var vsong On;#var hs On;#var pn On;#var pe On;#var pg On;#var pf On;#var ph On;#var mb On;#var blinkspell On;};
 	#alias {alloff} {#var hs Off;#var cc Off;#var pn Off;#var pe Off;#var pg Off;#var pf Off;#var ph Off;#var mb Off;#var blinkspell Off;#var harmonicregeneration Off;#var focusrainbow Off;#var om Off;#var lb Off;#var irock Off;#var lucidity Off;#var ag Off;#var vsong Off;#var devilsong Off;#var worry Off};
 	
 	#nop { S P E L L S };
