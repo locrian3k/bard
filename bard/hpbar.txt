@@ -95,7 +95,7 @@
 #if {$hpchange == 0} {#var hpchangec <088>};
 #if {$g2nchange == 0} {#var g2nchangec <088>};
 
-#showme {<bae>HP:<088>${hpcolor}$hpcur<bae>/$hpmax<179>(${hpchangec}${hpchange}<179>) <aae>SP:${spcolor}$spcur<aae>/$spmax<179>(${spchangec}${spchange}<179>) <ada>K:${karmacolor}$karmacur<ada>/$karmamax <139>V:${voicecolor}$voicecur <fca>G:<179>(${g2nchangec}${g2nchange}<179>)}{-5};
+#showme {<bae>H:<088>${hpcolor}$hpcur<bae>/$hpmax<179>(${hpchangec}${hpchange}<179>) <aae>S:${spcolor}$spcur<aae>/$spmax<179>(${spchangec}${spchange}<179>) <ada>K:${karmacolor}$karmacur<ada>/$karmamax <139>V:${voicecolor}$voicecur<179>(${perfpre}${performcolor}${perfinfo}<179>) <fca>G:<179>(${g2nchangec}${g2nchange}<179>)}{-5};
 }
 
 
@@ -107,7 +107,7 @@
 	#var spells1 %4;
 	
 	#regex $spells1 {HS:%d} {#var hskin &1};
-        #if {"$hskin" == "0" && "$hs" == "On" && $perfinfo == "D♭"} {cast hardened skin};
+        #if {"$hskin" <= "10" && "$hs" == "On" && $perfinfo == "D♭"} {cast hardened skin};
 	#if {"$hskin" == "0" && "$hs" == "Off"} {#var hskincolor <109>};
 	#if {"$hskin" == "0" && "$hs" == "On"} {#var hskincolor <bac>};
     	#if {"$hskin" != "0"}{#var hskincolor <eaf>};
@@ -119,31 +119,31 @@
     	#if {$catsclaw != "Off"}{#var catsclawcolor <eaf>};
 	
 	#regex $spells1 {PN:%d} {#var pneutral &1};
-        #if {$pneutral == 0 && "$pn" == "On" && $perfinfo == "D♭"} {cast protection from neutral};
+        #if {$pneutral <= "10" && "$pn" == "On" && $perfinfo == "D♭"} {cast protection from neutral};
 	#if {$pneutral == "0" && "$pn" == "Off"} {#var pncolor <109>};
 	#if {$pneutral == "0" && "$pn" == "On"} {#var pncolor <bac>};
     	#if {$pneutral != "0"}{#var pncolor <eaf>};
 	
         #regex $spells1 {PE:%d} {#var pevil &1};
-        #if {$pevil == 0 && "$pe" == "On" && $perfinfo == "D♭"} {cast protection from evil};
+        #if {$pevil <= "10" && "$pe" == "On" && $perfinfo == "D♭"} {cast protection from evil};
 	#if {$pevil == "0" && "$pe" == "Off"} {#var pecolor <109>};
 	#if {$pevil == "0" && "$pe" == "On"} {#var pecolor <bac>};
     	#if {$pevil != "0"}{#var pecolor <eaf>};
 	
         #regex $spells1 {PG:%d} {#var pgood &1};
-        #if {$pgood == 0 && "$pg" == "On" && $perfinfo == "D♭"} {cast protection from good};
+        #if {$pgood <= "10" && "$pg" == "On" && $perfinfo == "D♭"} {cast protection from good};
 	#if {$pgood == "0" && "$pg" == "Off"} {#var pgcolor <109>};
 	#if {$pgood == "0" && "$pg" == "On"} {#var pgcolor <bac>};
     	#if {$pgood != "0"}{#var pgcolor <eaf>};
 	
         #regex $spells1 {PF:%d} {#var pfrost &1};
-        #if {$pfrost == 0 && "$pf" == "On" && $perfinfo == "D♭"} {cast protection from frost};
+        #if {$pfrost <= "10" && "$pf" == "On" && $perfinfo == "D♭"} {cast protection from frost};
 	#if {$pfrost == "0" && "$pf" == "Off"} {#var pfcolor <109>};
 	#if {$pfrost == "0" && "$pf" == "On"} {#var pfcolor <bac>};
     	#if {$pfrost != "0"}{#var pfcolor <eaf>};
 	
         #regex $spells1 {PH:%d} {#var pheat &1};
-        #if {$pheat == 0 && "$ph" == "On" && $perfinfo == "D♭"} {cast protection from heat};
+        #if {$pheat <= "10" && "$ph" == "On" && $perfinfo == "D♭"} {cast protection from heat};
 	#if {$pheat == "0" && "$ph" == "Off"} {#var phcolor <109>};
 	#if {$pheat == "0" && "$ph" == "On"} {#var phcolor <bac>};
     	#if {$pheat != "0"}{#var phcolor <eaf>};
@@ -226,7 +226,7 @@
 	
 	#nop { CHANGE TO THIS ONE WHEN YOU GET FOCUS THE RAINBOW #showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F 		${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR ${frcolor}FR}{-4}; };
 	
-	#showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F ${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR ${smilecolor}SM ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V ${perfpre}${performcolor}${perfinfo}}{-4};
+	#showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F ${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR ${smilecolor}SM ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V}{-4};
     };
 
 #NOP {Coffin:6/18 Sm:[2/57%] <> c:[135]};
