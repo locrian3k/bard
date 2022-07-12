@@ -124,6 +124,13 @@
 		#alias {froff} {#var focusrainbow Off;}
 	
 	#nop { S O N G S };
+	#nop { Smile };
+	#var sm Off;
+	#var smready yes;
+		#alias {smon} {#var sm On;}
+		#alias {smoff} {#var sm Off;}
+		#action {You feel happy and smiley all over!} {#var smready no;#var sm On};
+		#action {You're not happy anymore.} {#var smready yes};
 	#nop { O Muse };
 	#var om Off;
 		#alias {omon} {#var om On;}
