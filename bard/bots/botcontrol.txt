@@ -100,7 +100,7 @@
         #var botting on;
         #var smurfbot On;
         #var whereami Smurfs-100;
-        #class {bots} {read} {tintin/bard/bots/bardsmurfbot.txt};
+        #class {bots} {read} {tintin/bard/bots/smurfbot.txt};
         scaler 100;
         #showme {<120>You may now proceed to play slaughter smurfs.<088>};allon;psclear;smurfbot;
         }
@@ -228,7 +228,7 @@
         #var icebot Off;
         #class bots kill;
         #var whereami Clear;
-        #var botting off;#read locrian/bardcorpses/locrianonlycorpses.txt;
+        #var botting off;#read tintin/corpses/mycorpses.txt;
         idleon}
 
 #action {You cannot go} {#if {"$botting" == "On"} {nobot;#showme <120>Something is screwed up, fix your bot.<088>}}
