@@ -117,7 +117,7 @@
     	#if {$catsclaw != "Off"}{#var catsclawcolor <129>};
 	
 	#regex $spells1 {PN:%d} {#var pneutral &1};
-        #if "{$pneutral" == 0 && "$pn" == "On"} {cast protection from neutral};
+        #if {$pneutral == 0 && "$pn" == "On"} {cast protection from neutral};
 	#if {$pneutral == "0"} {#var pncolor <109>};
     	#if {$pneutral != "0"}{#var pncolor <129>};
 	
@@ -202,7 +202,7 @@
 	
 	#nop { CHANGE TO THIS ONE WHEN YOU GET FOCUS THE RAINBOW #showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F 		${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR ${frcolor}FR}{-4}; };
 	
-	#showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F ${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR ${perfpre}${performcolor}${perfinfo}<088>${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V}{-4};
+	#showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F ${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR ${perfpre}${performcolor}${perfinfo} <088>${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V}{-4};
     };
 
 #NOP {Coffin:6/18 Sm:[2/57%] <> c:[135]};
