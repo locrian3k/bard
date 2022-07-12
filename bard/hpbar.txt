@@ -174,42 +174,50 @@
 	#var songs1 %5;
 	#regex $songs1 {\bOM:%S} {#var omuse &1};
         #if {"$omuse" == "Off" && "$om" == "On" && $voicecur > 20 && $karmacur > 400 && $perfinfo == "D♭"} {perform o muse};
-        #if {"$omuse" == "Off"} {#var omusecolor <109>};
+        #if {"$omuse" == "Off" && "$om" == "Off"} {#var omusecolor <109>};
+	#if {"$omuse" == "Off" && "$om" == "On"} {#var omusecolor <bac>};
         #if {"$omuse" != "Off"} {#var omusecolor <dcf>};
 	
 	#regex $songs1 {\bLB:%S} {#var leader &1};
 	#if {"$leaderoftheband" == "Off" && "$lb" == "On" && $voicecur > 20 && $coffincur == 0 && $karmacur < 300 && $perfinfo == "D♭"} {perform leader of the band};
-        #if {"$leader" == "Off"} {#var leadercolor <109>};
+        #if {"$leader" == "Off" && "$lb" == "Off"} {#var leadercolor <109>};
+	#if {"$leader" == "Off" && "$leader" == "On"} {#var leadercolor <bac>};
         #if {$leader != "Off"} {#var leadercolor <dcf>};
 	
 	#regex $songs1 {\bR:%S} {#var rock &1};
         #if {"$rock" == "Off" && "$irock" == "On" && $voicecur > 70 && $karmacur > 800 && $perfinfo == "D♭"} {perform i am a rock};
-        #if {"$rock" == "Off"} {#var rockcolor <109>};
+        #if {"$rock" == "Off" && "$irock" == "Off"} {#var rockcolor <109>};
+	#if {"$rock" == "Off" && "$irock" == "On"} {#var rockcolor <bac>};
         #if {"$rock" != "Off"} {#var rockcolor <dcf>};
 
         #regex $songs1 {\bSL:%S} {#var silent &1};
         #if {"$silent" == "Off" && "$lucidity" == "On" && $voicecur > 70 && $karmacur > 800 && $perfinfo == "D♭"} {perform silent lucidity};
-        #if {"$silent" == "Off"} {#var silentcolor <109>};
+        #if {"$silent" == "Off" && "$lucidity" == "Off"} {#var silentcolor <109>};
+	#if {"$silent" == "Off" && "$lucidity" == "On"} {#var silentcolor <bac>};
         #if {"$silent" != "Off"} {#var silentcolor <dcf>};
 
         #regex $songs1 {\bAG:%S} {#var grace &1};
         #if {"$grace" == "Off" && "$ag" == "On" && $voicecur > 50 && $karmacur > 400 && $perfinfo == "D♭"} {perform amazing grace};
-	#if {"$grace" == "Off"} {#var gracecolor <109>};
+	#if {"$grace" == "Off" && "$ag" == "Off"} {#var gracecolor <109>};
+	#if {"$grace" == "Off" && "$ag" == "On"} {#var gracecolor <bac>};
         #if {"$grace" != "Off"} {#var gracecolor <dcf>};
 	
 	#regex $songs1 {\bDW:%S} {#var devil &1};
 	#if {"$devil" == "Off" && "$devilsong" == "On" && $perfinfo == "D♭"} {perform devil went down to georgia};
-        #if {"$devil" == "Off"} {#var devilcolor <109>};
+        #if {"$devil" == "Off" && "$devilsong" == "Off"} {#var devilcolor <109>};
+	#if {"$devil" == "Off" && "$devilsong" == "On"} {#var devilcolor <bac>};
         #if {"$devil" != "Off"} {#var devilcolor <dcf>};
 
 	#regex $songs1 {\bD:%S} {#var dworry &1};
 	#if {"$dworry" == "Off" && "$worry" == "On" && $perfinfo == "D♭"} {perform don't worry be happy};
-        #if {"$dworry" == "Off"} {#var dworrycolor <109>};
+        #if {"$dworry" == "Off" && "$worry" == "Off"} {#var dworrycolor <109>};
+	#if {"$dworry" == "Off" && "$worry" == "On"} {#var dworrycolor <bac>};
         #if {"$dworry" != "Off"} {#var dworrycolor <dcf>};
 
         #regex $songs1 {\bV:%S} {#var vamp &1};
         #if {"$vamp" == "Off" && "$vsong" == "On" && $voicecur > 50 && $karmacur > 400 && $perfinfo == "D♭"} {perform vampire};
-        #if {"$vamp" == "Off"} {#var vampcolor <109>};
+        #if {"$vamp" == "Off" && "$vsong" == "Off"} {#var vampcolor <109>};
+	#if {"$vamp" == "Off" && "$vsong" == "On"} {#var vampcolor <bac>};
         #if {"$vamp" != "Off"} {#var vampcolor <dcf>};
 	
 	#nop { CHANGE TO THIS ONE WHEN YOU GET FOCUS THE RAINBOW #showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F 		${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR ${frcolor}FR}{-4}; };
