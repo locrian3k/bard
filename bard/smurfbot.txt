@@ -1,0 +1,49 @@
+#nop {Start from cot}
+
+#alias {smurfbot} {#var smurfstepnumber 1;#var smurfbot On;#var delaytime 0;#delay {3}{smurfwalk}}
+#alias {delay %1} {#showme {Delay set to %1 seconds.};#var delaytime %1}
+#action {There is no coins here.} {#delay {smurfdelay} {kill smurf} {$delaytime}}
+#alias {smurfwalk} {smurfstep$smurfstepnumber;#math smurfstepnumber $smurfstepnumber +1}
+#act {There is no smurf here.} {#if {"$smurfbot" == "On"} {smurfwalk}}
+#action {You cannot go} {#if {"$smurfbot" == "On"} {nobot;{#showme <120>Something is screwed up, fix your smurfbot.<088>}}}
+#action {You have no offered missions.} {#if {"$smurfbot" == "On"} {smurfwalk}}
+
+#alias {smurfstep1} {#showme Locrian yells at you: Beginning smurfs.;con;n;w;n;n;e;n;enter;e;s;s;kill smurf}
+#alias {smurfstep2} {ga;s;kill smurf}
+#alias {smurfstep3} {ga;s;mission ask;mission accept;#delay {3}{smurfwalk}}
+#alias {smurfstep4} {ga;w;kill smurf}
+#alias {smurfstep5} {ga;e;e;kill smurf}
+#alias {smurfstep6} {ga;w;s;kill smurf}
+#alias {smurfstep7} {ga;w;kill smurf}
+#alias {smurfstep8} {ga;kill smurf}
+#alias {smurfstep9} {ga;e;e;kill smurf}
+#alias {smurfstep10} {ga;e;kill smurf}
+#alias {smurfstep11} {ga;w;sw;kill smurf}
+#alias {smurfstep12} {ga;se;kill smurf}
+#alias {smurfstep13} {ga;w;kill smurf}
+#alias {smurfstep14} {ga;e;s;w;w;n;kill smurf}
+#alias {smurfstep15} {ga;s;e;e;n;nw;ne;w;n;n;n;n;n;w;vortex;s;w;s;s;w;s;s;e;s;s;s;e;s;w;w;s;s;n;n;e;e;n;w;n;n;n;w;n;n;e;n;n;e;n;enter;e;s;s;s;s;s;e;e;#8 s;enter;cast light;w;kill spider}
+#alias {smurfstep16} {ga;e;e;kill rat}
+#alias {smurfstep17} {ga;w;s;kill cat}
+#alias {smurfstep18} {ga;w;kill rat}
+#alias {smurfstep19} {ga;e;e;kill spider}
+#alias {smurfstep20} {ga;w;s;w;kill rat}
+#alias {smurfstep21} {ga;e;e;kill rat}
+#alias {smurfstep22} {ga;w;s;w;kill spider}
+#alias {smurfstep23} {ga;e;e;kill rat}
+#alias {smurfstep24} {ga;w;s;kill rat}
+#alias {smurfstep25} {ga;w;kill rat}
+#alias {smurfstep26} {ga;e;e;kill spider}
+#alias {smurfstep27} {ga;w;s;w;kill rat}
+#alias {smurfstep28} {ga;e;s;kill spider}
+#alias {smurfstep29} {ga;w;kill spider}
+#alias {smurfstep30} {ga;e;e;kill rat}
+#alias {smurfstep31} {ga;w;n;e;kill gargamel}
+#alias {smurfstep32} {ga;out;s;s;mission return;kill smurf}
+#alias {smurfstep33} {ga;n;n;n;n;w;vortex;s;w;s;s;w;s;s;e;s;s;s;e;s;w;w;s;s;n;n;e;e;n;w;n;n;n;e;n;#showme Locrian yells at you: Smurfs are done;#var smurfbot Off;nobot}
+
+#action {There is no gargamel here.} {smurfwalk}
+#action {There is no cat here.} {smurfwalk}
+#action {There is no smurf here.} {smurfwalk}
+#action {There is no spider here.} {smurfwalk}
+#action {There is no rat here.} {smurfwalk}
