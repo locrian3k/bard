@@ -128,8 +128,9 @@
 	
         #regex $spells1 {PG:%d} {#var pgood &1};
         #if {$pgood == 0 && "$pg" == "On" && $perfinfo == "D♭"} {cast protection from good};
-	#if {$pgood == "0"} {#var pgcolor <109>};
-    	#if {$pgood != "0"}{#var pgcolor <129>};
+	#if {$pgood == "0" && "$pg" == "Off"} {#var pgcolor <109>};
+	#if {$pgood == "0" && "$pg" == "On"} {#var pgcolor <bab>};
+    	#if {$pgood != "0"}{#var pgcolor <baf>};
 	
         #regex $spells1 {PF:%d} {#var pfrost &1};
         #if {$pfrost == 0 && "$pf" == "On" && $perfinfo == "D♭"} {cast protection from frost};
