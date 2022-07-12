@@ -109,50 +109,60 @@
 	#regex $spells1 {HS:%d} {#var hskin &1};
         #if {"$hskin" == "0" && "$hs" == "On"} {cast hardened skin};
 	#if {"$hskin" == "0"} {#var hskincolor <109>};
-    	#if {$hskin != "0"}{#var hskincolor <129>};
+    	#if {"$hskin" != "0"}{#var hskincolor <129>};
 
         #regex $spells1 {CC:%d} {#var catsclaw &1};
         #if {"$catsclaw" == "Off" && "$ccready" == "yes" && "$cc" == "On"} {cast cats claw};
 	#if {"$catsclaw" == "Off"} {#var catsclawcolor <109>};
-    	#if {$catsclaw != "Off"}{#var catsclawcolor <129>};
+    	#if {"$catsclaw" != "Off"}{#var catsclawcolor <129>};
 	
 	#regex $spells1 {\bPN:%d} {#var pneutral &1};
-        #if {$pneutral == 0 && "$pn" == "On"} {cast protection from neutral};
+        #if "{$pneutral" == 0 && "$pn" == "On"} {cast protection from neutral};
 	#if {"$pneutral" == "0"} {#var pncolor <109>};
-    	#if {$pneutral != "0"}{#var pncolor <129>};
+    	#if {"$pneutral" != "0"}{#var pncolor <129>};
 	
         #regex $spells1 {\bPE:%d} {#var pevil &1};
-        #if {$pevil == 0 && "$pe" == "On"} {cast protection from evil};
+        #if {"$pevil"== 0 && "$pe" == "On"} {cast protection from evil};
 	#if {"$pevil" == "0"} {#var pecolor <109>};
-    	#if {$pevil != "0"}{#var pecolor <129>};
+    	#if {"$pevil" != "0"}{#var pecolor <129>};
 	
         #regex $spells1 {\bPG:%d} {#var pgood &1};
-        #if {$pgood == 0 && "$pg" == "On"} {cast protection from good};
+        #if {"$pgood" == 0 && "$pg" == "On"} {cast protection from good};
 	#if {"$pgood" == "0"} {#var pgcolor <109>};
-    	#if {$pgood != "0"}{#var pgcolor <129>};
+    	#if {"$pgood" != "0"}{#var pgcolor <129>};
 	
         #regex $spells1 {\bPF:%d} {#var pfrost &1};
-        #if {$pfrost == 0 && "$pf" == "On"} {cast protection from frost};
+        #if {"$pfrost" == 0 && "$pf" == "On"} {cast protection from frost};
 	#if {"$pfrost" == "0"} {#var pfcolor <109>};
-    	#if {$pfrost != "0"}{#var pfcolor <129>};
+    	#if {"$pfrost" != "0"}{#var pfcolor <129>};
 	
         #regex $spells1 {\bPH:%d} {#var pheat &1};
-        #if {$pheat == 0 && "$ph" == "On"} {cast protection from heat};
+        #if {"$pheat" == 0 && "$ph" == "On"} {cast protection from heat};
 	#if {"$pheat" == "0"} {#var phcolor <109>};
-    	#if {$pheat != "0"}{#var phcolor <129>};
+    	#if {"$pheat" != "0"}{#var phcolor <129>};
 	
         #regex $spells1 {\bMB:%S} {#var mindblank &1};
         #if {"$mindblank" == "Off" && "$mb" == "On"} {cast mind blank};
 	#if {"$mindblank" == "Off"} {#var mbcolor <109>};
-    	#if {$mindblank != "Off"}{#var mbcolor <129>};
+    	#if {"$mindblank" != "Off"}{#var mbcolor <129>};
 	
         #regex $spells1 {\bB:%S} {#var blink &1};
         #if {"$blink" == "Off" && "$blinkspell" == "On"} {cast blink};
 	#if {"$blink" == "Off"} {#var bcolor <109>};
-    	#if {$blink != "Off"}{#var bcolor <129>};
+    	#if {"$blink" != "Off"}{#var bcolor <129>};
+	
+	#regex $spells1 {\bHR:%S} {#var harmonicreg &1};
+        #if {"$harmonicreg" == "Off" && "$harmonicregeneration" == "On"} {cast harmonic regeneration};
+	#if {"$harmonicreg" == "Off"} {#var hrcolor <109>};
+    	#if {"$harmonicreg" != "Off"}{#var hrcolor <129>};
+	
+	#regex $spells1 {\bFR:%S} {#var frain &1};
+        #if {"$frain" == "Off" && "$focusrainbow" == "On"} {cast focus the rainbow};
+	#if {"$frain" == "Off"} {#var frcolor <109>};
+    	#if {$frain != "Off"}{#var frcolor <129>};	
 
 	#var songs1 %5;
-	#showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F ${phcolor}H ${mbcolor}MB ${bcolor}B}{-4};
+	#showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F ${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR ${frcolor}FR}{-4};
     };
 
 #NOP {Coffin:6/18 Sm:[2/57%] <> c:[135]};
