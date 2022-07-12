@@ -162,16 +162,6 @@
     	#nop {  #if {$frain != "Off"}{#var frcolor <129>};	                             };
 
 	#var songs1 %5;
-	#nop { CHANGE TO THIS ONE WHEN YOU GET FOCUS THE RAINBOW #showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F 		${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR ${frcolor}FR}{-4}; };
-	#showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F ${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR}{-4};
-    };
-
-#NOP {Coffin:6/18 Sm:[2/57%] <> c:[135]};
-#GAG {^Coffin:%1};
-#ACT {^Coffin:%1} {
-
-    #var coffinbar %1;
-
 	#regex $songs1 {\bOM:%S} {#var omuse &1};
         #if {"$omuse" == "Off" && "$om" == "On" && $voicecur > 20 && $karmacur > 400} {perform o muse};
         #if {"$omuse" == "Off"} {#var omusecolor <109>};
@@ -209,6 +199,17 @@
         #if {"$vamp" == "Off" && "$vsong" == "On" && $voicecur > 50 && $karmacur > 400} {perform vampire};
         #if {"$vamp" == "Off"} {#var vampcolor <109>};
         #if {"$vamp" != "Off"} {#var vampcolor <dcf>};
+	
+	#nop { CHANGE TO THIS ONE WHEN YOU GET FOCUS THE RAINBOW #showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F 		${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR ${frcolor}FR}{-4}; };
+	
+	#showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F ${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR ${perfpre}${performcolor}${perfinfo}<088> ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V}{-4};
+    };
+
+#NOP {Coffin:6/18 Sm:[2/57%] <> c:[135]};
+#GAG {^Coffin:%1};
+#ACT {^Coffin:%1} {
+
+    #var coffinbar %1;
     
     #regex {$coffinbar} {^%d/%d} {#var coffincur &1;#var coffinmax &2};
  
@@ -222,7 +223,7 @@
 
     #regex {$coffinbar} {\bc:\[%d\]} {#var coincur &1};
 
-    #showme {<139>c:$coincur<088> Sm:$smilecur/$smilemax\%<088> ${perfpre}${performcolor}${perfinfo}<088> ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V <109>C:$coffincur/$coffinmax <279>[${encolor}${ens}<279>]}{-3};
+    #showme {<139>c:$coincur<088> Sm:$smilecur/$smilemax\%<088> <109>C:$coffincur/$coffinmax <279>[${encolor}${ens}<279>]}{-3};
     
     #nop {#showme {<109>C:$coffincur/$coffinmax <239>c:$coincur <dff>Sm:$smilecur/$smilemax\% <139>${perfpre}${performcolor}${perfinfo}<139> ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V<089> <279>[${encolor}${ens}<279>]<fac>}{-3};};
 
