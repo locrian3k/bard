@@ -91,32 +91,32 @@
 	#action {Your hands have healed somewhat.} {#var ccready yes};
 	
 	#var pn Off;
-	#alias {pnon} {#var pn On;}
-	#alias {pnoff} {#var pn Off;}
+	#alias {non} {#var pn On;}
+	#alias {noff} {#var pn Off;}
 	
 	#var pe Off;
-	#alias {peon} {#var pe On;}
-	#alias {peoff} {#var pe Off;}
+	#alias {eon} {#var pe On;}
+	#alias {eoff} {#var pe Off;}
 	
 	#var pg Off;
-	#alias {pgon} {#var pg On;}
-	#alias {pgoff} {#var pg Off;}
+	#alias {gon} {#var pg On;}
+	#alias {goff} {#var pg Off;}
 	
 	#var pf Off;
-	#alias {pfon} {#var pf On;}
-	#alias {pfoff} {#var pf Off;}
+	#alias {fon} {#var pf On;}
+	#alias {foff} {#var pf Off;}
 	
 	#var ph Off;
-	#alias {phon} {#var ph On;}
-	#alias {phoff} {#var ph Off;}
+	#alias {hon} {#var ph On;}
+	#alias {hoff} {#var ph Off;}
 	
 	#var mb Off;
 	#alias {mbon} {#var mb On;}
 	#alias {mboff} {#var mb Off;}
 	
 	#var blinkspell Off;
-	#alias {blinkon} {#var blinkspell On;}
-	#alias {blinkoff} {#var blinkspell Off;}
+	#alias {bon} {#var blinkspell On;}
+	#alias {boff} {#var blinkspell Off;}
 	
 	#var harmonicregeneration Off;
 	#alias {hron} {#var harmonicregeneration On;}
@@ -137,8 +137,8 @@
 	#alias {lboff} {#var lb Off;}
 	
 	#var irock Off;
-	#alias {rockon} {#var irock On;}
-	#alias {rockoff} {#var irock Off;}
+	#alias {ron} {#var irock On;}
+	#alias {roff} {#var irock Off;}
 	
 	#var lucidity Off;
 	#alias {slon} {#var lucidity On;}
