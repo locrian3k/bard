@@ -118,6 +118,14 @@
 	#alias {blinkon} {#var blinkspell On;}
 	#alias {blinkoff} {#var blinkspell Off;}
 	
+	#var harmonicregeneration Off;
+	#alias {hron} {#var harmonicregeneration On;}
+	#alias {hroff} {#var harmonicregeneration Off;}
+	
+	#var focusrainbow Off;
+	#alias {fron} {#var focusrainbow On;}
+	#alias {froff} {#var focusrainbow Off;}
+	
 	#nop { S O N G S };
 	
 	#var om Off;
