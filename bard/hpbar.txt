@@ -238,8 +238,9 @@
     #regex {$coffinbar} {^%d/%d} {#var coffincur &1;#var coffinmax &2};
  
     #regex {$coffinbar} {Sm:\[%d/%d\%\]} {#var smilecur &1;#var smilemax &2};
-        #if {$smilecur >= "1" && "$sm" == "On" && "$smready" == "yes" && $perfinfo == "D♭"} {perform smile;#var smcolor <eaf>};
+        #if {$smilecur >= "1" && "$sm" == "On" && "$smready" == "yes" && $perfinfo == "D♭"} {perform smile;#var smcolor <129>};
 	#if {"$sm" == "Off"} {#var smilecolor <109>};
+	#if {"$smready" == "yes"} {#var smilecolor <129>};
 
     #regex {$coffinbar} {\bP: %d} {#var perfinfo &1;#var perfpre {}} {#var performcolor <139>;#var perfinfo D♭;#unvar perfpre};
 
