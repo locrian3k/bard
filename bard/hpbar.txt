@@ -113,13 +113,13 @@
 
         #regex $spells1 {CC:%d} {#var catsclaw &1};
         #if {"$catsclaw" == "Off" && "$ccready" == "yes" && "$cc" == "On"} {cast cats claw};
-	#if {"$catsclaw" == "Off"} {#var catsclawcolor <109>};
-    	#if {"$catsclaw" != "Off"}{#var catsclawcolor <129>};
+	#if {$catsclaw == "Off"} {#var catsclawcolor <109>};
+    	#if {$catsclaw != "Off"}{#var catsclawcolor <129>};
 	
 	#regex $spells1 {PN:%d} {#var pneutral &1};
         #if "{$pneutral" == 0 && "$pn" == "On"} {cast protection from neutral};
-	#if {"$pneutral" == "0"} {#var pncolor <109>};
-    	#if {"$pneutral" != "0"}{#var pncolor <129>};
+	#if {$pneutral == "0"} {#var pncolor <109>};
+    	#if {$pneutral != "0"}{#var pncolor <129>};
 	
         #regex $spells1 {PE:%d} {#var pevil &1};
         #if {"$pevil"== 0 && "$pe" == "On"} {cast protection from evil};
@@ -170,7 +170,7 @@
 	#regex $songs1 {\bLB:%S} {#var leader &1};
 	#if {"$leaderoftheband" == "Off" && "$lb" == "On" && $voicecur > 20 && $coffincur == 0 && $karmacur < 300} {perform leader of the band};
         #if {"$leader" == "Off"} {#var leadercolor <109>};
-        #if {"$leader" != "Off"} {#var leadercolor <dcf>};
+        #if {$leader != "Off"} {#var leadercolor <dcf>};
 	
 	#regex $songs1 {\bR:%S} {#var rock &1};
         #if {"$rock" == "Off" && "$irock" == "On" && $voicecur > 70 && $karmacur > 800} {perform i am a rock};
@@ -215,7 +215,7 @@
  
     #regex {$coffinbar} {Sm:\[%d/%d\%\]} {#var smilecur &1;#var smilemax &2};
 
-    #regex {$coffinbar} {\bP: %S} {#var perfinfo &1;#var perfpre {P:}} {#var performcolor <139>;#var perfinfo D♭;#unvar perfpre};
+    #regex {$coffinbar} {\bP: %d} {#var perfinfo &1;#var perfpre {}} {#var performcolor <139>;#var perfinfo D♭;#unvar perfpre};
 
     #if {$perfinfo != "D♭" && $perfinfo >= 50}{#var performcolor <119>};
     #if {$perfinfo != "D♭" && $perfinfo < 50 && $perfinfo > 20}{#var performcolor <139>};
@@ -224,8 +224,6 @@
     #regex {$coffinbar} {\bc:\[%d\]} {#var coincur &1};
 
     #showme {<139>c:$coincur<088> Sm:$smilecur/$smilemax\%<088> <109>C:$coffincur/$coffinmax <279>[${encolor}${ens}<279>]}{-3};
-    
-    #nop {#showme {<109>C:$coffincur/$coffinmax <239>c:$coincur <dff>Sm:$smilecur/$smilemax\% <139>${perfpre}${performcolor}${perfinfo}<139> ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V<089> <279>[${encolor}${ens}<279>]<fac>}{-3};};
 
     #NOP { All your message colors and the showme here, but need to stay inside the Coffin HP BAR action };
 
