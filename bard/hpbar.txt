@@ -237,9 +237,9 @@
     
     #regex {$coffinbar} {^%d/%d} {#var coffincur &1;#var coffinmax &2};
     	#if {$coffincur == $coffinmax} {#var coffincurcolor <aef>;#var needcorspes Off};
-	#if {$coffincur < $coffinmax * .66 && $coffincur > $coffinmax * .33} {#var coffincurcolor <dda>;#var needcorpses On};
-	#if {$coffincur >= "1" && $coffincur < $coffinmax * .32} {#var coffincurcolor <279>;#var needcorpses On};
-	#if {$coffinmax >= "1"} {#var coffinmaxcolor <aef>};
+	#if {$coffincur < $coffinmax * 0.66 && $coffincur > $coffinmax * 0.33} {#var coffincurcolor <dda>;#var needcorpses On};
+	#if {$coffincur >= 0 && $coffincur < $coffinmax * 0.32} {#var coffincurcolor <279>;#var needcorpses On};
+	#if {$coffinmax >= 1} {#var coffinmaxcolor <aef>};
  
     #regex {$coffinbar} {Sm:\[%d/%d\%\]} {#var smilecur &1;#var smilemax &2};
         #if {$smilecur >= "1" && "$sm" == "On" && "$smready" == "yes" && $perfinfo == "D♭"} {perform smile;#var smcolor <129>};
