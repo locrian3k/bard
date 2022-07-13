@@ -95,7 +95,7 @@
 #if {$hpchange == 0} {#var hpchangec <088>};
 #if {$g2nchange == 0} {#var g2nchangec <088>};
 
-#showme {<bae>H:<088>${hpcolor}$hpcur<bae>/$hpmax${hpchangec}${hpchange} <aae>S:${spcolor}$spcur<aae>/$spmax${spchangec}${spchange} <ada>K:${karmacolor}$karmacur<ada>/$karmamax <139>V:${voicecolor}$voicecur<179>/${perfpre}${performcolor}${perfinfo}<fca>G:${g2nchangec}${g2nchange}}{-5};
+#showme {<bae>H:<088>${hpcolor}$hpcur<bae>/$hpmax${hpchangec}${hpchange} <aae>S:${spcolor}$spcur<aae>/$spmax${spchangec}${spchange} <ada>K:${karmacolor}$karmacur<ada>/$karmamax <139>V:${voicecolor}$voicecur<179>/${perfpre}${performcolor}${perfinfo} <fca>G:${g2nchangec}${g2nchange}}{-5};
 }
 
 
