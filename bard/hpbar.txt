@@ -236,15 +236,15 @@
     #var coffinbar %1;
     
     #regex {$coffinbar} {^%d/%d} {#var coffincur &1;#var coffinmax &2};
-    	#var coffincur %1;
-	#var coffinmax %2;
-	#if {%1 == %2}{#var coffincolor <ada>;wrapoff;sbon};
-    	#if {%1 > %6 * 0.80 && %5 < %6}{#var coffincolor <aea>};
-    	#if {%1 < %2 * 0.66 && %1 > %2 * 0.33}{#var coffincolor <afa>;sboff;wrapon};
-    	#if {%1 < %2 * 0.32}{#var coffincolor <119>};
-    	#if {%1 == 05}{#var coffincolor <109>};
-	#if {%2 == 0}{#var coffinmaxcolor <109>};
-	#if {%2 > 0}{#var coffinmaxcolor <aea>};
+    	#var coffincur %5;
+	#var coffinmax %6;
+	#if {%5 == %6}{#var coffincolor <ada>;wrapoff;sbon};
+    	#if {%5 > %6 * 0.80 && %5 < %6}{#var coffincolor <aea>};
+    	#if {%5 < %6 * 0.66 && %5 > %6 * 0.33}{#var coffincolor <afa>;sboff;wrapon};
+    	#if {%5 < %6 * 0.32}{#var coffincolor <119>};
+    	#if {%5 == "0"}{#var coffincolor <109>};
+	#if {%6 == "0"}{#var coffinmaxcolor <109>};
+	#if {%6 > "0"}{#var coffinmaxcolor <aea>};
  
     #regex {$coffinbar} {Sm:\[%d/%d\%\]} {#var smilecur &1;#var smilemax &2};
         #if {$smilecur >= "1" && "$sm" == "On" && "$smready" == "yes" && $perfinfo == "D♭"} {perform smile;#var smcolor <129>};
@@ -255,7 +255,7 @@
     #regex {$coffinbar} {\bP: %d} {#var perfinfo &1;#var perfpre {}} {#var performcolor <139>;#var perfinfo D♭;#unvar perfpre};
 
     #regex {$coffinbar} {\bc:\[%d\]} {#var coincur &1};
-    #showme {<dda>c:$coincur<088> Sm:$smilecur/$smilemax\%<088> <109>C:${coffincolor}$coffincur<179>/${coffinmaxcolor}$coffinmax <279>[${encolor}${ens}<279>]}{-3};
+    #showme {<dda>c:$coincur<088> Sm:$smilecur/$smilemax\%<088> <109>C:${coffincolor}$coffincur<179>/${coffinmaxcolor}$coffinmax<088> <279>[${encolor}${ens}<279>]}{-3};
 
     #NOP { All your message colors and the showme here, but need to stay inside the Coffin HP BAR action };
 
