@@ -101,3 +101,11 @@
 	#var vsong Off;
 		#alias {von} {#var vsong On;}
 		#alias {voff} {#var vsong Off;}
+	
+	#nop { C O R P S E S };
+	#var wrap Off;
+		#alias {won} {#var wrap On;}
+		#alias {woff} {#var wrap Off;}
+	#var soulbead Off;
+		#alias {sbon} {#var soulbead On;}
+		#alias {sboff} {#var soulbead Off;}
