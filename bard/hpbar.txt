@@ -244,7 +244,7 @@
     	#if {%1 < %2 * 0.32}{#var coffincolor <119>};
     	#if {%1 == 05}{#var coffincolor <109>};
 	#if {%2 == 0}{#var coffinmaxcolor <109>};
-	#if {%2 > 0}{#var coffinmaxcolor <aea>;
+	#if {%2 > 0}{#var coffinmaxcolor <aea>};
  
     #regex {$coffinbar} {Sm:\[%d/%d\%\]} {#var smilecur &1;#var smilemax &2};
         #if {$smilecur >= "1" && "$sm" == "On" && "$smready" == "yes" && $perfinfo == "D♭"} {perform smile;#var smcolor <129>};
