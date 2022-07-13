@@ -238,13 +238,6 @@
     #regex {$coffinbar} {^%d/%d} {#var coffincur &1;#var coffinmax &2};
     	#var coffincur %5;
 	#var coffinmax %6;
-	#if {%5 == %6}{#var coffincolor <ada>;#var wrap Off;;#var soulbead On};
-    	#if {%5 > %6 * 0.80 && %5 < %6}{#var coffincolor <aea>};
-    	#if {%5 < %6 * 0.66 && %5 > %6 * 0.33}{#var coffincolor <afa>;#var soulbead Off;#var wrap On};
-    	#if {%5 < %6 * 0.32}{#var coffincolor <119>};
-    	#if {%5 == "0"}{#var coffincolor <109>};
-	#if {%6 == "0"}{#var coffinmaxcolor <109>};
-	#if {%6 > "0"}{#var coffinmaxcolor <aea>};
  
     #regex {$coffinbar} {Sm:\[%d/%d\%\]} {#var smilecur &1;#var smilemax &2};
         #if {$smilecur >= "1" && "$sm" == "On" && "$smready" == "yes" && $perfinfo == "D♭"} {perform smile;#var smcolor <129>};
