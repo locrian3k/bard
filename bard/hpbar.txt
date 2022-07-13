@@ -41,7 +41,7 @@
     #if {$g2nchange >= 30} {#var g2nchangec <ffa>};
     #if {$g2nchange >= 20 && $g2nchange < 30} {#var g2nchangec <129>};
     #if {$g2nchange < 20} {#var g2nchangec <119>};
-
+	
 	#var hpcur %1;
 	#var hpmax %2;
 	#if {%1 >= %2}{#var hpcolor <caf>};
@@ -236,6 +236,13 @@
     #var coffinbar %1;
     
     #regex {$coffinbar} {^%d/%d} {#var coffincur &1;#var coffinmax &2};
+    	#var karmacur %1;
+	#var karmamax %2;
+	#if {%1 == %2}{#var coffincolor <ada>;wrapoff;sbon};
+    	#if {%1 > %6 * 0.80 && %5 < %6}{#var karmacolor <aea>};
+    	#if {%1 < %2 * 0.66 && %1 > %2 * 0.33}{#var coffincolor <afa>;sboff;wrapon};
+    	#if {%1 < %2 * 0.32}{#var coffincolor <119>};
+    	#if {%1 == 05}{#var coffincolor <109>};
  
     #regex {$coffinbar} {Sm:\[%d/%d\%\]} {#var smilecur &1;#var smilemax &2};
         #if {$smilecur >= "1" && "$sm" == "On" && "$smready" == "yes" && $perfinfo == "D♭"} {perform smile;#var smcolor <129>};
