@@ -1,5 +1,7 @@
 #var nodamage Off;
-  #action {You attack %1} {{#if $nodamage On} {#showme You will not be casting any spells at this enemy. Type rcnow to turn on damage.}};
+
+#
+  #action {You attack %1} {#if {$nodamage On} {#showme You will not be casting any spells at this enemy. Type rcnow to turn on damage.}};
 
 #var causticcritic Off;
   #alias {rcon} {$causticcritic On};
