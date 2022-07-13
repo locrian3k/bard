@@ -3,7 +3,7 @@
 
 #var causticcritic Off;
   #alias {rcon} {$causticcritic On};
-  #alias {rcoff} {$causticcritic Off;coff;$nodamage On;#showme {YOU ARE NO LONGER CASTING SPELLS AND KTRIG IS OFF.}};
+  #alias {rcoff} {$causticcritic Off;coff;$nodamage On;#showme YOU ARE NO LONGER CASTING SPELLS AND KTRIG IS OFF.};
   #alias {rcnow} {rhythmic actions 1 cast caustic critic:100/rcnow};
   #action {{You attack|You're already attacking|attacking you}} {{#if &causticcritic == On} {rcnow}};
-  #action {{You attack|You're already attacking|attacking you|| {{#if $nodamage == Off && $causticcritic Off} {$causticcritic On;rcnow};
+  #action {{You attack|You're already attacking|attacking you}} {{#if $nodamage == Off && $causticcritic Off} {$causticcritic On;rcnow}};
