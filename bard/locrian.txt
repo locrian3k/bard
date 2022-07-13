@@ -34,6 +34,9 @@
 #nop { THIS WILL RE-READ THIS FILE WHICH IS BENEFICIAL WHEN YOU ADD SOMETHING. YOU'LL NEED TO #END AND RELOG BACK IN IF YOU MODIFY SOMETHING ALREADY HERE }
 #alias {source} {#read tintin/bard/locrian.txt}
 
+#nop { READING THIS FILE WILL BRING IN ALL SPELLS AND SONGS VARIABLES }
+#read tintin/bard/variables.txt
+
 #nop { READING THIS FILE BRINGS IN ALL BOT RUNS }
 #read tintin/bard/bots/botcontrol.txt
 
