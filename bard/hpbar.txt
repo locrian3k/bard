@@ -112,7 +112,7 @@
 	#if {"$hskin" == "0" && "$hs" == "On"} {#var hskincolor <bac>};
     	#if {"$hskin" != "0"}{#var hskincolor <eaf>};
 
-        #regex $spells1 {CC:%d} {#var catsclaw &1};
+        #regex $spells1 {CC:%S} {#var catsclaw &1};
         #if {"$catsclaw" == "Off" && "$ccready" == "yes" && "$cc" == "On" && $perfinfo == "D♭"} {cast cats claw};
 	#if {"$catsclaw" == "Off" && "cc" == "Off"} {#var catsclawcolor <109>};
 	#if {"$catsclaw" == "Off" && "cc" == "On"} {#var catsclawcolor <bac>};
