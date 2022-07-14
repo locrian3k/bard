@@ -116,7 +116,7 @@
         #if {"$catsclaw" == "Off" && "$ccready" == "yes" && "$cc" == "On" && $perfinfo == "D♭"} {cast cats claw};
 	#if {"$catsclaw" == "Off" && "cc" == "Off"} {#var catsclawcolor <109>};
 	#if {"$catsclaw" == "Off" && "cc" == "On"} {#var catsclawcolor <bac>};
-    	#if {$catsclaw != "Off"}{#var catsclawcolor <eaf>};
+    	#if {"$catsclaw" != "Off"}{#var catsclawcolor <eaf>};
 	
 	#regex $spells1 {PN:%d} {#var pneutral &1};
         #if {$pneutral <= "10" && "$pn" == "On" && $perfinfo == "D♭"} {cast protection from neutral};
