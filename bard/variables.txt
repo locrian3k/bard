@@ -16,8 +16,8 @@
 	
 	
 	#nop { S P E L L S  A N D  S O N G S };
-	#alias {allon} {#var om On;#var lb On;#var irock On;#var lucidity On;#var ag On;#var vsong On;#var hs On;#var pn On;#var pe On;#var pg On;#var pf On;#var ph On;#var mb On;#var blinkspell On;#var sm On;};
-	#alias {alloff} {#var hs Off;#var cc Off;#var pn Off;#var pe Off;#var pg Off;#var pf Off;#var ph Off;#var mb Off;#var blinkspell Off;#var harmonicregeneration Off;#var focusrainbow Off;#var om Off;#var lb Off;#var irock Off;#var lucidity Off;#var ag Off;#var vsong Off;#var devilsong Off;#var worry Off;#var sm Off};
+	#alias {allon} {#var om On;#var lb On;#var irock On;#var lucidity On;#var ag On;#var vsong On;#var hs On;#var pn On;#var pe On;#var pg On;#var pf On;#var ph On;#var mb On;#var blinkspell On;#var sm On;#var hlaugh On;};
+	#alias {alloff} {#var hs Off;#var cc Off;#var pn Off;#var pe Off;#var pg Off;#var pf Off;#var ph Off;#var mb Off;#var blinkspell Off;#var harmonicregeneration Off;#var focusrainbow Off;#var om Off;#var lb Off;#var irock Off;#var lucidity Off;#var ag Off;#var vsong Off;#var devilsong Off;#var worry Off;#var sm Off;#var hlaugh Off;};
 	
 	#nop { S P E L L S };
 	#var hs Off;
