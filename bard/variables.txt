@@ -110,7 +110,7 @@
 	#var hearteninglaugh 0;
 	#var hlon;
 		#alias {hlon} {#var hlaugh On;}
-		#alias hloff} {#var hlaugh Off;}
+		#alias {hloff} {#var hlaugh Off;}
 	#action {Heartening Laugh fades from you} {#var hearteninglaugh 0;#if {hearteninglaugh == 0 && "$hlaugh" == "On";heartening laugh}};
 	#action {You let out a deep, loud laugh} {#var hearteninglaugh 1};
 	#action {^%w acks at you.} {7};
