@@ -116,7 +116,7 @@
 	#action {^%w acks at you.} {7};
 	#action {^From afar, %w %2} {
 		#delay {0.2} {
-                #if {"%2" == "acks at you."} {emoteto %1 laughs and you begin to feel energy surround you. That feeling quickly dissipates though...because someone is 			NOT AT COT!};
+                #if {"%2" == "acks at you."} {emoteto %1 laughs and you begin to feel energy surround you. That feeling quickly dissipates though...because someone is NOT AT COT!};
                 };
 	};
 	#action {^%w flies into your arms.} {cast wings of the phoenix on %w};
