@@ -204,14 +204,14 @@
 	#if {"$grace" == "Off" && "$ag" == "On"} {#var gracecolor <bac>};
         #if {"$grace" != "Off"} {#var gracecolor <dcf>};
 	
-	#regex $songs1 {\bDW:%S} {#var devil &1};
+	#regex $songs1 {\bD:%S} {#var devil &1};
 	#if {"$devil" == "Off" && "$devilsong" == "On" && $perfinfo == "D♭"} {perform devil went down to georgia};
         #if {"$devil" == "Off" && "$devilsong" == "Off"} {#var devilcolor <109>};
 	#if {"$devil" == "Off" && "$devilsong" == "On"} {#var devilcolor <bac>};
         #if {"$devil" != "Off"} {#var devilcolor <dcf>};
-
-	#regex $songs1 {\bD:%S} {#var dworry &1};
-	#if {"$dworry" == "Off" && "$worry" == "On" && $perfinfo == "D♭"} {perform don't worry be happy};
+	
+	#regex $songs1 {\bDW:%S} {#var dworry &1};
+	#if {"$dworry" == "Off" && "$worry" == "On" && $perfinfo == "D♭"} {perform don't worry, be happy};
         #if {"$dworry" == "Off" && "$worry" == "Off"} {#var dworrycolor <109>};
 	#if {"$dworry" == "Off" && "$worry" == "On"} {#var dworrycolor <bac>};
         #if {"$dworry" != "Off"} {#var dworrycolor <dcf>};
