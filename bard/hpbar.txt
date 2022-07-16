@@ -155,13 +155,13 @@
         #regex $spells1 {\bB:%S} {#var blink &1};
         #if {"$blink" == "Off" && "$blinkspell" == "On" && "$perfinfo" == "D♭"} {cast blink};
 	#if {"$blink" == "Off" && "$blinkspell" == "Off"} {#var bcolor <109>};
-	#if {"$blink" == "Off" && "$blinkspell" == "On"} {#var pgcolor <bac>};
+	#if {"$blink" == "Off" && "$blinkspell" == "On"} {#var bcolor <bac>};
     	#if {"$blink" != "Off"} {#var bcolor <eaf>};
 	
 	#regex $spells1 {HR:%S} {#var harmonicreg &1};
         #if {"$harmonicreg" == "No" && "$harmonicregeneration" == "On" && $perfinfo == "D♭"} {cast harmonic regeneration};
 	#if {"$harmonicreg" == "No" && "$harmonicregeneration" == "Off"} {#var hrcolor <109>};
-	#if {"$harmonicreg" == "No" && "$harmonicregeneration" == "On"} {#var pgcolor <bac>};
+	#if {"$harmonicreg" == "No" && "$harmonicregeneration" == "On"} {#var hrcolor <bac>};
     	#if {"$harmonicreg" != "No"}{#var hrcolor <eaf>};
 	
 	#nop {  #regex $spells1 {FR:%S} {#var frain &1};                                                        };
