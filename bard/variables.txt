@@ -119,6 +119,10 @@
                 #if {"%2" == "acks at you."} {emoteto %1 laughs and you begin to feel energy surround you. That feeling quickly dissipates though...because someone is NOT AT COT!};
                 };
 	};
+	#if {"$hearteninglaugh" == "0" && "$hlaugh" == "Off"} {#var hlcolor <109>};
+	#if {"$hearteninglaugh" == "0" && "$hlaugh" == "On"} {#var hlcolor <bac>};
+    	#if {"$hearteninglaugh" != "0"}{#var hlcolor <eaf>};
+	
 	#action {^%w flies into your arms.} {cast wings of the phoenix on %w};
 	
 	#nop { C O R P S E S };
