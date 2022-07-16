@@ -108,6 +108,7 @@
 	
 	#nop {HEARTENING LAUGH};
 	#var hearteninglaugh 0;
+	#var hlaugh Off;
 	#var hlon;
 		#alias {hlon} {#var hlaugh On;}
 		#alias {hloff} {#var hlaugh Off;}
