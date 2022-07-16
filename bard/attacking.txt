@@ -1,3 +1,7 @@
+#action {You attack} {rc};
+#action {attacks you} {rc};
+
+#nop { BELOW IS STILL IN PROGRESS }
 #var nodamage Off;
   #action {You attack %1} {#if {$nodamage On} {#showme You will not be casting any spells at this enemy. Type rcnow to turn on damage.}};
 
