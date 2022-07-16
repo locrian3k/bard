@@ -110,7 +110,7 @@
 	#var hearteninglaugh 0;
 	#var hlaugh Off;
 	#var hlon;
-		#alias {hlon} {#var hlaugh On;}
+		#alias {hlon} {#var hlaugh On;heartening laugh}
 		#alias {hloff} {#var hlaugh Off;}
 	#action {^%w acks at you.} {7};
 	#action {^From afar, %w %2} {
