@@ -248,7 +248,7 @@
 	#if {"$smready" == "no"} {#var smilecolor <129>};
 	
     #nop {HEARTENING LAUGH};
-	#action {Heartening Laugh fades from you} {#var hearteninglaugh 0;#if {"$hlaugh" == "On"} {heartening laugh}{;
+	#action {Heartening Laugh fades from you} {#var hearteninglaugh 0;#if {"$hlaugh" == "On"} {heartening laugh}};
 	#action {You let out a deep, loud laugh} {#var hearteninglaugh 1};
 	#if {"$hearteninglaugh" == "0" && "$hlaugh" == "Off"} {#var hlcolor <109>};
 	#if {"$hearteninglaugh" == "0" && "$hlaugh" == "On"} {#var hlcolor <bac>};
