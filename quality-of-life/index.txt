@@ -5,3 +5,23 @@
 #act {^You are heavily loaded.} {#showme <139>60% <119>[<139>##################<269>------------<119>]}
 #act {^You are over taxed.} {#showme <139>75% <119>[<139>######################<269>--------<119>]}
 #act {^You are collapsing under your load.} {#showme <119>100% <119>[<139>##############################<269><119>]}
+
+
+
+#nop { RESISTANCES }
+#nop { READING THIS FILE WILL ADD IN THE TYPE OF RESISTANCE THAT IS LISTED ON BOTH YOUR <SCORE> AND <EQ> COMMANDS }
+#action {{^Resistances:}} {#showme Resist Type:   Edge  Blnt  Fire   Ice  Acid  Elec  Mind  Enrg  Pois  Radi}
+
+#NOP { == EXAMPLE OF WHAT RESISTANES WILL LOOK LIKE WITHOUT THE SHOWAC VAF == }
+#nop {Resistances:  High  High    20   Low  None  None  High   100  None  None}
+#nop {Resistances:  Buff  Buff    40    20  None  None  Buff  High  None  None}
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+
