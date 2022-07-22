@@ -102,7 +102,7 @@
         #var whereami Smurfs-100;
         #class {bots} {read} {tintin/bard/bots/smurfbot.txt};
         scaler 100;
-        #showme {<120>You may now proceed to play slaughter smurfs.<088>};allon;psclear;smurfbot;
+        #showme {<120>You may now proceed to play slaughter smurfs.<088>};omon;hson;eon;gon;non;psclear;smurfbot;
         }
 
 #alias {majon} {
