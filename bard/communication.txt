@@ -69,6 +69,7 @@
                 #replace soultext {\'}{};
                 #system 3ktell -p '$soulperson' -l 'souls you' -m '$soultext'};
     };
+ };
 	
 
 #nop {==================== S P O U S E  L I N E =================};
