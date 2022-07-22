@@ -287,12 +287,12 @@
     <129>P<088>$partycolor$MissedParty
     <faa>N<088>$newbcolor$MissedNewb 
     <fac>F<088>$flapcolor$MissedFlap 
-    <dec>HM<088>$hmcolor$MissedHM
+    <dec>H<088>$hmcolor$MissedHM
     <acf>E<088>$eternalcolor$MissedEternal
     <039>Sh<088>$shoutcolor$MissedShout 
-    <caf>Craft<088>$craftcolor$MissedCraft 
+    <caf>Cr<088>$craftcolor$MissedCraft 
     <cfa>O<088>$ompcolor$MissedOmp
-    <129>R<139>A<119>I<bae>N<088>$MissedRainbow
+    <129>R<139>$MissedRainbow
     <129>U<139>N<119>O<bae>!<139>[<088>$unoplayer<139>]<088>
     }{-2};
 }
