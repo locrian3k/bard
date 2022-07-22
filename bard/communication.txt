@@ -202,7 +202,7 @@
 		#math MissedOmp {(1 + $MissedOmp)};
 		};
 	};
-	#alias {omp -h} {#var MissedOmp 0};
+	#alias {omp -h} {#var MissedOmp 0;#send omp -h};
 
 #nop {========== RAINBOW ==========};
 	#action {^[Rainbow] %w : %2} {
