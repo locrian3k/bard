@@ -1,1 +1,5 @@
 #gag {You can't cast a spell while singing!};
+
+#nop { CLAN };
+#gag {Linkdead Room (login)};
+#gag {Real Life, yea, right};
