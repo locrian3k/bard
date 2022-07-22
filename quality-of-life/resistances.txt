@@ -1,6 +1,0 @@
-#nop { READING THIS FILE WILL ADD IN THE TYPE OF RESISTANCE THAT IS LISTED ON BOTH YOUR <SCORE> AND <EQ> COMMANDS }
-#action {{^Resistances:}} {#showme Resist Type:   Edge  Blnt  Fire   Ice  Acid  Elec  Mind  Enrg  Pois  Radi}
-
-#NOP { == EXAMPLE OF WHAT RESISTANES WILL LOOK LIKE WITHOUT THE SHOWAC VAF == }
-#nop {Resistances:  High  High    20   Low  None  None  High   100  None  None}
-#nop {Resistances:  Buff  Buff    40    20  None  None  Buff  High  None  None}
