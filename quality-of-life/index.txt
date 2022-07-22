@@ -29,3 +29,7 @@ Contact GitHub
 #nop { SETMOD }
 #nop { WHEN READING HELP FILES, ETC. THIS SHOULD ENABLE YOUR CHARACTER TO READ THE ENTIRE FILE INSTEAD OF SMALL BATCHES }
 setmod ROWS 1000
+
+
+#nop { TEACHING SKILLS }
+#action {To do so, type: tskill %1 %2.%3.%4} {tskill %1 %2.%3.%4};
