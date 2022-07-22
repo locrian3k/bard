@@ -1,0 +1,287 @@
+#NOP {========== COMMUNICATION VARIABLES ==========}
+#var MissedTells 0
+#var MissedClanChat 0
+#var MissedSouls 0
+#var MissedParty 0
+#var MissedGuildChat 0
+#var MissedSP 0
+#var MissedCult 0
+#var MissedCraft 0
+#var MissedNewb 0
+#var MissedFlap 0
+#var MissedShout 0
+#var MissedHM 0
+#var MissedEternal 0
+#var unoplayer 0
+#var MissedOmp 0
+#var MissedRainbow 0
+
+
+#NOP {===================  C L A N  =====================}
+	#high {^[Clan] %w : %2} {<fac>}
+  #action {^[Clan] %w : %2} {
+    #if {"%1" != "Locrian"} {
+      #math MissedClanChat {(1 + $MissedClanChat)};
+      #var clanperson %1;
+      #var ClanChatText %2;
+      #replace ClanChatText {\;}{};
+      #replace ClanChatText {\:}{};
+      #replace ClanChatText {\"}{};
+      #replace ClanChatText {\'}{};
+      #replace ClanChatText {\\}{};
+      #replace ClanChatText {\/}{};
+      #system 3ktell -p '$clanperson' -l '[CLAN]' -m '$ClanChatText';		
+      };
+    }
+  #alias {ch} {ctell -h;#var MissedClanChat 0}
+
+
+
+#NOP {==========  PARTY  ==========
+  Party is using a modified aset since the line history looks just like the original
+    aset party_pref <ESC>[35m<
+    aset party_suff ><ESC>[0m
+    }
+
+  #action {^\<[PARTY]\> %w: %2} {
+    #var partyperson %1;
+    #var partychattext %2;
+    #if {"%1" != "Locrian" && "%1" != "All gold divvied, total"} {
+            #math MissedParty {(1 + $MissedParty)};
+            #replace partychattext {\'}{};
+            #system 3ktell -p '$partyperson' -l '[PARTY]' -m '$partychattext';
+            }
+    }
+	
+
+
+#nop {==================== S O U L S ======================}
+#alias {sh} {soulhist;#var MissedSouls 0}
+
+#high {^From afar, %w %2} {<139>}
+#var MissedSouls 0
+
+#action {^From afar, %w %2} {
+	#delay {0.2} {
+                #var soulperson %1;
+		#var soultext %2;
+    #if {"%1" != "Locrian" && "%1"} {
+                #math MissedSouls {(1 + $MissedSouls)};
+                #replace soultext {\'}{};
+                #system 3ktell -p '$soulperson' -l 'souls you' -m '$soultext'};
+    }
+	
+
+#nop {==================== S P O U S E  L I N E =================}
+
+	#action {--<@ Elminster @>--} {
+		#math MissedSP {(1 + $MissedSP)};
+		}
+	#action {--<@ Leonis @>--} {
+		#math MissedSP {(1 + $MissedSP)};
+		}
+
+	#action {Spouse history:} {#delay {4} {#var MissedSP 0}}
+  
+
+#NOP {=================  T E L L S  ==================};
+
+#alias {th} {tellhist;#var MissedTells 0};
+#alias tt {#showme Bob tells you: sup}
+
+#action {^%w tells you: %2} {
+        #delay {0.2} {
+                #if {"%1" != "Petunia" && "%1" != "Robert" && "%1" != "Klvorn" && "%1" != "Avrin" && "%1" != "Vilgan" && "%1" != "Voodoo"} {
+                        #var tellperson %1;
+                        #delay {1};
+                        #math MissedTells {(1 + $MissedTells)};
+                        #var {telltext} {%2};
+                        #replace telltext {\'}{};
+                        #system 3ktell -p '$tellperson' -l 'tells you' -m '$telltext';
+                        }
+                };
+        }
+
+#NOP {========== M U L T I   T E L L ==========}
+#action {^%w tells you \(%2\): %3} {
+        #delay {0.2} {
+                #if {"%1" != "Petunia" && "%1" != "Robert" && "%1" != "C:Nyarlathotep" && "%1" != "Klvorn" && "%1" != "Avrin"} {
+                        #var tellperson %1;
+                        #var tellgroup %2;
+                        #delay {1};
+                        #math MissedTells {(1 + $MissedTells)};
+                        #var {telltext} {%3};
+                        #replace telltext {\'}{};
+                        #system 3ktell -p '$tellperson' -l 'multitells ($tellgroup)' -m '$telltext';
+                        }
+                };
+        }
+        
+#NOP {==========  L I N K   T E L L S  ==========}
+#action {%1 LTs (%2} {;#delay {1};#math MissedTells {(1 + $MissedTells)};#var linktellperson %1;}
+#action {You LT (} {#var linktellperson me;}
+#action {   LT: %1} {
+        #if {"$linktellperson" != "me"} {
+                #var linktellmessage %1;
+                #var linktellgroup %2;
+                #replace linktellmessage {\'}{};
+                #system 3ktell -p '$linktellperson' -l 'LTs ($linktellgroup' -m '$linktellmessage';
+                };
+        }
+
+#NOP {================= C O W S  A N D  P I C K L E S ==================}
+#action {A death cow falls from the sky from %1 and squishes you!} {
+        #var {cowsender} {%1};
+        #system 3ktell -p '$cowsender' -l 'cow' -m 'You just got a cow!';
+        }
+
+#nop {==================== U N O ======================}
+#var unoplayer { }
+#action {Turn to play      : %1} {#var unoplayer %1;#if {"$unoplayer" == "Locrian"} {#var unoplayer {<579>$unoplayer<088>}} {#var unoplayer <bbb>$unoplayer<088>}}
+#action {It's now %1 turn.} {#var unoplayer %1;#replace unoplayer {'s} {};#if {"$unoplayer" == "Locrian"} {#var unoplayer {<579>$unoplayer<088>}} {#var unoplayer <bbb>$unoplayer<088>}}
+#action {has gone out!!} {#var unoplayer Deal}
+#action {First player  : %1} {#var unoplayer %1;#replace unoplayer {'s} {};#if {"$unoplayer" == "Locrian"} {#var unoplayer {<579>$unoplayer<088>}} {#var unoplayer <bbb>$unoplayer<088>}}
+
+#var ExtendedText " ";
+#action {{^[\s]{8,25}\S.*}} {
+	#var ExtendedTextCapture %1;
+	#if {"$ExtendedText" == " "} {#var ExtendedText $ExtendedTextCapture} {#var ExtendedText $ExtendedText $ExtendedTextCapture};
+	#replace ExtendedText {\;}{};
+	#replace ExtendedText {\:}{};
+	#replace ExtendedText {\"}{};
+	#replace ExtendedText {\'}{};
+	#delay {ExtraTextCleaner} {#if {"%1" != " "} {#var ExtendedText " ";#var ExtendedTextCapture " "}} {2};
+}
+
+
+#nop {========== BARD GUILD ==========
+	Locrian [Mystic]: and now i get to code this line for me to actually see it
+	}
+
+	#high {^%w [%d]:} {<fca>}
+	#action {^%w [%d]: %3} {
+		#if {"%1" != "Locrian"} {
+			#math MissedGuildChat {(1 + $MissedGuildChat)};
+			#var guildperson %1;
+                        #var guildtext %3;
+                        #replace guildtext {\'}{};
+                        #system 3ktell -p '$guildperson' -l '[BARD]' -m '$guildtext';
+			
+		};
+	}
+
+	#alias {gh} {bchat bard -h;#delay {2} {#var MissedGuildChat 0}}
+
+	#high {^[ADVANCE] %1} {<fca>}
+	#action {^[ADVANCE] %1} {
+		#if {"%1" != "Locrian"} {
+			#var guildperson %1;
+			#math MissedGuildChat {(1 + $MissedGuildChat)};
+                        #system 3ktell -p '$guildperson' -l '[BARD ADVANCE]' -m '$guildperson';
+		}
+	}
+
+#nop {========== ETERNALS ==========}
+	#action {^%w <.oO>: } {
+		#if {"%1" != "Locrian"} {
+		#math MissedEternal {(1 + $MissedEternal)};
+		}
+	}
+	#alias {eh} {eternal chat main -h;#var MissedEternal 0}
+
+
+#nop {========== FLAPCHAT ==========}
+	#action {^%w flaps : } {
+		#if {"%1" != "Locrian"} {
+		#math MissedFlap {(1 + $MissedFlap)};
+		}
+	}
+	#alias {fh} {flapchat -h;#var MissedFlap 0}
+
+#nop {========== OMP ==========}
+	#action {^%w -=(OMP)=- %2} {
+		#if {"%1" != "Locrian"} {
+		#math MissedOmp {(1 + $MissedOmp)};
+		}
+	}
+	#alias {omp -h} {#var MissedOmp 0}
+
+#nop {========== RAINBOW ==========}
+	#action {^[Rainbow] %w : %2} {
+		#if {"%1" != "Locrian"} {
+		#math MissedRainbow {(1 + $MissedRainbow)};
+		}
+	}
+	#alias {rh} {rbtalk -h;#var MissedRainbow 0}
+
+#nop {========== SHOUT LINE ==========}
+	#action {^%w shouts: } {
+		#if {"%1" != "Locrian"} {
+		#math MissedShout {(1 + $MissedShout)};
+		}
+	}
+	#alias {ssh} {shouthist;#var MissedShout 0}
+
+#nop {========== CULT GAME ==========}
+	#high {^%w <cgame>: %2} {<acf>}
+	#action {^%w <cgame>: } {#if {"%1" != "Locrian"} {
+		#math MissedCult {(1 + $MissedCult)};
+		}}
+
+	#alias {cgh} {cgame -h;#var MissedCult 0}
+    #nop {Gargoyle whispers: You are an innocent.}
+    
+
+#nop {========== CRAFT LINE ==========}
+	#high {^%w <Craft>: %2} {<caf>}
+	#action {^%w <Craft>: } {
+		#if {"%1" != "Locrian"} {
+		#math MissedCraft {(1 + $MissedCraft)};
+		}}
+
+	#alias {crh} {craft -h;#var MissedCraft 0}
+
+#nop {========== HM LINE ==========}
+	#high {^%w <HM-%w>: %2} {<caf>}
+	#action {^%w <HM-%w>: } {
+		#if {"%1" != "Locrian"} {
+		#math MissedHM {(1 + $MissedHM)};
+		}}
+
+	#alias {hmh} {hm -h;#var MissedHM 0}
+
+		#high {^%w <HM-%w %w>: %2} {<caf>}
+	#action {^%w <HM-%w %w>: } {
+		#if {"%1" != "Locrian"} {
+		#math MissedHM {(1 + $MissedHM)};
+		}}
+
+
+#NOP {==========  LOTTO   ==========};
+	#high {^<Lotto> %w:} {<caf>}
+  #action {A lottery has been created for %1} {
+        #var {lottoitem} {%1};
+        #system 3ktell -p 'Lottery' -l '$lottoitem' -m 'New lottery item posted!';
+        }
+
+#NOP {==========  NEWBIE  ==========}
+	#high {^newb %w [%2}
+    #action {^newb %w [%2}
+{
+#if {"%1" != "Locrian"} {
+	#math MissedNewb {(1 + $MissedNewb)};
+	#var ExtendedText " ";
+	#delay {0.2} {
+		#var NewbText %2;
+		#replace NewbText {\;}{};
+		#replace NewbText {\:}{};
+		#replace NewbText {\"}{};
+		#replace NewbText {\'}{};
+		#replace NewbText {\\}{};
+		#replace NewbText {\/}{};			
+		};
+	}
+}
+#alias {nh} {newb -h;#var MissedNewb 0}
+#alias {ph} {ptell -h;#var MissedParty 0}
+#gag {^L  %1}
