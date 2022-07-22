@@ -126,7 +126,7 @@
 		#alias {con} {#var corpses On};
 		#alias {coff} {#var corpses Off};
 	#var needcorpses Off;
-		#if {$needcorpses == On && $corpses == On && $wrap == Off} {#delay {5}; won};
+		#if {$needcorpses == On && $corpses == On && $wrap == Off} {#delay {5} {won}};
 		#action {dealt the killing blow} {#if {$needcorpses == Off && $corpses == Off} {rhythmic actions 1 cease}};
 	#var wrap Off;
 		#alias {won} {#var wrap On;}
