@@ -73,9 +73,9 @@
         #var botting on;
         #var alphabot On;
         #var whereami Alphabet-150;
-        #class {bots} {read} {locrian/bots/bardalphabot.txt};
+        #class {bots} {read} {tintin/bard/bots/alphabot.txt};
         scaler 150;
-        #showme {<120>You may now proceed to spell things.<088>};idleoff;psclear;alphabot;
+        #showme {<120>You may now proceed to spell things.<088>};omon;hson;hlon;psclear;alphabot;
         }
 
 #alias {chesson} {
