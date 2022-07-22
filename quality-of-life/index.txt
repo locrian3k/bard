@@ -15,15 +15,6 @@
 #NOP { == EXAMPLE OF WHAT RESISTANES WILL LOOK LIKE WITHOUT THE SHOWAC VAF == }
 #nop {Resistances:  High  High    20   Low  None  None  High   100  None  None}
 #nop {Resistances:  Buff  Buff    40    20  None  None  Buff  High  None  None}
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
 
 
 #nop { SETMOD }
