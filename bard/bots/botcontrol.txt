@@ -46,9 +46,9 @@
         #var botting on;
         #var aegisbot On;
         #var whereami Aegis-76;
-        #class {bots} {read} {locrian/bots/aegisbot.txt};
-        scaler 76;
-        #showme {<120>You may now proceed to kill zombies and robots.<088>};idleoff;psclear;aegisbot;
+        #class {bots} {read} {tintin/bard/bots/aegisbot.txt};
+        scaler 86;
+        #showme {<120>You may now proceed to kill zombies and robots.<088>};omon;agon;von;hson;hlon;eon;non;hon;psclear;aegisbot;
         }
 
 #alias {anchoron} {
