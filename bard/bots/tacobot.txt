@@ -7,13 +7,13 @@
 #alias {tacowalk} {tacostep$tacostepnumber;#math tacostepnumber $tacostepnumber +1}
 
 #act {^You try to grab a taco shell, but they all wriggle} {#var ingredient lettuce;get all;tacowalk}
-#act {^You try to grab some lettuce, but it shrinks} {#var ingredient tomato;dl;tacowalk}
-#act {^You try to grab some tomatoes but they quiver} {#var ingredient cheese;get all;w;get all;e;tacowalk}
-#act {^You try to grab a handful of cheese, but it slips} {#var ingredient meat;get all;tacowalk}
-#act {^You try to grab some meat, but it creeps} {#var ingredient cream;get all;tacowalk}
-#act {^You try to grab a scoop of the sour cream, but it quivers} {#var ingredient guac;get all;tacowalk}
-#act {^You try to grab a scoop of the guacamole} {#var ingredient sauce;get all;tacowalk}
-#act {^You try to grab a packet of hot sauce, but it crinkles} {get all;tacowalk}
+#act {^You try to grab some lettuce, but it shrinks} {#var ingredient tomato;tacowalk}
+#act {^You try to grab some tomatoes but they quiver} {#var ingredient cheese;land;get all;soar;w;get all;e;tacowalk}
+#act {^You try to grab a handful of cheese, but it slips} {#var ingredient meat;land;get all;soar;tacowalk}
+#act {^You try to grab some meat, but it creeps} {#var ingredient cream;land;get all;soar;tacowalk}
+#act {^You try to grab a scoop of the sour cream, but it quivers} {#var ingredient guac;land;get all;soar;tacowalk}
+#act {^You try to grab a scoop of the guacamole} {#var ingredient sauce;land;get all;soar;tacowalk}
+#act {^You try to grab a packet of hot sauce, but it crinkles} {land;get all;soar;tacowalk}
 #act {^The taco BLASTS you with Mexipower!} {cast wings of the phoenix}
 #act {^You get KNOCKED back hard, but then} {#4 w;cast wings of the phoenix}
 #act {^Whom do you wish to grab?} {assemble death taco}
@@ -31,13 +31,5 @@
 #alias {tacostep9} {w;assemble death taco;cast wings of the phoenix;bg,cac}
 
 
-#act {The melting cheese finally evaporates from Elminster.} {!wield staff}
-#act {monstrous lettuce golem.} {!st;!lv}
-
-
-#gag {DEATH TACO (tm) clatters away from your blow!}
-#act {Hot sauce sprays all over your face, blinding you} {dm}
-#act {The melting cheese sizzles on your flesh} {dm}
-#act {The taco drips melting cheese all over you} {dm}
-#act {The taco squirts guacamole all over you} {dm}
-#act {You BLEED from the shell fragment} {dm}
+#act {The melting cheese finally evaporates from Locrian.} {!wield lance}
+#act {monstrous lettuce golem.} {!st;!cast wings of the phoenix}
