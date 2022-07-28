@@ -1,0 +1,84 @@
+#nop { ========================= };
+#nop {        BOOT RUN           };
+#nop { ========================= };
+
+
+#nop { ========================= };
+#nop {        GO WHERE           };
+#nop { ========================= };
+#alias {gowhere} {#showme
+        <aef>BEGIN AT Center of Town:\n
+        Aegis - go aegis\n
+        Alphabet - go alphabet\n
+        Android - go android\n
+        Arcanarton's room - go arcanarton\n
+        Banshee's Lair - go banshee\n
+        Death Taco - go taco\n
+        Hotel Transylvania - go hotel\n
+        Land of the Verbeeg - go verbeeg\n
+        Nex Gear - go nex\n
+        Peeron's Castle - go peeron\n
+        Phylactery - go ravenloft\n
+        Puppy Mill - go puppy\n
+        Rabbit Fields - go rabbit \n
+        (Beloch) - go beloch, beloch 2, beloch 3\n
+        (Ghoti/Delundar) - go ghoti, ghoti 2, ghoti 3\n
+        Section Z - go secz\n
+        Spirit Gear - go tree\n
+        Terra's Treehouse - go terra\n
+        Zelligar - go zelligar\n
+        \n
+        BEGIN AT HOME:\n
+        Ball Dispenser - get dispenser\n
+        Donate to Guild - d guild\n
+        }
+        
+
+#nop { ========================= };
+#nop {    DONATE TO GUILD        };
+#nop { ========================= };
+#alias {dguild} {fantasy;portal;#7 w;n;#3 w;s;sw;w;n;donate all;s;e;ne;n;#3 e;s;#7 e;portal;h}
+
+
+#nop { ========================= };
+#nop {          AEGIS            };
+#nop { ========================= };
+#alias {goaegis} {s;e;e;n;e;e;enter;u;n;n;n;n;d;#18 n;#25 e;n;n;n;n;e;bridge;e;se;se;e;e;enter}
+#alias {leaveaegis} {exit;n;n;w;enter}
+
+
+#nop { ========================= };
+#nop {        ALPHABET           };
+#nop { ========================= };
+#alias {goalphabet} {n;w;n;n;e;n;enter;e;e;d}
+#alias {leavealphabet} {u;w;w;vortex;h}
+
+
+#nop { ========================= };
+#nop {   ISLETH THE WIDOWMAKER   };
+#nop { ========================= };
+#alias {goisleth} {n;w;w;s;w;w;w;portal;#12 n;leave;#9 n;#10 w;#5 nw;w;#5 nw;#6 w;nw;w;nw;w;nw;w;w;w;nw;n;n;nw;ne;e;e;n;nw;w;n;n;#5 w;sw;s;w;w;n;enter crypt;d;e;e;e;jump across;e;e;d;e;#delay {5} {#showme {<aef>Kill these wights and then type isleth2.}}};
+#alias {isleth2} {search basin;get dagger;cut hand;enter;e;kill figure;#delay {2} {kill bladesinger};#showme {<aef>Kill the Bladesinger and type isleth3}};
+#alias {isleth3} {get scabbard;draw sword;keep isleth;w;out;w;u;w;w;w;w;u;out;s;e;e;s;s;s;sw;s;s;s;s;s;s;sw;s;e;n;ne;ne;ne;e;s;s;e;ne;ne;ne;e;e;e;se;e;se;e;se;e;e;e;e;e;d;search skeleton;keep amulet;wield sword;#delay {2} #showme {<aef>Now type isleth4 to return home.}};
+#alias {isleth4} {u;e;#5 se;e;#5 se;e;n;w;portal;home};
+
+
+#nop { ========================= };
+#nop {          BELOCH           };
+#nop { ========================= };
+#alias {gobeloch} {n;w;w;s;w;w;w;portal;#15 e;leave;e;se;#8 e;se;#7 s;w;w;s;d;d;d;#delay {3} {#showme <fff>Kill these monsters and type beloch2}};
+#alias {leavebeloch} {u;u;u;n;e;e;n;n;n;n;n;n;n;nw;#8 w;nw;w;enter;#15 w;portal;e;e;e;n;e;e;s};
+#alias {beloch2} {n;n;n;nw;w;w;w;s;s;s;#delay {3} {#showme <fff>Kill these monsters and type beloch3}};
+#alias {beloch3} {#7 s;e;e;e;se;ne;w;n;};
+#alias {goghoti} {n;w;w;s;w;w;w;portal;#15 e;leave;e;se;#8 e;se;#7 s;w;w;s;d;d;d;#delay {3} {#showme <fff>Kill these monsters and type ghoti2}};
+#alias {ghoti2} {n;n;n;nw;w;w;w;s;s;s;#delay {3} {#showme <fff>Kill these monsters and type ghoti3}};
+#alias {ghoti3} {#7 s;e;e;e;se;ne;w;n;};
+#alias {leaveghoti} {u;u;u;n;e;e;n;n;n;n;n;n;n;nw;#8 w;nw;w;enter;#15 w;portal;e;e;e;n;e;e;s};
+#alias {leavebeloch} {u;u;u;n;e;e;n;n;n;n;n;n;n;nw;#8 w;nw;w;enter;#15 w;portal;e;e;e;n;e;e;s};
+
+
+#nop { ========================= };
+#nop {          ZELLIGAR         };
+#nop { ========================= };
+#alias {gozelligar} {n;w;w;s;w;w;w;portal;#12 w;leave;w;w;w;n;n;n;n;enter};
+#alias {leavezelligar} {leave;s;s;s;s;e;e;e;enter;#12 e;portal;h};
