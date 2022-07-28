@@ -113,6 +113,13 @@
         scaler 70;
         #showme {<120>You may now proceed to kill Mahjongg (3 hour reset)<088>};idleoff;psclear;majbot;
                 }
+                
+#alias {tacoon} {
+        #var botting on;
+        #var tacobot On;
+        #class {bots} {read} {tintin/bard/bots/tacobot.txt};
+        #showme {<120>You may now proceed to kill zombies and robots.<088>};omon;agon;von;hson;hlon;eon;non;hon;psclear;tacobot;
+        }
 
 #alias {golemson} {
         #var botting on;
