@@ -1,0 +1,53 @@
+#nop {Start from COT}
+
+#alias {androidbot} {#var androidstepnumber 1;#var androidbot On;#var delaytime 0;#delay {3}{androidwalk}}
+#alias {delay %1} {#showme {Delay set to %1 seconds.};#var delaytime %1}
+#alias {androidwalk} {androidstep$androidstepnumber;#math androidstepnumber $androidstepnumber +1}
+
+#action {There is no coins here.} {
+	#if {"$androidbot" == "On"} {#delay {androiddelay} {androidwalk} {$delaytime}};
+	};
+#action {There is no fanboy here.} {
+	#if {"$androidbot" == "On"} {#delay {androiddelay} {androidwalk} {$delaytime}};
+	};
+#action {There is no android here.} {
+	#if {"$androidbot" == "On"} {#delay {androiddelay} {androidwalk} {$delaytime}};
+	};
+#action {There is no development here.} {
+	#if {"$androidbot" == "On"} {#delay {androiddelay} {androidwalk} {$delaytime}};
+	};
+
+#action {BING! The button light goes off and the elevator doors open.} {
+	#if {"$androidbot" == "On"} {enter};
+	};
+#action {The elevator jerks to a halt and the doors open.} {
+	#if {"$androidbot" == "On"} {out;#delay {androiddelay} {androidwalk} {$delaytime}};
+	};
+#action {You cannot go} {
+	#if {"$androidbot" == "On"} {
+		nobot;#showme <120>Something is screwed up, fix your androidbot.<088>
+		};
+		};
+
+#alias {androidstep1} {con;#showme Locrian yells at you: Beginning android.;n;w;n;n;e;n;enter;e;e;e;s;s;e;e;n;n;flick switch;n;kill fanboy};
+#alias {androidstep2} {stairs;w;n;kill android};
+#alias {androidstep3} {s;e;e;n;kill android};
+#alias {androidstep4} {s;w;w;kill android};
+#alias {androidstep5} {e;e;kill android};
+#alias {androidstep6} {w;stairs;w;w;w;n;n;kill android};
+#alias {androidstep7} {e;e;kill android};
+#alias {androidstep8} {s;w;kill android};
+#alias {androidstep9} {s;w;kill android};
+#alias {androidstep10} {e;e;kill android};
+#alias {androidstep11} {e;e;n;n;kill android};
+#alias {androidstep12} {e;e;kill android};
+#alias {androidstep13} {w;s;kill android};
+#alias {androidstep14} {s;w;kill android};
+#alias {androidstep15} {e;e;kill android};
+#alias {androidstep16} {w;w;w;push button};
+#alias {androidstep17} {w;w;w;n;n;kill android};
+#alias {androidstep18} {e;e;kill android};
+#alias {androidstep19} {s;w;kill android};
+#alias {androidstep20} {s;e;e;e;e;n;kill development};
+#alias {androidstep21} {s;w;w;push button};
+#alias {androidstep22} {s;leave;s;s;w;w;n;n;w;w;w;vortex;s;w;s;s;w;s;s;e;s;s;s;e;s;w;w;s;s;donate coffin;n;n;e;e;n;w;n;n;n;e;n;#showme Locrian yells at you: Android is done!;#var androidbot Off;nobot};
