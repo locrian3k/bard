@@ -1,4 +1,4 @@
-#alias {tacoon} {party;con;#var tacostepnumber 1;#var tacobot On;#var delaytime 0;#delay {5}{tacowalk}}
+#alias {tacobot} {party;con;#var tacostepnumber 1;#var tacobot On;#var delaytime 0;#delay {5}{tacowalk}}
 #alias {delay %1} {#showme {Delay set to %1 seconds.};#var delaytime %1}
 #var ingredient shell
 
