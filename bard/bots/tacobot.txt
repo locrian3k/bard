@@ -21,15 +21,15 @@
 #act {^You don't have all the right components to make a veggie} {#3 dl;#5 dispose shell;#5 dispose lettuce;#5 dispose tomato;#5 dispose cheese;#5 dispose meat;#5 dispose cream;#5 dispose guac;#5 dispose sauce;#showme TacoBot tells you: Tacos done!;#4 e;n;w;w;w;e;e;e;s;w;w;w;w;nobot}
 
 #alias {tacostep1} {grab shell}
-#alias {tacostep2} {e;grab lettuce}
+#alias {tacostep2} {e;grab lettuce;thunderous bellow}
 #alias {tacostep3} {e;grab tomato}
 #alias {tacostep4} {e;grab cheese}
 #alias {tacostep5} {s;grab meat}
 #alias {tacostep6} {w;grab cream}
 #alias {tacostep7} {w;grab guac}
 #alias {tacostep8} {w;grab sauce}
-#alias {tacostep9} {w;assemble death taco;cast wings of the phoenix;bg,cac}
+#alias {tacostep9} {w;assemble death taco;cast wings of the phoenix}
 
 
 #act {The melting cheese finally evaporates from Locrian.} {!wield lance}
-#act {monstrous lettuce golem.} {!st;!cast wings of the phoenix}
+#act {monstrous lettuce golem.} {!cast wings of the phoenix}
