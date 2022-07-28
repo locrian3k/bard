@@ -1,0 +1,43 @@
+#alias {tacoon} {party;con;#var tacostepnumber 1;#var tacobot On;#var delaytime 0;#delay {5}{tacowalk}}
+#alias {delay %1} {#showme {Delay set to %1 seconds.};#var delaytime %1}
+#var ingredient shell
+
+#act {coins here.} {#delay {tacodelay} {!grab $ingredient} {$delaytime}}
+
+#alias {tacowalk} {tacostep$tacostepnumber;#math tacostepnumber $tacostepnumber +1}
+
+#act {^You try to grab a taco shell, but they all wriggle} {#var ingredient lettuce;get all;tacowalk}
+#act {^You try to grab some lettuce, but it shrinks} {#var ingredient tomato;dl;tacowalk}
+#act {^You try to grab some tomatoes but they quiver} {#var ingredient cheese;get all;w;get all;e;tacowalk}
+#act {^You try to grab a handful of cheese, but it slips} {#var ingredient meat;get all;tacowalk}
+#act {^You try to grab some meat, but it creeps} {#var ingredient cream;get all;tacowalk}
+#act {^You try to grab a scoop of the sour cream, but it quivers} {#var ingredient guac;get all;tacowalk}
+#act {^You try to grab a scoop of the guacamole} {#var ingredient sauce;get all;tacowalk}
+#act {^You try to grab a packet of hot sauce, but it crinkles} {get all;tacowalk}
+#act {^The taco BLASTS you with Mexipower!} {cast wings of the phoenix}
+#act {^You get KNOCKED back hard, but then} {#4 w;cast wings of the phoenix}
+#act {^Whom do you wish to grab?} {assemble death taco}
+#act {^You don't have all the right components to make a DEATH} {assemble veggie taco}
+#act {^You don't have all the right components to make a veggie} {#3 dl;#5 dispose shell;#5 dispose lettuce;#5 dispose tomato;#5 dispose cheese;#5 dispose meat;#5 dispose cream;#5 dispose guac;#5 dispose sauce;#showme TacoBot tells you: Tacos done!;#4 e;n;w;w;w;e;e;e;s;w;w;w;w;nobot}
+
+#alias {tacostep1} {grab shell}
+#alias {tacostep2} {e;grab lettuce}
+#alias {tacostep3} {e;grab tomato}
+#alias {tacostep4} {e;grab cheese}
+#alias {tacostep5} {s;grab meat}
+#alias {tacostep6} {w;grab cream}
+#alias {tacostep7} {w;grab guac}
+#alias {tacostep8} {w;grab sauce}
+#alias {tacostep9} {w;assemble death taco;cast wings of the phoenix;bg,cac}
+
+
+#act {The melting cheese finally evaporates from Elminster.} {!wield staff}
+#act {monstrous lettuce golem.} {!st;!lv}
+
+
+#gag {DEATH TACO (tm) clatters away from your blow!}
+#act {Hot sauce sprays all over your face, blinding you} {dm}
+#act {The melting cheese sizzles on your flesh} {dm}
+#act {The taco drips melting cheese all over you} {dm}
+#act {The taco squirts guacamole all over you} {dm}
+#act {You BLEED from the shell fragment} {dm}
