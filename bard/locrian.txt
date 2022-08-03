@@ -52,8 +52,9 @@
 #nop { READING THIS FILE BRINGS IN YOUR HIT POINT BAR  - MAKE SURE YOU TYPE AUTOHP 1 ON THE MUD }
 #read tintin/bard/hpbar.txt
 
-#nop { READING THIS FILE WILL ADD IN AN ENCUMBERANCE METER WHEN YOU CHECK INVENTORY, SHOW RESISTANCES IN SCORE, HELP TRAIN, AND ADJUST SETMOD }
+#nop { READING THIS FILE WILL ADD IN AN ENCUMBERANCE METER WHEN YOU CHECK INVENTORY, SHOW RESISTANCES IN SCORE, HELP TRAIN, ADJUST SETMOD, and ADD ALIASES TO GO TO PLACES }
 #read tintin/quality-of-life/index.txt
+#read tintin/quality-of-life/goto.txt
 
 #nop { READING THIS FILE WILL BRING IN GOLEM MASTER INFORMATION - gmhelp }
 #read tintin/professions/golem-master.txt
@@ -70,3 +71,79 @@
 #nop { ALIASES }
 #alias {exs %1} {look at %1;search %1};
 #alias {sr} {search};
+
+#nop {========================================================================};
+#nop {============================= H E A L I N G ============================};
+#nop {========================================================================};
+	#alias {healing} {#showme 
+		<bae>HEALS HP ONLY<088>\n
+		\ \ 1-P  bandage (costs 2 karma)\n
+		\ \ 2-♭  perform quiet hum D:varies\n
+		\ \ 9-P  karma tap <amt> (costs karma 1:1 ratio)\n
+		\ \ 12-S cast minor healing [on person] (costs 12 SP)\n
+		\ \ 19-S cast cure [on person] (costs 20 SP)\n
+		\ \ 22-♭ perform good for you _for_ <player>\n
+		\ \ \ \ \ \ \ (heals both target AND ME) D:61 (costs 28% V, 10 karma)\n
+		\ \ 28-♭ perform i will survive D:66 (costs 35% V, 18 karma)\n
+		\ \ 32-S soul bead necklace (hp slowly flows)\n
+		\ \ 32-S crush soul bead\n
+		\ \ 33-♭ perform hero [for <player>] (may also provide CON boost)\n 
+		\ \ \ \ \ \ \ D:56 (costs 19% V, 5 karma)\n
+		\ \ 35-P heal [person] (costs 25 karma)\n
+		\ \ 70-S cast healing hands [on person] (costs 60 SP)\n
+		\n
+		<aae>HEALS SP ONLY<088>\n
+		\ \ 16-♭ perform smile [for player] D:16 (no cost)\n
+		\ \ 29-♭ perform it's all coming back to me now\n 
+		\ \ \ \ \ \ \ D:103 (cost 61% V, 17 karma)\n
+		\ \ 40-♭ perform memory (may also provide INT boost,\n 
+		\ \ \ \ \ \ \ can also use on others) D:38 (costs 30% V, 10 karma)\n
+		\n
+		<bae>Heals HP <aae>and SP<088>\n
+		\ \ 14-P soothe / soothe [person] (costs 17 karma)\n
+		\n
+		<bae>HEALS HP,<aae> SP,<ada> AND KARMA<088>\n
+		\ \ 19-♭ corpse - perform electric funeral D:20 (costs 3% V)\n
+		\ \ 50-♭ perform silent lucidity D:51 (costs 26% V, 30 karma)\n
+		\n
+		<ada>HEALS KARMA<088>\n
+		\ \ 1-♭ corpse - perform dirge D:I\n
+		\ \ 8-♭ perform leader of the band D:59 (costs 43% V)\n
+		\n
+		<bae>ROOM HEALS<088>\n
+		\ \ 14-♭ Heals HP - perform circle of life D:41 (costs 33% V)\n
+		\n
+		<bae>ONLY OTHER PEOPLE<088>\n
+		\ \ 7-♭ perform you've got a friend for <person> D:42 (costs 17% V)\n
+		\ \ 15-♭ TRANSFER MY HP & SP TO SOMEONE -\n 
+		\ \ \ \ \ \ \ perform everything i do i do it _for_ <player>\n
+		\ \ \ \ \ \ \ D:38 (costs 20% V, 11 karma)\n
+		\n
+		<fca>STAT BOOSTS<088>\n
+		\ \ (47) perform let it be    D:59 (+5 WIS) (7hrs) \n
+		\ \ (33) perform hero         D:56 (+11 CON) (7.4hrs)\n
+		\ \ (42) perform son of man   D:40 (+9 STR/WIS)\n
+		\ \ (40) perform memory       D:38 (+10 INT) (7hrs)\n
+		\ \ (9)  perform naked sunday D:20 (+4 STR/WIS/INT) (7.4)\n
+		\ \ (39) heartening laugh     D:I  (+21 CON)\n
+		\ \ Total: +12 STR, +20 CON, +22 INT, +17 WIS
+	};
+
+
+#nop {========================================================================};
+#nop {====================== S O N G S  O N  H P  B A R ======================};
+#nop {========================================================================};
+	#alias {songs2} {#showme 
+		<bae>SHIELDS<088>\n
+		\ \ 1-A  O Muse                     D:11 (costs 5 karma)\n
+		\ \ 44-A I Am a Rock                D:42 (costs 15 karma)\n
+		\ \ 50-b Silent Lucidity            D:51 (costs 30 karma)\n
+		\ \ 56-b Amazing Grace              D:19 (costs 10 karma)\n
+		\ \ 59-A Don't Worry, Be Happy      D:101 (costs 21 karma)\n
+		\ \ 70-b Devil Went Down to Georgia D:56 (costs 75 karma)\n
+		\ \ 76-b Vampire                    D:62 (costs 135 karma)\n
+		\n
+		<bae>HEALS SP & KARMA<088>\n
+		\ \ 8-♭  Leader of the Band D:59 (costs 0 karma)\n
+		\ \ \ \ \  Attack faster & defend better for a bit after\n
+	};
