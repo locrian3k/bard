@@ -1,5 +1,6 @@
 #action {You attack} {rc};
 #action {attacks you} {rc};
+#action {attacking you} {rc};
 
 #nop { BELOW IS STILL IN PROGRESS }
 #var nodamage Off;
