@@ -8,6 +8,7 @@
 #nop { ========================= };
 #alias {gowhere} {#showme
         <aef>BEGIN AT Center of Town:\n
+        Abbey               - goabbey\n
         Aegis               - goaegis\n
         Alphabet            - goalphabet\n
         Android             - goandroid\n
@@ -38,6 +39,13 @@
 #nop {    DONATE TO GUILD        };
 #nop { ========================= };
 #alias {dguild} {fantasy;portal;#7 w;n;#3 w;s;sw;w;n;donate all;s;e;ne;n;#3 e;s;#7 e;portal;h}
+
+
+#nop { ========================= };
+#nop {          ABBEY            };
+#nop { ========================= };
+#alias {goabbey} {portal;#15 e;leave;#12 e;#5 n;w;s;s;sw;w;nw;enter mist;;#delay {3} {#showme <fff>Kill phylactery monster and type abbey2}}
+#alias {abbey2} {in;n;nw;e;e;n;n;e;n}
 
 
 #nop { ========================= };
@@ -104,6 +112,13 @@
 #alias {isleth2} {search basin;get dagger;cut hand;enter;e;kill figure;#delay {2} {kill bladesinger};#showme {<aef>Kill the Bladesinger and type isleth3}};
 #alias {isleth3} {get scabbard;draw sword;keep isleth;w;out;w;u;w;w;w;w;u;out;s;e;e;s;s;s;sw;s;s;s;s;s;s;sw;s;e;n;ne;ne;ne;e;s;s;e;ne;ne;ne;e;e;e;se;e;se;e;se;e;e;e;e;e;d;search skeleton;keep amulet;wield sword;#delay {2} #showme {<aef>Now type isleth4 to return home.}};
 #alias {isleth4} {u;e;#5 se;e;#5 se;e;n;w;portal;home};
+
+
+#nop { ========================= };
+#nop {        LANTERN            };
+#nop { ========================= };
+#alias {getlantern} {portal;#15 e;leave;#12 e;#5 n;w;s;s;sw;w;nw;enter mist;#delay {3} {#showme <fff>Kill phylactery monster and type lantern2}}
+#alias {lantern2} {in;n;nw;n;ne;n;nw;n;ne;n;ne;ne;e;e;s#delay {3} {#showme <fff>Now get all from corpse}}
 
 
 #nop { ========================= };
