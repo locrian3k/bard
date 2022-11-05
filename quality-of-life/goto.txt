@@ -50,7 +50,7 @@
 #alias {abbeysteps} {2e;se;e;s;se;e;e;get shovel;get all;ne;desecrate grave;d;kill saren;#delay {5} {#showme Type abbeysteps2 once you get the breastplate.}}
 #alias {abbeysteps2} {u;n;n;climb vines;wrench symbol;kill ghost;#delay {5} {#showme Type abbeysteps3 once you kill the ghost.}}
 #alias {abbeysteps3} {wrench symbol;d;nw;w;w;sw;s;e;enter;e;e;kill marcus;#delay {5} {#showme Type abbeysteps4 once you kill Marcus.}}
-#alias {abbeysteps4 {push altar;d;d;e;e;kill dakath;#delay {5} {#showme Return to crypt and push lid for each room to acquire all gear.}}
+#alias {abbeysteps4} {push altar;d;d;e;e;kill dakath;#delay {5} {#showme Return to crypt and push lid for each room to acquire all gear.}}
 #alias {leaveabbey} {s;w;s;s;w;w;se;s;enter mist;e;n;portal;home}
 
 
