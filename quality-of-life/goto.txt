@@ -7,7 +7,7 @@
 #nop {        GO WHERE           };
 #nop { ========================= };
 #alias {gowhere} {#showme
-        <aef>BEGIN AT Center of Town:\n
+        <aef>BEGIN AT Home:\n
         Abbey               - goabbey\n
         Aegis               - goaegis\n
         Alphabet            - goalphabet\n
@@ -29,8 +29,9 @@
         Terra's Treehouse   - goterra\n
         Zelligar            - gozelligar\n
         \n
-        BEGIN AT HOME:\n
+        ITEMS:\n
         Ball Dispenser      - getdispenser\n
+        Ravenloft Lantern   - getlantern\n
         Donate to Guild     - dguild\n
         }
         
@@ -38,20 +39,20 @@
 #nop { ========================= };
 #nop {    DONATE TO GUILD        };
 #nop { ========================= };
-#alias {dguild} {fantasy;portal;#7 w;n;#3 w;s;sw;w;n;donate all;s;e;ne;n;#3 e;s;#7 e;portal;h}
+#alias {dguild} {shop;w;n;w;w;s;w;w;w;portal;#7 w;n;#3 w;s;sw;w;n;donate all;s;e;ne;n;#3 e;s;#7 e;portal;h}
 
 
 #nop { ========================= };
 #nop {          ABBEY            };
 #nop { ========================= };
-#alias {goabbey} {portal;#15 e;leave;#12 e;#5 n;w;s;s;sw;w;nw;enter mist;;#delay {3} {#showme <fff>Kill phylactery monster and type abbey2}}
+#alias {goabbey} {shop;w;n;w;w;s;w;w;w;portal;#15 e;leave;#12 e;#5 n;w;s;s;sw;w;nw;enter mist;;#delay {3} {#showme <fff>Kill phylactery monster and type abbey2}}
 #alias {abbey2} {in;n;nw;e;e;n;n;e;n}
 
 
 #nop { ========================= };
 #nop {          AEGIS            };
 #nop { ========================= };
-#alias {goaegis} {s;e;e;n;e;e;enter;u;n;n;n;n;d;#18 n;#25 e;n;n;n;n;e;bridge;e;se;se;e;e;enter}
+#alias {goaegis} {shop;w;s;e;e;n;e;e;enter;u;n;n;n;n;d;#18 n;#25 e;n;n;n;n;e;bridge;e;se;se;e;e;enter}
 #alias {leaveaegis} {exit;n;n;w;enter}
 
 
@@ -65,25 +66,24 @@
 #nop { ========================= };
 #nop {        ARCANARTON         };
 #nop { ========================= };
-#alias {goarcanarton} {n;w;w;s;w;w;w;portal;#12 n;leave;#8 n;#4 e; #6 n;#9 w;s;#2 w;sw;trail;enter;n;n;u;e;u;s;s;u;u;u;}
+#alias {goarcanarton} {shop;w;n;w;w;s;w;w;w;portal;#12 n;leave;#8 n;#4 e; #6 n;#9 w;s;#2 w;sw;trail;enter;n;n;u;e;u;s;s;u;u;u;}
 #alias {leavearcanarton} {d;d;d;n;n;d;w;d;s;out;s;trail;ne;e;e;n;portal;e;e;e;n;e;e;s}
 
 
 #nop { ========================= };
 #nop {     BANSHEE'S LAIR        };
 #nop { ========================= };
-#alias {gobanshee} {n;w;w;s;w;w;w;portal;#12 n;leave;n;n;n;n;#8 w;enter;s;s;e;e;clear debris;enter}
+#alias {gobanshee} {shop;w;n;w;w;s;w;w;w;portal;#12 n;leave;n;n;n;n;#8 w;enter;s;s;e;e;clear debris;enter}
 #alias {leavebanshee} {exit;w;w;n;n;leave;#6 n;w;w;portal}
 
 
 #nop { ========================= };
 #nop {      BELOCH / GHOTI       };
 #nop { ========================= };
-#alias {gobeloch} {n;w;w;s;w;w;w;portal;#15 e;leave;e;se;#8 e;se;#7 s;w;w;s;d;d;d;#delay {3} {#showme <fff>Kill these monsters and type beloch2}};
-#alias {leavebeloch} {u;u;u;n;e;e;n;n;n;n;n;n;n;nw;#8 w;nw;w;enter;#15 w;portal;e;e;e;n;e;e;s};
+#alias {gobeloch} {shop;w;n;w;w;s;w;w;w;portal;#15 e;leave;e;se;#8 e;se;#7 s;w;w;s;d;d;d;#delay {3} {#showme <fff>Kill these monsters and type beloch2}};
 #alias {beloch2} {n;n;n;nw;w;w;w;s;s;s;#delay {3} {#showme <fff>Kill these monsters and type beloch3}};
 #alias {beloch3} {#7 s;e;e;e;se;ne;w;n;};
-#alias {goghoti} {n;w;w;s;w;w;w;portal;#15 e;leave;e;se;#8 e;se;#7 s;w;w;s;d;d;d;#delay {3} {#showme <fff>Kill these monsters and type ghoti2}};
+#alias {goghoti} {shop;w;n;w;w;s;w;w;w;portal;#15 e;leave;e;se;#8 e;se;#7 s;w;w;s;d;d;d;#delay {3} {#showme <fff>Kill these monsters and type ghoti2}};
 #alias {ghoti2} {n;n;n;nw;w;w;w;s;s;s;#delay {3} {#showme <fff>Kill these monsters and type ghoti3}};
 #alias {ghoti3} {#7 s;e;e;e;se;ne;w;n;};
 #alias {leaveghoti} {u;u;u;n;e;e;n;n;n;n;n;n;n;nw;#8 w;nw;w;enter;#15 w;portal;e;e;e;n;e;e;s};
@@ -93,14 +93,14 @@
 #nop { ========================= };
 #nop {      DEATH TACO           };
 #nop { ========================= };
-#alias {gotaco} {n;w;n;n;e;n;enter;w;w;w;w;e;n;w;n;n;taco}
+#alias {gotaco} {shop;w;n;w;n;n;e;n;enter;w;w;w;w;e;n;w;n;n;taco}
 #alias {leavetaco} {out;s;s;e;s;w;w;e;e;e;vortex}
     
     
 #nop { ========================= };
 #nop {   HOTEL TRANSYLVANIA      };
 #nop { ========================= };
-#alias {gohotel} {n;w;n;n;e;n;enter;e;e;e;s;s;e;e;s;w;w;#delay {2} {#showme <aef>Buy 5 if you need a ticket and then type hotel2}}
+#alias {gohotel} {shop;w;n;w;n;n;e;n;enter;e;e;e;s;s;e;e;s;w;w;#delay {2} {#showme <aef>Buy 5 if you need a ticket and then type hotel2}}
 #alias {hotel2} {theatre;e;enter;pull rug;n}
 #alias {leavehotel} {s;out;out;w;s;e;e;n;w;w;n;n;w;w;w;vortex}
     
@@ -108,7 +108,7 @@
 #nop { ========================= };
 #nop {   ISLETH THE WIDOWMAKER   };
 #nop { ========================= };
-#alias {goisleth} {n;w;w;s;w;w;w;portal;#12 n;leave;#9 n;#10 w;#5 nw;w;#5 nw;#6 w;nw;w;nw;w;nw;w;w;w;nw;n;n;nw;ne;e;e;n;nw;w;n;n;#5 w;sw;s;w;w;n;enter crypt;d;e;e;e;jump across;e;e;d;e;#delay {5} {#showme {<aef>Kill these wights and then type isleth2.}}};
+#alias {goisleth} {shop;w;n;w;w;s;w;w;w;portal;#12 n;leave;#9 n;#10 w;#5 nw;w;#5 nw;#6 w;nw;w;nw;w;nw;w;w;w;nw;n;n;nw;ne;e;e;n;nw;w;n;n;#5 w;sw;s;w;w;n;enter crypt;d;e;e;e;jump across;e;e;d;e;#delay {5} {#showme {<aef>Kill these wights and then type isleth2.}}};
 #alias {isleth2} {search basin;get dagger;cut hand;enter;e;kill figure;#delay {2} {kill bladesinger};#showme {<aef>Kill the Bladesinger and type isleth3}};
 #alias {isleth3} {get scabbard;draw sword;keep isleth;w;out;w;u;w;w;w;w;u;out;s;e;e;s;s;s;sw;s;s;s;s;s;s;sw;s;e;n;ne;ne;ne;e;s;s;e;ne;ne;ne;e;e;e;se;e;se;e;se;e;e;e;e;e;d;search skeleton;keep amulet;wield sword;#delay {2} #showme {<aef>Now type isleth4 to return home.}};
 #alias {isleth4} {u;e;#5 se;e;#5 se;e;n;w;portal;home};
@@ -117,7 +117,7 @@
 #nop { ========================= };
 #nop {        LANTERN            };
 #nop { ========================= };
-#alias {getlantern} {portal;#15 e;leave;#12 e;#5 n;w;s;s;sw;w;nw;enter mist;#delay {3} {#showme <fff>Kill phylactery monster and type lantern2}}
+#alias {getlantern} {shop;w;n;w;w;s;w;w;w;portal;#15 e;leave;#12 e;#5 n;w;s;s;sw;w;nw;enter mist;#delay {3} {#showme <fff>Kill phylactery monster and type lantern2}}
 #alias {lantern2} {in;n;nw;n;ne;n;nw;n;ne;n;ne;ne;e;e;s#delay {3} {#showme <fff>Now get all from corpse}}
 
 
@@ -125,10 +125,10 @@
 #nop {   TOY STORE IN SCIENCE    };
 #nop {    for Ball Dispenser     };
 #nop { ========================= };
-#alias {getdispenser} {science;enter;u;#3 e;d;e;path;#2 e;n;#13 e;n;e;n;e;#11 n;#2 e;#4 n;e;bridge;e;#2 se;e;#4 n;enter;n;n;e;buy 3;smugle dispenser;buy 3;keep dispenser;w;s;s;out;s;s;enter;h}
+#alias {getdispenser} {shop;w;s;e;e;n;e;e;enter;u;#3 e;d;e;path;#2 e;n;#13 e;n;e;n;e;#11 n;#2 e;#4 n;e;bridge;e;#2 se;e;#4 n;enter;n;n;e;buy 3;smugle dispenser;buy 3;keep dispenser;w;s;s;out;s;s;enter;h}
 
 #nop { ========================= };
 #nop {          ZELLIGAR         };
 #nop { ========================= };
-#alias {gozelligar} {n;w;w;s;w;w;w;portal;#12 w;leave;w;w;w;n;n;n;n;enter};
+#alias {gozelligar} {shop;w;n;w;w;s;w;w;w;portal;#12 w;leave;w;w;w;n;n;n;n;enter};
 #alias {leavezelligar} {leave;s;s;s;s;e;e;e;enter;#12 e;portal;h};
