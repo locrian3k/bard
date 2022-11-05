@@ -47,7 +47,7 @@
 #nop { ========================= };
 #alias {goabbey} {shop;w;n;w;w;s;w;w;w;portal;#15 e;leave;#12 e;#5 n;w;s;s;sw;w;nw;enter mist;;#delay {3} {#showme <fff>Kill phylactery monster and type abbey2}}
 #alias {abbey2} {in;n;nw;e;e;n;n;e;n}
-#alias {abbeysteps} {2e;se;e;s;se;e;e;get shovel;get all;ne;desecrate grave;d;kill saren;#delay {5} {#showme Type abbeysteps2 once you get the breastplate.}}
+#alias {abbeysteps} {e;e;se;e;s;se;e;e;get shovel;get all;ne;desecrate grave;d;kill saren;#delay {5} {#showme Type abbeysteps2 once you get the breastplate.}}
 #alias {abbeysteps2} {u;n;n;climb vines;wrench symbol;kill ghost;#delay {5} {#showme Type abbeysteps3 once you kill the ghost.}}
 #alias {abbeysteps3} {wrench symbol;d;nw;w;w;sw;s;e;enter;e;e;kill marcus;#delay {5} {#showme Type abbeysteps4 once you kill Marcus.}}
 #alias {abbeysteps4} {push altar;d;d;e;e;kill dakath;#delay {5} {#showme Return to crypt and push lid for each room to acquire all gear.}}
