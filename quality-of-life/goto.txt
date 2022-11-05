@@ -118,7 +118,7 @@
 #nop {        LANTERN            };
 #nop { ========================= };
 #alias {getlantern} {shop;w;n;w;w;s;w;w;w;portal;#15 e;leave;#12 e;#5 n;w;s;s;sw;w;nw;enter mist;#delay {3} {#showme <fff>Kill phylactery monster and type lantern2}}
-#alias {lantern2} {in;n;nw;n;ne;n;nw;n;ne;n;ne;ne;e;e;s#delay {3} {#showme <fff>Now get all from corpse}}
+#alias {lantern2} {in;n;nw;n;ne;n;nw;n;ne;n;ne;ne;e;e;s;#delay {3} {#showme <fff>Now get all from corpse}}
 
 
 #nop { ========================= };
