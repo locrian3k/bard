@@ -27,7 +27,8 @@
 #nop { GAGGING THE HIT POINT BAR SO THAT IT'S NOT SPAMMY EVERY ROUND, COMMENTING OUT ALL ['s WITH A \ }
 #GAG {HP:\[%d/%d\] SP:\[%d/%d\] K:\[%d/%d\] V:\[%d/%d\] G2N:\[%d\] \[%12\]}
 #ACT {HP:\[%d/%d\] SP:\[%d/%d\] K:\[%d/%d\] V:\[%d/%d\] G2N:\[%d\] \[%12\]} 
-{   #var hptmp %1;
+{   #if {$checkrounds} {#math {checkrounds} {$checkrounds + 1};#show {Checker at $checkrounds rounds.};look};
+    #var hptmp %1;
     #math hpchange {$hptmp - $hpcur};
     #if {$hpchange >= 0} {#var hpchangec <129>} {#replace hpchange {-} {};#var hpchangec <119>;#math {dmgtaken} {$dmgtaken + $hpchange}};
     #var sptmp %3;
