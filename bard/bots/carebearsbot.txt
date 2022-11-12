@@ -1,0 +1,48 @@
+#nop {Start from rainbow path}
+
+#alias {carebearbot} {#var carebearstepnumber 1;#var carebearbot On;#delay {3}{carebearwalk}}
+
+#alias {carebearwalk} {carebearstep$carebearstepnumber;#math carebearstepnumber $carebearstepnumber +1}
+#alias {stop} {#var carebearbot Off}
+#alias {start} {#var carebearbot On;carebearwalk}
+#action {You cannot go} {#if {"$carebearbot" == "On"} {nobot;{#showme <120>Something is screwed up, fix your carebearbot.<088>}}}
+#action {There is no coins here.} {#if {"$carebearbot" == "On"} {carebearwalk}}
+
+#alias {carebearstep1} {#showme Beginning Care Bear run.;path;n;kill bear}
+#alias {carebearstep2} {enter;kill bear}
+#alias {carebearstep3} {out;e;n;kill bear}
+#alias {carebearstep4} {search table;e;pull latch;cast light;d;search bed;kill bear}
+#alias {carebearstep5} {kill bear}
+#alias {carebearstep6} {u;w;s;s;kill bear}
+#alias {carebearstep7} {n;e;kill bear}
+#alias {carebearstep8} {get cupcake;eat cupcake;enter;shake lump}
+#alias {carebearstep9} {out;w;w;w;enter;kill bear}
+#alias {carebearstep10} {out;climb;kill bear}
+#alias {carebearstep11} {kill bear}
+#alias {carebearstep12} {kill bear}
+#alias {carebearstep13} {s;kill bear}
+#alias {carebearstep14} {n;climb;n;e;kill bear}
+#alias {carebearstep15} {n;n;kill bear}
+#alias {carebearstep16} {s;s;e;rollout;kill bear}
+#alias {carebearstep17} {search forest;path;w;w;kill elephant}
+#alias {carebearstep18} {n;kill monkey}
+#alias {carebearstep19} {s;s;kill bear}
+#alias {carebearstep20} {kill bear}
+#alias {carebearstep21} {s;kill bear}
+#alias {carebearstep22} {enter;kill bear}
+#alias {carebearstep23} {kill lion}
+#alias {carebearstep24} {w;kill raccoon}
+#alias {carebearstep25} {n;knock on door;open door}
+#alias {carebearstep26} {s;e;e;kill pig}
+#alias {carebearstep27} {e;kill rabbit}
+#alias {carebearstep28} {n;n;pry board;d;bend bars;n;turn latch;open door;grab diamond}
+#alias {carebearstep29} {s;u;n;kill bear}
+#alias {carebearstep30} {look at equipment;get hyblomiter;w;search skulls}
+#alias {carebearstep31} {kill bear}
+#alias {carebearstep32} {kill bear}
+#alias {carebearstep33} {e;n;sit chair;enter;sit and wait}
+#alias {carebearstep34} {door;w;kill professor}
+#alias {carebearstep35} {e;4s;2w;out;2n;e;e;e;rollout;castle;enter;e}
+#alias {carebearstep36} {w;w;kill beastlie}
+#alias {carebearstep37} {e;n;n}
+#alias {carebearstep38} {out;fly bike;nobot}
