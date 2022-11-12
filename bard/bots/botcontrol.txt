@@ -100,7 +100,7 @@
         #var whereami Ice;
         #class {bots} {read} {locrian/bots/icybluebot.txt};
         scaler 30;
-        #showme {<120>You may now proceed to slaughter a village.<088>};idleoff;psclear;icebot;
+        #showme {<120>You may now proceed to slaughter a village.<088>};psclear;icebot;
         }
 
 #alias {smurfon} {
@@ -228,6 +228,7 @@
         #var chessbot Off;
         #var puppybot Off;
         #var puppyrescuebot Off;
+        #var carebearbot Off;
         #var majbot Off;
         #var alphabot Off;
         #var golembot Off;
