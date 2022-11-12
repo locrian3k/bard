@@ -1,0 +1,48 @@
+#nop {Start from COT}
+
+#alias {alphabot} {#var alphastepnumber 1;#var alphabot On;#delay {3}{alphawalk}}
+
+#alias {alphawalk} {alphastep$alphastepnumber;#math alphastepnumber $alphastepnumber +1}
+#alias {stop} {#var alphabot Off}
+#alias {start} {#var alphabot On;alphawalk}
+#action {You cannot go} {#if {"$alphabot" == "On"} {nobot;{#showme <120>Something is screwed up, fix your alphabot.<088>}}}
+#action {You have no offered missions.} {#if {"$alphabot" == "On"} {alphawalk}}
+#action {You have accepted the mission} {#if {"$alphabot" == "On"} {#delay {6};alphawalk}}
+#action {There is no coins here.} {#delay {alphadelay} {kill letter} {$delaytime}}
+#act {There is no letter here.} {#if {"$alphabot" == "On"} {alphawalk}}
+
+#alias {alphastep1} {#showme Locrian yells at you: Beginning alphabet.;con;n;w;n;n;e;n;enter;e;e;d;mission ask;mission accept}
+#alias {alphastep2} {mission accept}
+#alias {alphastep3} {mission accept}
+#alias {alphastep4} {mission accept}
+#alias {alphastep5} {mission accept}
+#alias {alphastep6} {mission accept}
+#alias {alphastep7} {ga;s;kill letter}
+#alias {alphastep8} {ga;drop a;s;kill letter}
+#alias {alphastep9} {ga;drop f;e;kill letter}
+#alias {alphastep10} {ga;drop g;w;n;e;kill letter}
+#alias {alphastep11} {ga;drop b;e;kill letter}
+#alias {alphastep12} {ga;drop c;e;kill letter}
+#alias {alphastep13} {ga;drop d;e;kill letter}
+#alias {alphastep14} {ga;drop e;s;kill letter}
+#alias {alphastep15} {ga;drop j;n;w;w;s;kill letter}
+#alias {alphastep16} {ga;drop h;s;kill letter}
+#alias {alphastep17} {ga;drop m;w;kill letter}
+#alias {alphastep18} {ga;drop l;w;kill letter}
+#alias {alphastep19} {ga;drop k;s;kill letter}
+#alias {alphastep20} {ga;drop p;n;e;e;e;kill letter}
+#alias {alphastep21} {ga;drop n;n;kill letter}
+#alias {alphastep22} {ga;drop i;s;s;kill letter}
+#alias {alphastep23} {ga;drop s;n;e;kill letter}
+#alias {alphastep24} {ga;drop o;s;kill letter}
+#alias {alphastep25} {ga;drop t;s;kill letter}
+#alias {alphastep26} {ga;drop y;e;kill letter}
+#alias {alphastep27} {ga;drop z;w;w;kill letter}
+#alias {alphastep28} {ga;drop x;w;kill letter}
+#alias {alphastep29} {ga;drop w;w;kill letter}
+#alias {alphastep30} {ga;drop v;w;kill letter}
+#alias {alphastep31} {ga;drop u;e;n;kill letter}
+#alias {alphastep32} {ga;drop q;e;kill letter}
+#alias {alphastep33} {ga;drop r;w;s;e;e;e;n;n;w;w;n;n;w;w;n;mission return;u;w;w;vortex;s;w;s;s;e;s;pstats;#showme Locrian yells at you: Alphabet is done;#var alphabot Off;nobot}
+
+#action {There is no letter here.} {#if {"$alphabot" == "On"} {alphawalk}}
