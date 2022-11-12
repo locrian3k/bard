@@ -82,7 +82,7 @@
         #var botting on;
         #var carebearbot On;
         #var whereami Care Bears;
-        #class {bots} {read} {locrian/bots/carebearbot.txt};psclear;carebearbot;
+        #class {bots} {read} {locrian/bots/carebearsbot.txt};psclear;carebearbot;
         }
         
 #alias {chesson} {
