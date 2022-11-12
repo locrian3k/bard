@@ -15,7 +15,7 @@
 #alias {carebearstep5} {kill bear}
 #alias {carebearstep6} {u;w;s;s;kill bear}
 #alias {carebearstep7} {n;e;kill bear}
-#alias {carebearstep8} {get cupcake;eat cupcake;enter;shake lump}
+#alias {carebearstep8} {get cupcake;eat cupcake;enter;shake lump;kill bear}
 #alias {carebearstep9} {out;w;w;w;enter;kill bear}
 #alias {carebearstep10} {out;climb;kill bear}
 #alias {carebearstep11} {kill bear}
@@ -35,14 +35,14 @@
 #alias {carebearstep25} {n;knock on door;open door}
 #alias {carebearstep26} {s;e;e;kill pig}
 #alias {carebearstep27} {e;kill rabbit}
-#alias {carebearstep28} {n;n;pry board;d;bend bars;n;turn latch;open door;grab diamond}
+#alias {carebearstep28} {n;n;pry board;d;bend bars;n;turn latch;open door;grab diamond;kill bear}
 #alias {carebearstep29} {s;u;n;kill bear}
-#alias {carebearstep30} {look at equipment;get hyblomiter;w;search skulls}
+#alias {carebearstep30} {look at equipment;get hyblomiter;w;search skulls;kill bear}
 #alias {carebearstep31} {kill bear}
 #alias {carebearstep32} {kill bear}
-#alias {carebearstep33} {e;n;sit chair;enter;sit and wait}
+#alias {carebearstep33} {e;n;sit chair;enter;sit and wait;kill doctor}
 #alias {carebearstep34} {door;w;kill professor}
-#alias {carebearstep35} {e;4s;2w;out;2n;e;e;e;rollout;castle;enter;e}
+#alias {carebearstep35} {e;s;s;s;s;w;w;out;n;n;e;e;e;rollout;castle;enter;e;kill screetchie}
 #alias {carebearstep36} {w;w;kill beastlie}
-#alias {carebearstep37} {e;n;n}
+#alias {carebearstep37} {e;n;n;kill noheart}
 #alias {carebearstep38} {out;fly bike;nobot}
