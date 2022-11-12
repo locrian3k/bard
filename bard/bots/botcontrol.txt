@@ -78,13 +78,20 @@
         #showme {<120>You may now proceed to spell things.<088>};omon;hson;hlon;psclear;alphabot;
         }
 
+#alias {carebearon} {
+        #var botting on;
+        #var carebearbot On;
+        #var whereami Care Bears;
+        #class {bots} {read} {locrian/bots/carebearbot.txt};psclear;carebearbot;
+        }
+        
 #alias {chesson} {
         #var botting on;
         #var chessbot On;
         #var whereami Chess-110;
         #class {bots} {read} {locrian/bots/bardchessbot.txt};
         scaler 110;
-        #showme {<120>You may now proceed to play chess<088>};idleoff;psclear;chessbot;
+        #showme {<120>You may now proceed to play chess<088>};psclear;chessbot;
         }
 
 #alias {iceon} {
