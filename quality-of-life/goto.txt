@@ -20,7 +20,7 @@
         Android             - goandroid\n
         Arcanarton's room   - goarcanarton\n
         Banshee's Lair      - gobanshee\n
-        Care Bears          - gobears (carebearon)\n
+        Care Bears          - gobears,set scaler,carebearon\n
         Death Taco          - gotaco,set scaler,e,tacoon\n
         Hotel Transylvania  - gohotel\n
         Land of the Verbeeg - goverbeeg\n
