@@ -165,10 +165,16 @@
 	#if {"$harmonicreg" == "No" && "$harmonicregeneration" == "On"} {#var hrcolor <bac>};
     	#if {"$harmonicreg" != "No"}{#var hrcolor <eaf>};
 	
+	#regex $spells1 {PN:%d} {#var pneutral &1};
+        #if {$pneutral <= "10" && "$pn" == "On" && $perfinfo == "D♭"} {cast protection from neutral};
+	#if {$pneutral == "0" && "$pn" == "Off"} {#var pncolor <109>};
+	#if {$pneutral == "0" && "$pn" == "On"} {#var pncolor <bac>};
+    	#if {$pneutral != "0"}{#var pncolor <eaf>};
+	
 	#regex $spells1 {FH:%d} {#var frain &1};
-        #if {$frain <= "10" && "$focusrainbow" == "On" && $perfinfo == "D♭"} {cast focus the rainbow};
-	#if {$frain == "0" && "$fr" == "Off"} {#var frcolor <109>};
-	#if {$frain == "0" && "$fr" == "On"} {#var frcolor <bac>};
+        #if {$frain <= "9" && "$focusrainbow" == "On" && $perfinfo == "D♭"} {cast focus the rainbow};
+	#if {$frain == "0" && "$focusrainbow" == "Off"} {#var frcolor <109>};
+	#if {$frain == "0" && "$focusrainbow" == "On"} {#var frcolor <bac>};
     	#if {$frain != "0"}{#var frcolor <eaf>};
 
     	#if {"$perfinfo" != "D♭" && $perfinfo >= 50}{#var performcolor <119>};
