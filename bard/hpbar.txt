@@ -165,17 +165,11 @@
 	#if {"$harmonicreg" == "No" && "$harmonicregeneration" == "On"} {#var hrcolor <bac>};
     	#if {"$harmonicreg" != "No"}{#var hrcolor <eaf>};
 	
-	#regex $spells1 {PN:%d} {#var pneutral &1};
-        #if {$pneutral <= "10" && "$pn" == "On" && $perfinfo == "D♭"} {cast protection from neutral};
-	#if {$pneutral == "0" && "$pn" == "Off"} {#var pncolor <109>};
-	#if {$pneutral == "0" && "$pn" == "On"} {#var pncolor <bac>};
-    	#if {$pneutral != "0"}{#var pncolor <eaf>};
-	
 	#regex $spells1 {FH:%d} {#var frain &1};
-        #if {$frain <= "9" && "$focusrainbow" == "On" && $perfinfo == "D♭"} {cast focus the rainbow};
-	#if {$frain == "0" && "$focusrainbow" == "Off"} {#var frcolor <109>};
-	#if {$frain == "0" && "$focusrainbow" == "On"} {#var frcolor <bac>};
-    	#if {$frain != "0"}{#var frcolor <eaf>};
+        #if {$frain == 0 && "$focusrainbow" == "On" && "$perfinfo" == "D♭"} {cast focus the rainbow};
+	#if {$frain == 0 && "$focusrainbow" == "Off"} {#var frcolor <109>};
+	#if {$frain == 0 && "$focusrainbow" == "On"} {#var frcolor <bac>};
+    	#if {$frain != 0}{#var frcolor <eaf>};
 
     	#if {"$perfinfo" != "D♭" && $perfinfo >= 50}{#var performcolor <119>};
     	#if {"$perfinfo" != "D♭" && $perfinfo < 50 && $perfinfo > 20}{#var performcolor <139>};
@@ -229,8 +223,6 @@
         #if {"$vamp" == "Off" && "$vsong" == "Off"} {#var vampcolor <109>};
 	#if {"$vamp" == "Off" && "$vsong" == "On"} {#var vampcolor <bac>};
         #if {"$vamp" != "Off"} {#var vampcolor <dcf>};
-	
-	#nop { CHANGE TO THIS ONE WHEN YOU GET FOCUS THE RAINBOW #showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F 		${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR ${frcolor}FR}{-4}; };
 	
 	#showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F ${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR ${frcolor}FR ${smilecolor}SM ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V}{-4};
     };
