@@ -50,7 +50,7 @@
 #read tintin/bard/gag.txt
 
 #nop { READING THIS FILE BRINGS IN YOUR HIT POINT BAR  - MAKE SURE YOU TYPE AUTOHP 1 ON THE MUD }
-#read tintin/bard/hpbar.txt
+#nop {#read tintin/bard/hpbar.txt}
 
 #nop { READING THIS FILE WILL ADD IN AN ENCUMBERANCE METER WHEN YOU CHECK INVENTORY, SHOW RESISTANCES IN SCORE, HELP TRAIN, ADJUST SETMOD, and ADD ALIASES TO GO TO PLACES }
 #read tintin/quality-of-life/index.txt
