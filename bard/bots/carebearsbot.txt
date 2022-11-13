@@ -7,6 +7,18 @@
 #alias {start} {#var carebearbot On;carebearwalk}
 #action {You cannot go} {#if {"$carebearbot" == "On"} {nobot;{#showme <120>Something is screwed up, fix your carebearbot.<088>}}}
 #action {There is no coins here.} {#if {"$carebearbot" == "On"} {carebearwalk}}
+#action {There is no bear here.} {carebearwalk}
+#action {There is no professor here.} {carebearwalk}
+#action {There is no elephant here.} {carebearwalk}
+#action {There is no monkey here.} {carebearwalk}
+#action {There is no lion here.} {carebearwalk}
+#action {There is no raccoon here.} {carebearwalk}
+#action {There is no pig here.} {carebearwalk}
+#action {There is no rabbit here.} {carebearwalk}
+#action {There is no screetchie here.} {carebearwalk}
+#action {There is no noheart here.} {carebearwalk}
+#action {There is no doctor here.} {carebearwalk}
+#action {There is no beastlie here.} {carebearwalk}
 
 #alias {carebearstep1} {#showme Beginning Care Bear run.;path;n;kill bear}
 #alias {carebearstep2} {enter;kill bear}
