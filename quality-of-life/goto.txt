@@ -2,7 +2,10 @@
 #nop {        BOOT RUN           };
 #nop { ========================= };
 #alias {bootrun} {#showme
-        Spirit Gear        - goangels,activate defenses,angelson\n
+        <aef>BEGIN AT Home:\n
+        Spirit Gear - goangels,activate defenses,angelson\n
+        Taco Stuff  - gotaco,set scaler,e,tacoon\n
+        Care Bears  - gobears,set scaler,carebearon\n
        }
 
 
