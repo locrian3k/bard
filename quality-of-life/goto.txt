@@ -105,8 +105,8 @@
 #nop { ========================= };
 #nop {       CARE BEARS          };
 #nop { ========================= };
-#alias {gobears} {shop;w;n;w;n;n;e;n;enter;w;w;w;s;climb rainbow}
-#alias {leavebears} {slide rainbow;n;e;e;e;vortex}
+#alias {gobears} {shop;w;n;w;n;n;e;n;enter;e;e;e;s;climb rainbow}
+#alias {leavebears} {slide rainbow;n;w;w;w;vortex}
 
 
 #nop { ========================= };
