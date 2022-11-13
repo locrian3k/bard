@@ -166,9 +166,9 @@
     	#if {"$harmonicreg" != "No"}{#var hrcolor <eaf>};
 	
 	#regex $spells1 {FH:%d} {#var frain &1};
-        #if {$frain == 0 && "$focusrainbow" == "On" && "$perfinfo" == "D♭"} {cast focus the rainbow};
-	#if {$frain == 0 && "$focusrainbow" == "Off"} {#var frcolor <109>};
-	#if {$frain == 0 && "$focusrainbow" == "On"} {#var frcolor <bac>};
+        #if {"$frain" == "0" && "$focusrainbow" == "On" && "$perfinfo" == "D♭"} {cast focus the rainbow};
+	#if {"$frain" == "0" && "$focusrainbow" == "Off"} {#var frcolor <109>};
+	#if {"$frain" == "0" && "$focusrainbow" == "On"} {#var frcolor <bac>};
     	#if {$frain != 0}{#var frcolor <eaf>};
 
     	#if {"$perfinfo" != "D♭" && $perfinfo >= 50}{#var performcolor <119>};
