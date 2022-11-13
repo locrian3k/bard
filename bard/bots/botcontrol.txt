@@ -145,7 +145,7 @@
         #var whereami SectionZ-75;
         #class {bots} {read} {locrian/bots/Xsecbot.txt};
         scaler 75;
-        #showme {<120>You may now proceed to kill Section Z things.<088>};idleoff;psclear;secbotX;
+        #showme {<120>You may now proceed to kill Section Z things.<088>};pstats;psclear;secbotX;
         }
 
 #alias {zombieson} {
@@ -154,7 +154,7 @@
         #var whereami Zombies-70;
  #class {bots} {read} {locrian/bots/bardzombiebot.txt};
         scaler 70;
-        #showme {<120>You may now proceed to slaughter zombies.<088>};idleoff;psclear;zombiebot;
+        #showme {<120>You may now proceed to slaughter zombies.<088>};psclear;zombiebot;
         }
 
 #NOP {========== CRAFTING ==========}
@@ -243,8 +243,8 @@
         #var icebot Off;
         #class bots kill;
         #var whereami Clear;
-        #var botting off;#read tintin/corpses/mycorpses.txt;
-        idleon}
+        #var botting off;#read tintin/corpses/mycorpses.txt
+        }
 
 #action {You cannot go} {#if {"$botting" == "On"} {nobot;#showme <120>Something is screwed up, fix your bot.<088>}}
 #action {Pstat Time : %1} {#var pstattime %1}
