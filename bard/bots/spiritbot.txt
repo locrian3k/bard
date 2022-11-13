@@ -13,8 +13,6 @@
 #alias {spiritstep8} {get all;onward;doorway;kill angel}
 #alias {spiritstep9} {get all;onward;doorway;kill angel}
 #alias {spiritstep10} {get all;onward;doorway;kill angel}
-#alias {spiritstep11} {get all;onward;doorway;kill angel}
-#alias {spiritstep12} {get all;light;get all;will}
-
+#alias {spiritstep11} {get all;light;get all;will}
 
 #action {The light bends into the shape of a doorway.} {leave;e;w;w;e;e;e;vortex;home;nobot}
