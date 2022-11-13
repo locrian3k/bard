@@ -11,8 +11,8 @@
 
 #nop { THIS IS WHAT OUR HIT POINT BAR LOOKS LIKE WHEN YOU HAVE WAY MORE SPELLS AND SONGS, LINE BY LINE }
 #nop { HP:[3952/1777] SP:[4347/3969] K:[1198/1198] V:[100/100] G2N:[17039202] [] }
-#nop { [ HS:0 CC:Off PG:0 PE:0 PN:0 PF:0 PH:0 MB:Off B:Off HR:No ] [ OM:Off LB:Off R:Off SL:Off AG:Off D:Off DW:Off V:Off ] }
-#nop { Coffin:0/32 Sm:[4/24%] <> c:[41681] }
+#nop { [ [ HS:0 CC:Off PG:0 PE:0 PN:0 PF:0 PH:0 MB:Off B:On HR:No FR:0 ] [ OM:68 LB:Off R:Off SL:Off AG:105 D:Off DW:Off V:848 ] }
+#nop { Coffin:8/31 Sm:[4/15%] <> c:[281726] }
 
 
 #nop { SLIME HIT POINT BAR - THIS IS ON CHRISTMAS DAY WHEN YOU GET SLIME (ALL ~'s MUST BE COMMENTED OUT WITH A \ ) }
@@ -165,10 +165,11 @@
 	#if {"$harmonicreg" == "No" && "$harmonicregeneration" == "On"} {#var hrcolor <bac>};
     	#if {"$harmonicreg" != "No"}{#var hrcolor <eaf>};
 	
-	#nop {  #regex $spells1 {FR:%S} {#var frain &1};                                                        };
-        #nop {  #if {"$frain" == "Off" && "$focusrainbow" == "On" && "$perfinfo" == "D♭"} {cast focus the rainbow}; };
-	#nop {  #if {"$frain" == "Off"} {#var frcolor <109>};                                                     };
-    	#nop {  #if {"$frain" != "Off"}{#var frcolor <eaf>};	                                                };
+	#regex $spells1 {FH:%d} {#var frain &1};
+        #if {$frain <= "10" && "$focusrainbow" == "On" && $perfinfo == "D♭"} {cast focus the rainbow};
+	#if {$frain == "0" && "$fr" == "Off"} {#var frcolor <109>};
+	#if {$frain == "0" && "$fr" == "On"} {#var frcolor <bac>};
+    	#if {$frain != "0"}{#var frcolor <eaf>};
 
     	#if {"$perfinfo" != "D♭" && $perfinfo >= 50}{#var performcolor <119>};
     	#if {"$perfinfo" != "D♭" && $perfinfo < 50 && $perfinfo > 20}{#var performcolor <139>};
@@ -225,7 +226,7 @@
 	
 	#nop { CHANGE TO THIS ONE WHEN YOU GET FOCUS THE RAINBOW #showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F 		${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR ${frcolor}FR}{-4}; };
 	
-	#showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F ${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR ${smilecolor}SM ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V}{-4};
+	#showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F ${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR ${frcolor}FR ${smilecolor}SM ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V}{-4};
     };
 
 #NOP {Coffin:6/18 Sm:[2/57%] <> c:[135]};
