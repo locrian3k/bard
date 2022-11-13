@@ -34,7 +34,7 @@
  #showme {<120>You may now proceed to play rescue puppies.<088>};pstats;psclear;puppybot;
         }
 
-#alias {spiriton} {
+#alias {angelson} {
         #var botting on;
         #var spiritbot On;
         #var whereami Spirit Angels;
