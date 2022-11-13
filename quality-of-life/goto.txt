@@ -1,7 +1,10 @@
 #nop { ========================= };
 #nop {        BOOT RUN           };
 #nop { ========================= };
-Spirit Gear        - 
+#alias {bootrun} {#showme
+        Spirit Gear        - goangels,activate defenses,angelson\n
+       }
+
 
 #nop { ========================= };
 #nop {        GO WHERE           };
@@ -26,7 +29,7 @@ Spirit Gear        -
         (Beloch)            - gobeloch, beloch2, beloch3\n
         (Ghoti/Delundar)    - goghoti, ghoti2, ghoti3\n
         Section Z           - gosecz\n
-        Spirit Gear         - gotree\n
+        Tree of Life 2.0    - goangels\n
         Terra's Treehouse   - goterra\n
         Zelligar            - gozelligar\n
         \n
@@ -146,7 +149,7 @@ Spirit Gear        -
 #nop {    TREE OF LIFE 2.0       };
 #nop { ========================= };
 #alias {goangels} {shop;w;n;w;n;n;e;n;enter;w;w;w;w;embrace void;#delay {3} {#showme <fff>MAKE SURE ALL DEFENSES ARE UP! and then angelon}}
-#alias {leaveangels} {;vortex}
+#alias {leaveangels} {leave;e;w;w;e;e;e;vortex;home}
 
 
 #nop { ========================= };
