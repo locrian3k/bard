@@ -59,8 +59,8 @@
 	#var focusrainbow Off;
 		#alias {fron} {#var focusrainbow On;}
 		#alias {froff} {#var focusrainbow Off;}
-		#action {A shimmering, ethereal lens slowly materializes in front of you} {#var focusrainbow On;}
-		#action {The shimmering lens in front of you slowly dissipates} {#var focusrainbow Off;}
+		#nop {#action {A shimmering, ethereal lens slowly materializes in front of you} {#var focusrainbow On;}}
+		#nop {#action {The shimmering lens in front of you slowly dissipates} {#var focusrainbow Off;}}
 	
 	#nop { S O N G S };
 	#nop { Smile };
