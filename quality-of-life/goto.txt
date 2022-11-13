@@ -14,7 +14,8 @@
         Android             - goandroid\n
         Arcanarton's room   - goarcanarton\n
         Banshee's Lair      - gobanshee\n
-        Death Taco          - gotaco\n
+        Care Bears          - gobears (carebearon)\n
+        Death Taco          - gotaco,set scaler,e,tacoon\n
         Hotel Transylvania  - gohotel\n
         Land of the Verbeeg - goverbeeg\n
         Nex Gear            - gonex\n
@@ -64,7 +65,7 @@
 #nop { ========================= };
 #nop {        ALPHABET           };
 #nop { ========================= };
-#alias {goalphabet} {n;w;n;n;e;n;enter;e;e;d}
+#alias {goalphabet} {shop;w;n;w;n;n;e;n;enter;e;e;d}
 #alias {leavealphabet} {u;w;w;vortex;h}
 
 
@@ -93,6 +94,13 @@
 #alias {ghoti3} {#7 s;e;e;e;se;ne;w;n;};
 #alias {leaveghoti} {u;u;u;n;e;e;n;n;n;n;n;n;n;nw;#8 w;nw;w;enter;#15 w;portal;e;e;e;n;e;e;s};
 #alias {leavebeloch} {u;u;u;n;e;e;n;n;n;n;n;n;n;nw;#8 w;nw;w;enter;#15 w;portal;e;e;e;n;e;e;s};
+
+
+#nop { ========================= };
+#nop {       CARE BEARS          };
+#nop { ========================= };
+#alias {gotaco} {shop;w;n;w;n;n;e;n;enter;w;w;w;s;climb rainbow}
+#alias {leavetaco} {slide rainbow;n;e;e;e;vortex}
 
 
 #nop { ========================= };
