@@ -146,6 +146,7 @@
 #nop {      PORTAL OF LIFE       };
 #nop { ========================= };
 #alias {gopol} {shop;w;n;w;w;s;w;w;w;portal;#15 e;leave;e;ne;#6 e;portal;#delay {3} {#showme <fff>Arrived.}}
+#alias {leavepol} {portal;#6 w;sw;w;enter;#15 w;portal;h}
 
 
 #nop { ========================= };
