@@ -27,6 +27,7 @@
         Nex Gear            - gonex\n
         Peeron's Castle     - gopeeron\n
         Phylactery          - goravenloft\n
+        Portal of Life      - gopol\n
         Puppy Mill          - gopuppy\n
         Rabbit Fields       - gorabbit \n
         (Beloch)            - gobeloch, beloch2, beloch3\n
@@ -139,6 +140,12 @@
 #alias {getlantern} {shop;w;n;w;w;s;w;w;w;portal;#15 e;leave;#12 e;#5 n;w;s;s;sw;w;nw;enter mist;#delay {3} {#showme <fff>Kill phylactery monster and type lantern2}}
 #alias {lantern2} {in;n;nw;n;ne;n;nw;n;ne;n;ne;ne;e;e;s;#delay {3} {#showme <fff>Now get all from corpse}}
 #alias {leavelantern} {n;w;w;sw;sw;s;sw;s;se;s;sw;s;se;s;enter mist;e;n;portal;home}
+
+
+#nop { ========================= };
+#nop {      PORTAL OF LIFE       };
+#nop { ========================= };
+#alias {gopol} {shop;w;n;w;w;s;w;w;w;portal;#15 e;leave;e;ne;#6 e;portal;#delay {3} {#showme <fff>Arrived.}}
 
 
 #nop { ========================= };
