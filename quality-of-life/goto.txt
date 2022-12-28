@@ -16,6 +16,7 @@
         <aef>BEGIN AT Home:\n
         Abbey               - goabbey, abbey2\n
         Aegis               - goaegis\n
+        Alchemist's house   - gozos\n
         Alphabet            - goalphabet\n
         Android             - goandroid\n
         Arcanarton's room   - goarcanarton\n
@@ -67,6 +68,13 @@
 #nop { ========================= };
 #alias {goaegis} {shop;w;s;e;e;n;e;e;enter;u;n;n;n;n;d;#18 n;#25 e;n;n;n;n;e;bridge;e;se;se;e;e;enter}
 #alias {leaveaegis} {exit;n;n;w;enter}
+
+
+#nop { ========================= };
+#nop {    ALCHEMIST'S HOUSE      };
+#nop { ========================= };
+#alias {gozos} {fantasy;portal;#12 n;leave;#9 n;#3 w;enter;n;e}
+#alias {leavezos} {w;s;leave;n;#7 w;portal}
 
 
 #nop { ========================= };
