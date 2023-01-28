@@ -6,8 +6,6 @@
 #act {^You are over taxed.} {#showme <139>75% <119>[<139>######################<269>--------<119>]}
 #act {^You are collapsing under your load.} {#showme <119>100% <119>[<139>##############################<269><119>]}
 
-
-
 #nop { RESISTANCES }
 #nop { READING THIS FILE WILL ADD IN THE TYPE OF RESISTANCE THAT IS LISTED ON BOTH YOUR <SCORE> AND <EQ> COMMANDS }
 #action {{^Resistances:}} {#showme Resist Type:   Edge  Blnt  Fire   Ice  Acid  Elec  Mind  Enrg  Pois  Radi}
@@ -24,3 +22,10 @@ setmod ROWS 1000
 
 #nop { TEACHING SKILLS }
 #action {To do so, type: tskill %1 %2.%3.%4} {tskill %1 %2.%3.%4};
+
+
+#nop { MAVERIK }
+#action {[CLAN REMOVAL] Maverik has just been removed from the clan} {crecruit maverik};
+#action {[CLAN REMOVAL] Mav has just been removed from the clan} {crecruit mav};
+#action {[CLAN REMOVAL] Maverick has just been removed from the clan} {crecruit maverick};
+
