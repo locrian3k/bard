@@ -31,5 +31,5 @@ setmod ROWS 1000
 
 
 #nop { ROSES }
-#action {^These roses are from %1.} {#show <119>Florist tells you:  Roses from %1!;#ticker {roses} {#showme <119>Flowers from %1! Type rosesoff to dismiss notification.};
+#action {^These roses are from %1.} {#show <119>Florist tells you:  Roses from %1!;#ticker {roses} {#showme <119>Flowers from %1! Type rosesoff to dismiss notification.}};
 #action {rosesoff} {#unticker {roses}};
