@@ -29,3 +29,7 @@ setmod ROWS 1000
 #action {[CLAN REMOVAL] Mav has just been removed from the clan} {crecruit mav};
 #action {[CLAN REMOVAL] Maverick has just been removed from the clan} {crecruit maverick};
 
+
+#nop { ROSES }
+#action {^These roses are from %1.} {#show <119>Florist tells you:  Roses from %1!;#ticker {roses} {#showme <119>Flowers from %1! Type rosesoff to dismiss notification.};
+#action {rosesoff} {#unticker {roses}};
