@@ -1,18 +1,16 @@
 #nop { BARD SETUP FOR HIT POINT BAR }
 #nop { Your HP bar has been set with gset custom_hp using the following settings: }
-#nop { Valkyrja's = gset custom_hp H[&$HP2$&] F[&$FE2$&] G[&$G2N$&/&$G2N%$&%] &$NL$&S[&$AS$&] c:[&$AU$&] T:[&$C$&] }
+#nop { Valkyrja's = gset custom_hp H[&$HP2$&] F[&$FE2$&] G[&$G2N$&/&$G2N%$&%] T[&$C$&] &$NL$&S[&$AS$&] c[&$AU$&] }
 
 
 #nop {    EXAMPLE OF WHAT THE ABOVE BSET WILL LOOK LIKE                   }
-#nop {    HP:[633/310] SP:[713/713] K:[183/183] V:[68/100] G2N:[24] []    }
-#nop {    [ HS:0 CC:Off ] [ OM:85 LB:Off ]                                }
-#nop {    Coffin:4/5 Sm:[0/13%] <> c:[3125]                               }
+#nop {    H[633/310] F[713/713] G[183285/39%] T[10%]                      }
+#nop {    S [] c[38579]                                                   }
 #nop {    You can change this any way you want, but will need to update the triggers to reflect your changes. }
 
-#nop { THIS IS WHAT OUR HIT POINT BAR LOOKS LIKE WHEN YOU HAVE WAY MORE SPELLS AND SONGS, LINE BY LINE }
-#nop { HP:[3952/1777] SP:[4347/3969] K:[1198/1198] V:[100/100] G2N:[17039202] [] }
-#nop { [ [ HS:0 CC:Off PG:0 PE:0 PN:0 PF:0 PH:0 MB:Off B:On HR:No FR:0 ] [ OM:68 LB:Off R:Off SL:Off AG:105 D:Off DW:Off V:848 ] }
-#nop { Coffin:8/31 Sm:[4/15%] <> c:[281726] }
+#nop { THIS IS WHAT OUR HIT POINT BAR LOOKS LIKE WHEN SPELLS ARE ACTIVATED}
+#nop {    H[633/310] F[713/713] G[183285/39%] T[10%]                      }
+#nop {    S[BI: 36 BF: 50 FBT: 10 ] c[38579]                              }
 
 
 #nop { SLIME HIT POINT BAR - THIS IS ON CHRISTMAS DAY WHEN YOU GET SLIME (ALL ~'s MUST BE COMMENTED OUT WITH A \ ) }
@@ -22,12 +20,12 @@
 
 
 #nop {HPBAR LINE 1}
-#nop {HP:[633/310] SP:[713/713] K:[183/183] V:[68/100] G2N:[24] []}
+#nop {H[633/310] F[713/713] G[183285/39%] T[10%]}
 
 #nop { GAGGING THE HIT POINT BAR SO THAT IT'S NOT SPAMMY EVERY ROUND, COMMENTING OUT ALL ['s WITH A \ }
-#GAG {HP:\[%d/%d\] SP:\[%d/%d\] K:\[%d/%d\] V:\[%d/%d\] G2N:\[%d\] \[%12\]}
-#ACT {HP:\[%d/%d\] SP:\[%d/%d\] K:\[%d/%d\] V:\[%d/%d\] G2N:\[%d\] \[%12\]} 
-{   #if {"$checking" == "on"} {#math {checkrounds} {$checkrounds + 1};#show {Checker at $checkrounds rounds.};look};
+#GAG {H\[%d/%d\] F\[%d/%d\] G\[%d/%d\\%] T\[%7\]}
+#ACT {H\[%d/%d\] F\[%d/%d\] G\[%d/%d\\%] T\[%7\]} 
+{   #if {"$checking" == "on"} {#math {checkrounds} {$checkrounds + 1};#show {Checker at $checkrounds rounds.}};
     #var hptmp %1;
     #math hpchange {$hptmp - $hpcur};
     #if {$hpchange >= 0} {#var hpchangec <129>} {#replace hpchange {-} {};#var hpchangec <119>;#math {dmgtaken} {$dmgtaken + $hpchange}};
