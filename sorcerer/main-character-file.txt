@@ -1,0 +1,89 @@
+#CONFIG           {AUTO TAB}              {5000}
+#CONFIG           {BUFFER SIZE}           {100000}
+#CONFIG           {CONNECT RETRY}         {15}
+#CONFIG           {COMMAND COLOR}         {<078>}
+#CONFIG           {COMMAND ECHO}          {ON}
+#CONFIG           {HISTORY SIZE}          {2500}
+#CONFIG           {LOG}                   {RAW}
+#CONFIG           {PACKET PATCH}          {0.5}
+#CONFIG           {REPEAT ENTER}          {OFF}
+#CONFIG           {REPEAT CHAR}           {)}
+#CONFIG           {SCROLL LOCK}           {OFF}
+#CONFIG           {SPEEDWALK}             {OFF}
+#CONFIG           {TINTIN CHAR}           {#}
+#CONFIG           {VERBATIM}              {OFF}
+#CONFIG           {VERBATIM CHAR}         {\}
+#CONFIG           {VERBOSE}               {OFF}
+#CONFIG           {WORDWRAP}              {ON}
+#CONFIG		  	  {COLOR PATCH}           {ON}
+#PATHDIR          {n}                     {s}                          {1}
+#PATHDIR          {e}                     {w}                          {2}
+#PATHDIR          {ne}                    {sw}                         {3}
+#PATHDIR          {s}                     {n}                          {4}
+#PATHDIR          {se}                    {nw}                         {6}
+#PATHDIR          {w}                     {e}                          {8}
+#PATHDIR          {nw}                    {se}                         {9}
+#PATHDIR          {sw}                    {ne}                         {12}
+#PATHDIR          {u}                     {d}                          {16}
+#PATHDIR          {d}                     {u}                          {32}
+
+#nop { THIS WILL SPLIT YOUR SCREEN INTO MULTIPLE SECTIONS }
+#nop { Example of what numbers go where for the split you desire: #split {top bar} {bottom bar} {left bar} {right bar} {input bar}}
+	#split {0} {5} {0} {0} {1};
+
+#nop { THIS WILL RE-READ THIS FILE WHICH IS BENEFICIAL WHEN YOU ADD SOMETHING. YOU'LL NEED TO #END AND RELOG BACK IN IF YOU MODIFY SOMETHING ALREADY HERE }
+#alias {source} {#read tintin/sorcerer/main-character-file.txt}
+
+#nop { READING THIS FILE WILL ACTIVATE SPECIFIC ATTACKS DURING COMBAT}
+#read tintin/sorcerer/attacking.txt
+
+#nop { READING THIS FILE WILL BRING IN THE COMMUINCATION NOTIFICATIONS AT THE BOTTOM OF THE HIT POINT BAR }
+#read tintin/sorcerer/communication.txt
+
+#nop { READING THIS FILE WILL BRING IN ALL SPELLS AND SONGS VARIABLES }
+#read tintin/sorcerer/variables.txt
+
+#nop { READING THIS FILE BRINGS IN ALL BOT RUNS }
+#read tintin/sorcerer/bots/botcontrol.txt
+
+#nop { READING THIS FILE WILL HELP KEEP THINGS FROM SPAMMING YOUR SCREEN }
+#read tintin/sorcerer/gag.txt
+
+#nop { READING THIS FILE BRINGS IN YOUR HIT POINT BAR  - MAKE SURE YOU TYPE AUTOHP 1 ON THE MUD }
+#read tintin/sorcerer/hpbar.txt
+
+#nop { READING THIS FILE WILL ADD IN AN ENCUMBERANCE METER WHEN YOU CHECK INVENTORY, SHOW RESISTANCES IN SCORE, HELP TRAIN, ADJUST SETMOD, and ADD ALIASES TO GO TO PLACES }
+#read tintin/quality-of-life/index.txt
+#read tintin/quality-of-life/goto.txt
+
+#nop { READING THIS FILE WILL BRING IN GOLEM MASTER INFORMATION - gmhelp }
+#read tintin/professions/golem-master.txt
+
+
+#nop { ENTRANCE AND EXIT MESSAGES FOR HIGH MORTAL, WHICH DISAPPEAR WHEN YOU DIE }
+#delay {EnterMess} {
+        setmin strums a chord on her guitar;
+        setmout breaks a guitar string;
+        setmmin strums a chord on her guitar;
+        setmmout intensely focuses on her guitar solo and vanishes;
+} {10};
+
+
+#nop {========================================};
+#nop {========= H I G H L I G H T S ==========};
+#nop {========================================};
+#highlight {acid shower} {green}
+
+
+#nop {========================================};
+#nop {=== S P E L L S  O N  H P  B A R =======};
+#nop {========================================};
+	#alias {spellshp} {#showme 
+		<bae>SHIELDS<088>\n
+		\ \ (10) Barrier of Ice             Costs 175 fettle\n
+		\ \ (25) Barrier of Fire            Costs 275 fettle)\n
+		\n
+		<bae>DAMAGE OVER TIME<088>\n
+		\ \ (15) Frostbite                  Costs 200 fettle\n
+    \ \ (30) Molten Shower              Costs 255 fettle\n
+	};
