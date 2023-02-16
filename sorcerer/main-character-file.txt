@@ -55,6 +55,7 @@
 #nop { READING THIS FILE WILL ADD IN AN ENCUMBERANCE METER WHEN YOU CHECK INVENTORY, SHOW RESISTANCES IN SCORE, HELP TRAIN, ADJUST SETMOD, and ADD ALIASES TO GO TO PLACES }
 #read tintin/quality-of-life/index.txt
 #read tintin/quality-of-life/goto.txt
+#read tintin/quality-of-life/alias.txt
 
 #nop { READING THIS FILE WILL BRING IN GOLEM MASTER INFORMATION - gmhelp }
 #read tintin/professions/golem-master.txt
