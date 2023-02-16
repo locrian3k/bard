@@ -1,0 +1,5 @@
+#nop { ============================= };
+#nop { ==== E X P L O R I N G ====== };
+#nop { ============================= };
+#alias {exs %1} {look at %1;search %1};
+#alias {sr} {search};
