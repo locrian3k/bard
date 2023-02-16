@@ -86,5 +86,7 @@
 		\n
 		<bae>DAMAGE OVER TIME<088>\n
 		\ \ (15) Frostbite                  Costs 200 fettle\n
-    \ \ (30) Molten Shower              Costs 255 fettle\n
+    		\ \ (30) Molten Shower              Costs 255 fettle\n
+    		\ \ (40) Ice Golem                  Costs 350 fettle\n	
+    		\ \ (47) Fire Golem                 Costs 450 fettle\n		
 	};
