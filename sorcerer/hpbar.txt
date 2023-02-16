@@ -1,6 +1,6 @@
 #nop { BARD SETUP FOR HIT POINT BAR }
 #nop { Your HP bar has been set with gset custom_hp using the following settings: }
-#nop { Valkyrja's = gset custom_hp HP:[&$HP$&/&$MHP$&] HP2:[&$HP2$&] HP3:[&$HP3$&] &$NL$&FE:[&$FE$&/&$MFE$&] FE2:[&$FE2$&] FE3:[&$FE3$&] &$NL$&G2N:[&$G2N$&] G2N%:[&$G2N%$&] G2S:[&$G2S$&] &$NL$&S:[&$AS$&] c:[&$AU$&] T:[&$C$&] &$NL$&XP:[&$XP$&] XPS:[&$XPS$&] }
+#nop { Valkyrja's = gset custom_hp H[&$HP2$&] F[&$FE2$&] G[&$G2N$&/&$G2N%$&%] &$NL$&S[&$AS$&] c:[&$AU$&] T:[&$C$&] }
 
 
 #nop {    EXAMPLE OF WHAT THE ABOVE BSET WILL LOOK LIKE                   }
