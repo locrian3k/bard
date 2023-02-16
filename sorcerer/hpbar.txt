@@ -1,1 +1,298 @@
+#nop { BARD SETUP FOR HIT POINT BAR }
+#nop { Your HP bar has been set with gset custom_hp using the following settings: }
+#nop { Valkyrja's = gset custom_hp HP:[&$HP$&/&$MHP$&] HP2:[&$HP2$&] HP3:[&$HP3$&] &$NL$&FE:[&$FE$&/&$MFE$&] FE2:[&$FE2$&] FE3:[&$FE3$&] &$NL$&G2N:[&$G2N$&] G2N%:[&$G2N%$&] G2S:[&$G2S$&] &$NL$&S:[&$AS$&] c:[&$AU$&] T:[&$C$&] &$NL$&XP:[&$XP$&] XPS:[&$XPS$&] }
 
+
+#nop {    EXAMPLE OF WHAT THE ABOVE BSET WILL LOOK LIKE                   }
+#nop {    HP:[633/310] SP:[713/713] K:[183/183] V:[68/100] G2N:[24] []    }
+#nop {    [ HS:0 CC:Off ] [ OM:85 LB:Off ]                                }
+#nop {    Coffin:4/5 Sm:[0/13%] <> c:[3125]                               }
+#nop {    You can change this any way you want, but will need to update the triggers to reflect your changes. }
+
+#nop { THIS IS WHAT OUR HIT POINT BAR LOOKS LIKE WHEN YOU HAVE WAY MORE SPELLS AND SONGS, LINE BY LINE }
+#nop { HP:[3952/1777] SP:[4347/3969] K:[1198/1198] V:[100/100] G2N:[17039202] [] }
+#nop { [ [ HS:0 CC:Off PG:0 PE:0 PN:0 PF:0 PH:0 MB:Off B:On HR:No FR:0 ] [ OM:68 LB:Off R:Off SL:Off AG:105 D:Off DW:Off V:848 ] }
+#nop { Coffin:8/31 Sm:[4/15%] <> c:[281726] }
+
+
+#nop { SLIME HIT POINT BAR - THIS IS ON CHRISTMAS DAY WHEN YOU GET SLIME (ALL ~'s MUST BE COMMENTED OUT WITH A \ ) }
+#nop {~{S}~ H:100/100 S:100/100 P: F:70% H:68% XP:Some Almost!}
+#nop {#act {\~\{S\}\~ Health:%1/%2 Slime:%3/%4 P: Fullness:%5\% Happy:%6\% XP:%7} {#if {%5 < 75} {get dagger from truck;slime feed dagger}}}
+#act {\~\{S\}\~ H:%1/%2 S:%3/%4 P: F:%5\% H:%6\% XP:%7} {#if {%5 < 75} {unwrap;slime feed corpse}};
+
+
+#nop {HPBAR LINE 1}
+#nop {HP:[633/310] SP:[713/713] K:[183/183] V:[68/100] G2N:[24] []}
+
+#nop { GAGGING THE HIT POINT BAR SO THAT IT'S NOT SPAMMY EVERY ROUND, COMMENTING OUT ALL ['s WITH A \ }
+#GAG {HP:\[%d/%d\] SP:\[%d/%d\] K:\[%d/%d\] V:\[%d/%d\] G2N:\[%d\] \[%12\]}
+#ACT {HP:\[%d/%d\] SP:\[%d/%d\] K:\[%d/%d\] V:\[%d/%d\] G2N:\[%d\] \[%12\]} 
+{   #if {"$checking" == "on"} {#math {checkrounds} {$checkrounds + 1};#show {Checker at $checkrounds rounds.};look};
+    #var hptmp %1;
+    #math hpchange {$hptmp - $hpcur};
+    #if {$hpchange >= 0} {#var hpchangec <129>} {#replace hpchange {-} {};#var hpchangec <119>;#math {dmgtaken} {$dmgtaken + $hpchange}};
+    #var sptmp %3;
+    #math spchange {$sptmp - $spcur};
+    #if {$spchange >= 0} {#var spchangec <129>} {#replace spchange {-} {};#var spchangec <119>;#math {spused} {$spused + $spchange}};
+    #var g2ntmp %9;
+    #math g2nchange {$g2ntmp - $g2ncur};
+    #replace g2nchange {-} {};
+    #math {g2nused} {$g2nused + $g2nchange};
+
+    #if {$g2nchange >= 30} {#var g2nchangec <ffa>};
+    #if {$g2nchange >= 20 && $g2nchange < 30} {#var g2nchangec <129>};
+    #if {$g2nchange < 20} {#var g2nchangec <119>};
+	
+	#var hpcur %1;
+	#var hpmax %2;
+	#if {%1 >= %2}{#var hpcolor <caf>};
+    #if {%1 < %2 * 0.95 && %1 < %2}{#var hpcolor <129>};
+    #if {%1 < %2 * 0.95 && %1 > %2 * 0.65}{#var hpcolor <139>};
+    #if {%1 < %2 * 0.65}{#var hpcolor <119>};
+
+	#var spcur %3;
+	#var spmax %4;
+	#if {%3 == %4}{#var spcolor <aae>};
+    #if {%3 > %4}{#var spcolor <aae>};
+    #if {%3 > %4 * 0.80 && %3 < %4}{#var spcolor <129>};
+    #if {%3 < %4 * 0.80 && %3 > %4 * 0.35}{#var spcolor <139>};
+    #if {%3 < %4 * 0.15}{soothe};
+    #if {%3 < %4 * 0.35}{#var spcolor <139>};
+
+	#var karmacur %5;
+	#var karmamax %6;
+	#if {%5 == %6}{#var karmacolor <ada>};
+    #if {%5 > %6}{#var karmacolor <ada>};
+    #if {%5 > %6 * 0.80 && %5 < %6}{#var karmacolor <aea>};
+    #if {%5 < %6 * 0.80 && %5 > %6 * 0.35}{#var karmacolor <afa>};
+    #if {%5 < %6 * 0.35}{#var karmacolor <119>};
+    #if {%5 < %6 * 0.35 && $coffincur > 0}{cease;#3 {unwrap;perform dirge}};
+
+	#var voicecur %7;
+	#var voicemax %8;
+	#if {%7 == %8}{#var voicecolor <109>};
+    #if {%7 > %8}{#var voicecolor <129>};
+    #if {%7 > %8 * 0.50 && %7 < %8}{#var voicecolor <139>};
+    #if {%7 < %8 * 0.50}{#var voicecolor <119>};
+	
+    #var g2ncur %9;
+    #if {%9 >= 400000} {#var g2ncolor <baa>};
+    #if {%9 < 400000 && %9 > 100000} {#var g2ncolor <cba>};
+    #if {%9 <= 100000} {#var g2ncolor <fda>};
+	
+    #if {"%12" != ""} {#var ens %12;#var combat yes} {#var ens None;#var combat no};
+    #if {"$combat" == "yes"} {#math {combatrounds} {$combatrounds + 1}};
+    #if {"%12" == ""} {#var enemypercent None}{#var encolor <088>};
+    #if {"%12" == "T:per"}{#var encolor <129>};
+    #if {"%12" == "T:bru"}{#var encolor <ada>};
+    #if {"%12" == "T:ble"}{#var encolor <239>};
+    #if {"%12" == "T:eme"}{#var encolor <fca>};
+    #if {"%12" == "T:Dea"}{#var encolor <119>};
+    #if {"$combat" == "yes"} {#math {g2noverall} {$g2nused / $combatrounds}};
+
+#if {$spchange == 0} {#var spchangec <088>};
+#if {$hpchange == 0} {#var hpchangec <088>};
+#if {$g2nchange == 0} {#var g2nchangec <088>};
+
+#showme {<bae>H:<088>${hpcolor}$hpcur<bae>/$hpmax${hpchangec}${hpchange} <aae>S:${spcolor}$spcur<aae>/$spmax${spchangec}${spchange} <ada>K:${karmacolor}$karmacur<ada>/$karmamax <139>V:${voicecolor}$voicecur<179>/${perfpre}${performcolor}${perfinfo} <fca>G:${g2nchangec}${g2nchange}}{-5};
+}
+
+
+#NOP {HPBAR LINE 2}
+#NOP {[ HS:0 CC:Off ] [ OM:Off LB:Off R:Off]}
+#GAG {^\[%4\] \[%5\]}
+#ACT {^\[%4\] \[%5\]} {
+	
+	#var spells1 %4;
+	
+	#regex $spells1 {HS:%d} {#var hskin &1};
+        #if {"$hskin" <= "10" && "$hs" == "On" && $perfinfo == "D♭"} {cast hardened skin};
+	#if {"$hskin" == "0" && "$hs" == "Off"} {#var hskincolor <109>};
+	#if {"$hskin" == "0" && "$hs" == "On"} {#var hskincolor <bac>};
+    	#if {"$hskin" != "0"}{#var hskincolor <eaf>};
+
+        #regex $spells1 {CC:%S} {#var catsclaw &1};
+        #if {"$catsclaw" == "Off" && "$ccready" == "yes" && "$cc" == "On" && "$perfinfo" == "D♭"} {cast cats claw};
+	#if {"$catsclaw" == "Off" && "$cc" == "Off"} {#var catsclawcolor <109>};
+	#if {"$catsclaw" == "Off" && "$cc" == "On"} {#var catsclawcolor <bac>};
+    	#if {"$catsclaw" != "Off"}{#var catsclawcolor <eaf>};
+	
+	#regex $spells1 {PN:%d} {#var pneutral &1};
+        #if {$pneutral <= "10" && "$pn" == "On" && $perfinfo == "D♭"} {cast protection from neutral};
+	#if {$pneutral == "0" && "$pn" == "Off"} {#var pncolor <109>};
+	#if {$pneutral == "0" && "$pn" == "On"} {#var pncolor <bac>};
+    	#if {$pneutral != "0"}{#var pncolor <eaf>};
+	
+        #regex $spells1 {PE:%d} {#var pevil &1};
+        #if {$pevil <= "10" && "$pe" == "On" && $perfinfo == "D♭"} {cast protection from evil};
+	#if {$pevil == "0" && "$pe" == "Off"} {#var pecolor <109>};
+	#if {$pevil == "0" && "$pe" == "On"} {#var pecolor <bac>};
+    	#if {$pevil != "0"}{#var pecolor <eaf>};
+	
+        #regex $spells1 {PG:%d} {#var pgood &1};
+        #if {$pgood <= "10" && "$pg" == "On" && $perfinfo == "D♭"} {cast protection from good};
+	#if {$pgood == "0" && "$pg" == "Off"} {#var pgcolor <109>};
+	#if {$pgood == "0" && "$pg" == "On"} {#var pgcolor <bac>};
+    	#if {$pgood != "0"}{#var pgcolor <eaf>};
+	
+        #regex $spells1 {PF:%d} {#var pfrost &1};
+        #if {$pfrost <= "10" && "$pf" == "On" && $perfinfo == "D♭"} {cast protection from frost};
+	#if {$pfrost == "0" && "$pf" == "Off"} {#var pfcolor <109>};
+	#if {$pfrost == "0" && "$pf" == "On"} {#var pfcolor <bac>};
+    	#if {$pfrost != "0"}{#var pfcolor <eaf>};
+	
+        #regex $spells1 {PH:%d} {#var pheat &1};
+        #if {$pheat <= "10" && "$ph" == "On" && $perfinfo == "D♭"} {cast protection from heat};
+	#if {$pheat == "0" && "$ph" == "Off"} {#var phcolor <109>};
+	#if {$pheat == "0" && "$ph" == "On"} {#var phcolor <bac>};
+    	#if {$pheat != "0"}{#var phcolor <eaf>};
+	
+        #regex $spells1 {MB:%S} {#var mindblank &1};
+        #if {"$mindblank" == "Off" && "$mb" == "On" && "$perfinfo" == "D♭"} {cast mind blank};
+	#if {"$mindblank" == "Off" && "$mb" == "Off"} {#var mbcolor <109>};
+	#if {"$mindblank" == "Off" && "$mb" == "On"} {#var mbcolor <bac>};
+    	#if {"$mindblank" != "Off"} {#var mbcolor <eaf>};
+	
+        #regex $spells1 {\bB:%S} {#var blink &1};
+        #if {"$blink" == "Off" && "$blinkspell" == "On" && "$perfinfo" == "D♭"} {cast blink};
+	#if {"$blink" == "Off" && "$blinkspell" == "Off"} {#var bcolor <109>};
+	#if {"$blink" == "Off" && "$blinkspell" == "On"} {#var bcolor <bac>};
+    	#if {"$blink" != "Off"} {#var bcolor <eaf>};
+	
+	#regex $spells1 {HR:%S} {#var harmonicreg &1};
+        #if {"$harmonicreg" == "No" && "$harmonicregeneration" == "On" && "$perfinfo" == "D♭"} {cast harmonic regeneration};
+	#if {"$harmonicreg" == "No" && "$harmonicregeneration" == "Off"} {#var hrcolor <109>};
+	#if {"$harmonicreg" == "No" && "$harmonicregeneration" == "On"} {#var hrcolor <bac>};
+    	#if {"$harmonicreg" != "No"}{#var hrcolor <eaf>};
+	
+	#regex $spells1 {FR:%d} {#var frain &1};
+        #if {$frain == "0" && "$focusrainbow" == "On" && "$perfinfo" == "D♭"} {cast focus the rainbow};
+	#if {$frain == "0" && "$focusrainbow" == "Off"} {#var frcolor <109>};
+	#if {$frain == "0" && "$focusrainbow" == "On"} {#var frcolor <bac>};
+    	#if {$frain != "0"}{#var frcolor <eaf>};
+
+    	#if {"$perfinfo" != "D♭" && $perfinfo >= 50}{#var performcolor <119>};
+    	#if {"$perfinfo" != "D♭" && $perfinfo < 50 && $perfinfo > 20}{#var performcolor <139>};
+    	#if {"$perfinfo" != "D♭" && $perfinfo <= 20}{#var performcolor <129>};
+    
+	#var songs1 %5;
+	#regex $songs1 {\bOM:%S} {#var omuse &1};
+        #if {"$omuse" == "Off" && "$om" == "On" && $voicecur > 20 && $karmacur > 400 && "$perfinfo" == "D♭"} {perform o muse};
+        #if {"$omuse" == "Off" && "$om" == "Off"} {#var omusecolor <109>};
+	#if {"$omuse" == "Off" && "$om" == "On"} {#var omusecolor <bac>};
+        #if {"$omuse" != "Off"} {#var omusecolor <dcf>};
+	
+	#regex $songs1 {\bLB:%S} {#var leader &1};
+	#if {"$leaderoftheband" == "Off" && "$lb" == "On" && $voicecur > 20 && $coffincur == 0 && $karmacur < 300 && "$perfinfo" == "D♭"} {perform leader of the band};
+        #if {"$leader" == "Off" && "$lb" == "Off"} {#var leadercolor <109>};
+	#if {"$leader" == "Off" && "$leader" == "On"} {#var leadercolor <bac>};
+        #if {"$leader" != "Off"} {#var leadercolor <dcf>};
+	
+	#regex $songs1 {\bR:%S} {#var rock &1};
+        #if {"$rock" == "Off" && "$irock" == "On" && $voicecur > 70 && $karmacur > 800 && "$perfinfo" == "D♭"} {perform i am a rock};
+        #if {"$rock" == "Off" && "$irock" == "Off"} {#var rockcolor <109>};
+	#if {"$rock" == "Off" && "$irock" == "On"} {#var rockcolor <bac>};
+        #if {"$rock" != "Off"} {#var rockcolor <dcf>};
+
+        #regex $songs1 {\bSL:%S} {#var silent &1};
+        #if {"$silent" == "Off" && "$lucidity" == "On" && $voicecur > 70 && $karmacur > 530 && "$perfinfo" == "D♭"} {perform silent lucidity};
+        #if {"$silent" == "Off" && "$lucidity" == "Off"} {#var silentcolor <109>};
+	#if {"$silent" == "Off" && "$lucidity" == "On"} {#var silentcolor <bac>};
+        #if {"$silent" != "Off"} {#var silentcolor <dcf>};
+
+        #regex $songs1 {\bAG:%S} {#var grace &1};
+        #if {"$grace" == "Off" && "$ag" == "On" && $voicecur > 50 && $karmacur > 400 && "$perfinfo" == "D♭"} {perform amazing grace};
+	#if {"$grace" == "Off" && "$ag" == "Off"} {#var gracecolor <109>};
+	#if {"$grace" == "Off" && "$ag" == "On"} {#var gracecolor <bac>};
+        #if {"$grace" != "Off"} {#var gracecolor <dcf>};
+	
+	#regex $songs1 {\bD:%S} {#var devil &1};
+	#if {"$devil" == "Off" && "$devilsong" == "On" && "$perfinfo" == "D♭"} {perform devil went down to georgia};
+        #if {"$devil" == "Off" && "$devilsong" == "Off"} {#var devilcolor <109>};
+	#if {"$devil" == "Off" && "$devilsong" == "On"} {#var devilcolor <bac>};
+        #if {"$devil" != "Off"} {#var devilcolor <dcf>};
+	
+	#regex $songs1 {\bDW:%S} {#var dworry &1};
+	#if {"$dworry" == "Off" && "$worry" == "On" && "$perfinfo" == "D♭"} {perform don't worry, be happy};
+        #if {"$dworry" == "Off" && "$worry" == "Off"} {#var dworrycolor <109>};
+	#if {"$dworry" == "Off" && "$worry" == "On"} {#var dworrycolor <bac>};
+        #if {"$dworry" != "Off"} {#var dworrycolor <dcf>};
+
+        #regex $songs1 {\bV:%S} {#var vamp &1};
+        #if {"$vamp" == "Off" && "$vsong" == "On" && $voicecur > 50 && $karmacur > 400 && "$perfinfo" == "D♭"} {perform vampire};
+        #if {"$vamp" == "Off" && "$vsong" == "Off"} {#var vampcolor <109>};
+	#if {"$vamp" == "Off" && "$vsong" == "On"} {#var vampcolor <bac>};
+        #if {"$vamp" != "Off"} {#var vampcolor <dcf>};
+	
+	#showme {${hskincolor}HS ${catsclawcolor}CC ${pncolor}N ${pecolor}E ${pgcolor}G ${pfcolor}F ${phcolor}H ${mbcolor}MB ${bcolor}B ${hrcolor}HR ${frcolor}FR ${smilecolor}SM ${omusecolor}OM ${leadercolor}LB ${rockcolor}R ${silentcolor}SL ${gracecolor}AG ${devilcolor}D ${dworrycolor}DW ${vampcolor}V}{-4};
+    };
+
+#NOP {Coffin:6/18 Sm:[2/57%] <> c:[135]};
+#GAG {^Coffin:%1};
+#ACT {^Coffin:%1} {
+
+    #var coffinbar %1;
+    
+    #regex {$coffinbar} {^%d/%d} {#var coffincur &1;#var coffinmax &2};
+    	#if {$coffincur == $coffinmax} {#var coffincurcolor <aef>;#var needcorspes Off};
+	#if {$coffincur >= $coffinmax * 0.85 && $coffincur <= $coffinmax - 1} {#var coffincurcolor <ada>;#var needcorpses Off};
+	#if {$coffincur < $coffinmax * 0.84 && $coffincur > $coffinmax * 0.33} {#var coffincurcolor <139>;#var needcorpses On};
+	#if {$coffincur >= 1 && $coffincur < $coffinmax * 0.32} {#var coffincurcolor <faa>;#var needcorpses On};
+	#if {$coffincur == 0} {#var coffincurcolor <faa>;#var needcorpses On;};
+	#if {$coffinmax >= 1} {#var coffinmaxcolor <aef>};
+ 
+    #regex {$coffinbar} {Sm:\[%d/%d\%\]} {#var smilecur &1;#var smilemax &2};
+        #if {$smilecur >= "1" && "$sm" == "On" && "$smready" == "yes" && $perfinfo == "D♭"} {perform smile;#var smcolor <129>};
+	#if {"$sm" == "Off"} {#var smilecolor <109>};
+	#if {"$smready" == "yes"} {#var smilecolor <109>};
+	#if {"$smready" == "no"} {#var smilecolor <129>};
+	
+    #nop {HEARTENING LAUGH};
+	#action {Heartening Laugh fades from you} {#var hearteninglaugh 0;#if {"$hlaugh" == "On"} {heartening laugh}};
+	#action {You let out a deep, loud laugh} {#var hearteninglaugh 1};
+	#if {"$hearteninglaugh" == "0" && "$hlaugh" == "Off"} {#var hlcolor <109>};
+	#if {"$hearteninglaugh" == "0" && "$hlaugh" == "On"} {#var hlcolor <bac>};
+    	#if {"$hearteninglaugh" != "0"}{#var hlcolor <eaf>};
+
+    #regex {$coffinbar} {\bP: %d} {#var perfinfo &1;#var perfpre {}} {#var performcolor <139>;#var perfinfo D♭;#unvar perfpre};
+
+    #regex {$coffinbar} {\bc:\[%d\]} {#var coincur &1};
+    #showme {${hlcolor}HL <dda>c:$coincur<088> ${coffinmaxcolor}C:${coffincurcolor}${coffincur}<088>/${coffinmaxcolor}${coffinmax}<088> <279>[${encolor}${ens}<279>]}{-3};
+
+    #NOP { All your message colors and the showme here, but need to stay inside the Coffin HP BAR action };
+
+    #if {$MissedTells > 0}      {#var tellscolor <faa>}     {#var tellscolor <279>};
+    #if {$MissedClanChat > 0}   {#var clanchatcolor <faa>}  {#var clanchatcolor <279>};
+    #if {$MissedGuildChat > 0}  {#var guildchatcolor <faa>} {#var guildchatcolor <279>};
+    #if {$MissedSouls > 0}      {#var soulscolor <faa>}     {#var soulscolor <279>};
+    #if {$MissedSP > 0}         {#var spcolor <109>}        {#var spcolor <279>};
+    #if {$MissedParty > 0}      {#var partycolor <faa>}     {#var partycolor <279>};
+    #if {$MissedCult > 0}       {#var cultcolor <faa>}      {#var cultcolor <279>};
+    #if {$MissedCraft > 0}      {#var craftcolor <faa>}     {#var craftcolor <279>};
+    #if {$MissedNewb > 0}       {#var newbcolor <faa>}      {#var newbcolor <279>};
+    #if {$MissedFlap > 0}       {#var flapcolor <faa>}      {#var flapcolor <279>};
+    #if {$MissedShout > 0}      {#var shoutcolor <faa>}     {#var shoutcolor <279>};
+    #if {$MissedHM > 0}         {#var hmcolor <faa>}        {#var hmcolor <279>};
+    #if {$MissedEternal > 0}    {#var eternalcolor <faa>}   {#var eternalcolor <279>};
+    #if {$MissedOmp > 0}        {#var ompcolor <faa>}       {#var ompcolor <279>};
+    #if {$MissedRainbow > 0}    {#var rainbowcolor <faa>}   {#var rainbowcolor <279>};
+    #if {$rhythmicaction > 0}   {#var racolor <faa>}        {#var racolor <279>};
+
+    #showme {
+    <cfa>T<088>$tellscolor$MissedTells 
+    <fac>C<088>$clanchatcolor$MissedClanChat 
+    <fca>G<088>$guildchatcolor$MissedGuildChat 
+    <139>S<088>$soulscolor$MissedSouls 
+    <109>SP<088>$spcolor$MissedSP
+    <129>P<088>$partycolor$MissedParty
+    <faa>N<088>$newbcolor$MissedNewb 
+    <fac>F<088>$flapcolor$MissedFlap 
+    <dec>H<088>$hmcolor$MissedHM
+    <acf>E<088>$eternalcolor$MissedEternal
+    <039>Sh<088>$shoutcolor$MissedShout 
+    <caf>Cr<088>$craftcolor$MissedCraft 
+    <cfa>O<088>$ompcolor$MissedOmp
+    <129>R<139>$MissedRainbow
+    <129>U<139>N<119>O<bae>!<139>[<088>$unoplayer<139>]<088>
+    }{-2};
+}
