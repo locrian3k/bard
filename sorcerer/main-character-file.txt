@@ -15,7 +15,7 @@
 #CONFIG           {VERBATIM CHAR}         {\}
 #CONFIG           {VERBOSE}               {OFF}
 #CONFIG           {WORDWRAP}              {ON}
-#CONFIG		  	  {COLOR PATCH}           {ON}
+#CONFIG		  {COLOR PATCH}           {ON}
 #PATHDIR          {n}                     {s}                          {1}
 #PATHDIR          {e}                     {w}                          {2}
 #PATHDIR          {ne}                    {sw}                         {3}
