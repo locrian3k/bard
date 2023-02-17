@@ -19,7 +19,6 @@
 	#alias {allon} {#var bi On;#var bf On;#var fbt On;#var mol On;#var ig On;};
 	#alias {alloff} {#var bi Off;#var bf Off;#var fbt Off;#var mol Off;#var ig Off;};
 	
-	#nop { S P E L L S };
 	#var bi Off;
 		#alias {bion} {#var bi On;}
 		#alias {bioff} {#var bi Off;}
