@@ -32,7 +32,7 @@
     #var sptmp %3;
     #math spchange {$sptmp - $spcur};
     #if {$spchange >= 0} {#var spchangec <129>} {#replace spchange {-} {};#var spchangec <119>;#math {spused} {$spused + $spchange}};
-    #var g2ntmp %9;
+    #var g2ntmp %5;
     #math g2nchange {$g2ntmp - $g2ncur};
     #replace g2nchange {-} {};
     #math {g2nused} {$g2nused + $g2nchange};
@@ -60,28 +60,30 @@
     #if {%5 < 50000 && %9 > 275000} {#var g2ncolor <cba>};
     #if {%5 <= 50000} {#var g2ncolor <fda>};
 	
-    #if {"%7" != ""} {#var ens %12;#var combat yes} {#var ens None;#var combat no};
+    #if {"%7" != "X"} {#var ens %7;#var combat yes} {#var ens None;#var combat no};
     #if {"$combat" == "yes"} {#math {combatrounds} {$combatrounds + 1}};
-    #if {"%12" == ""} {#var enemypercent None}{#var encolor <088>};
-    #if {"%12" == "T:per"}{#var encolor <129>};
-    #if {"%12" == "T:bru"}{#var encolor <ada>};
-    #if {"%12" == "T:ble"}{#var encolor <239>};
-    #if {"%12" == "T:eme"}{#var encolor <fca>};
-    #if {"%12" == "T:Dea"}{#var encolor <119>};
+    #if {"%7" == "X"} {#var enemypercent None}{#var encolor <088>};
+    #if {"%7" >= 76}{#var encolor <107>};
+    #if {"%7" <= 75}{#var encolor <129>};
+    #if {"%12" <= 60}{#var encolor <ada>};
+    #if {"%12" <= 45}{#var encolor <239>};
+    #if {"%12" <= 30}{#var encolor <fca>};
+    #if {"%12" <= 15}{#var encolor <119>};
     #if {"$combat" == "yes"} {#math {g2noverall} {$g2nused / $combatrounds}};
 
-#if {$spchange == 0} {#var spchangec <088>};
+#if {$fchange == 0} {#var fchangec <088>};
 #if {$hpchange == 0} {#var hpchangec <088>};
 #if {$g2nchange == 0} {#var g2nchangec <088>};
 
-#showme {<bae>H:<088>${hpcolor}$hpcur<bae>/$hpmax${hpchangec}${hpchange} <aae>S:${spcolor}$spcur<aae>/$spmax${spchangec}${spchange} <ada>K:${karmacolor}$karmacur<ada>/$karmamax <139>V:${voicecolor}$voicecur<179>/${perfpre}${performcolor}${perfinfo} <fca>G:${g2nchangec}${g2nchange}}{-5};
+#showme {<bae>H<088>${hpcolor}$hpcur<bae>/$hpmax${hpchangec}${hpchange} <aae>S${fcolor}$fcur<aae>/$fmax${fchangec}${fchange} <fca>G${g2nchangec/g2npercent}${g2nchange}}{-5};
 }
 
 
 #NOP {HPBAR LINE 2}
 #NOP {[ HS:0 CC:Off ] [ OM:Off LB:Off R:Off]}
-#GAG {^\[%4\] \[%5\]}
-#ACT {^\[%4\] \[%5\]} {
+#NOP {S[] c[43992]}
+#GAG {^S\[%8\] c\[%9\]}
+#ACT {^S\[%8\] c\[%9\]} {
 	
 	#var spells1 %4;
 	
