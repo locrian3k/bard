@@ -1,1 +1,41 @@
-
+#nop {========================================================================};
+#nop {====================== V A R I A B L E S ===============================};
+#nop {========================================================================};
+	#nop { M E L E E };
+	#var combatrounds 0;
+	#var dmgtaken 0;
+	#var hitsmade 0'
+	#var spused 0;
+	#var dodgedrounds 0;
+	#var g2nearned 0;
+	#var numberhits 0;
+	#var numberdmg 0;
+	#var numberdmgcount 0;
+	#var erad 0;
+	#var whom 0;
+	
+	
+	#nop { S P E L L S };
+	#alias {allon} {#var bi On;#var bf On;#var fbt On;#var mol On;#var ig On;};
+	#alias {alloff} {#var bi Off;#var bf Off;#var fbt Off;#var mol Off;#var ig Off;};
+	
+	#nop { S P E L L S };
+	#var bi Off;
+		#alias {bion} {#var bi On;}
+		#alias {bioff} {#var bi Off;}
+    
+	#var bf Off;
+		#alias {bfon} {#var bf On;}
+		#alias {bfoff} {#var bf Off;}
+    
+	#var fbt Off;
+		#alias {fbton} {#var fbt On;}
+		#alias {fbtoff} {#var fbt Off;}
+    
+	#var mol Off;
+		#alias {molon} {#var mol On;}
+		#alias {moloff} {#var mol Off;}
+    
+	#var ig Off;
+		#alias {igon} {#var ig On;}
+		#alias {igoff} {#var ig Off;}
