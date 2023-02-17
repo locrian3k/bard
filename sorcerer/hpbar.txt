@@ -1,4 +1,4 @@
-#nop { BARD SETUP FOR HIT POINT BAR }
+#nop { SORCERER SETUP FOR HIT POINT BAR }
 #nop { Your HP bar has been set with gset custom_hp using the following settings: }
 #nop { Valkyrja's = gset custom_hp H[&$HP2$&] F[&$FE2$&] G[&$G2N$&/&$G2N%$&%] T[&$C$&] &$NL$&S[&$AS$&] c[&$AU$&] }
 
