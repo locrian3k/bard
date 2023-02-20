@@ -69,6 +69,12 @@
         setmmout intensely focuses on her guitar solo and vanishes;
 } {10};
 
+#NOP {TEMPORARY ATTACKING AND SHIELDS}
+#action {Your barrier of ice has expired} {cbi};
+#action {Your barrier of ice has shattered} {cbi};
+#action {Your barrier of fire has expired} {cbf};
+#action {Your barrier of fire has shattered} {cbf};
+#action {Your firefly slowly flickers out} {cast firefly};
 
 #nop {========================================};
 #nop {========= H I G H L I G H T S ==========};
