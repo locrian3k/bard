@@ -7,27 +7,12 @@
 #action {There is no coins here.} {
 	#if {"$fachanbot" == "On"} {#delay {fachandelay} {fachanwalk} {$delaytime}};
 	};
-#action {There is no fanboy here.} {
-	#if {"$fachanbot" == "On"} {#delay {fachandelay} {fachanwalk} {$delaytime}};
-	};
 #action {There is no fachan here.} {
 	#if {"$fachanbot" == "On"} {#delay {fachandelay} {fachanwalk} {$delaytime}};
 	};
-#action {There is no development here.} {
+#action {There is no dragon here.} {
 	#if {"$fachanbot" == "On"} {#delay {fachandelay} {fachanwalk} {$delaytime}};
 	};
-
-#action {BING! The button light goes off and the elevator doors open.} {
-	#if {"$fachanbot" == "On"} {enter};
-	};
-#action {The elevator jerks to a halt and the doors open.} {
-	#if {"$fachanbot" == "On"} {out;#delay {fachandelay} {fachanwalk} {$delaytime}};
-	};
-#action {You cannot go} {
-	#if {"$fachanbot" == "On"} {
-		nobot;#showme <120>Something is screwed up, fix your fachanbot.<088>
-		};
-		};
 
 #alias {fachanstep1} {con;#showme You yell out: Beginning fachan!;fantasy;portal;15e;leave;6e;4s;2w;s;s;s;lodge1;kill fachan};
 #alias {fachanstep2} {out;lodge2;kill fachan};
