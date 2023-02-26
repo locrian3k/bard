@@ -143,9 +143,9 @@
 #nop { ========================= };
 #nop {   ISLETH THE WIDOWMAKER   };
 #nop { ========================= };
-#alias {goisleth} {shop;w;n;w;w;s;w;w;w;portal;#12 n;leave;#9 n;#10 w;#5 nw;w;#5 nw;#6 w;nw;w;nw;w;nw;w;w;w;nw;n;n;nw;ne;e;e;n;nw;w;n;n;#5 w;sw;s;w;w;n;enter crypt;d;e;e;e;jump across;e;e;d;e;#delay {5} {#showme {<aef>Kill these wights and then type isleth2.}}};
-#alias {isleth2} {search basin;get dagger;cut hand;enter;e;kill figure;#delay {2} {kill bladesinger};#showme {<aef>Kill the Bladesinger and type isleth3}};
-#alias {isleth3} {get scabbard;draw sword;keep isleth;w;out;w;u;w;w;w;w;u;out;s;e;e;s;s;s;sw;s;s;s;s;s;s;sw;s;e;n;ne;ne;ne;e;s;s;e;ne;ne;ne;e;e;e;se;e;se;e;se;e;e;e;e;e;d;search skeleton;keep amulet;wield sword;#delay {2} #showme {<aef>Now type isleth4 to return home.}};
+#alias {goisleth} {shop;w;n;w;w;s;w;w;w;portal;#12 n;leave;#9 n;#10 w;#5 nw;w;#5 nw;#6 w;nw;w;nw;w;nw;w;w;w;nw;n;n;nw;ne;e;e;n;nw;w;n;n;#5 w;sw;s;w;w;n;enter crypt;d;e;e;e;jump across;e;e;d;e;#delay {5} {#showme <aef>Kill these wights and then type isleth2.}};
+#alias {isleth2} {search basin;get dagger;cut hand;enter;e;kill figure;#delay {2} {kill bladesinger}; #showme <aef>Kill the Bladesinger and type isleth3};
+#alias {isleth3} {get scabbard;draw sword;keep isleth;w;out;w;u;w;w;w;w;u;out;s;e;e;s;s;s;sw;s;s;s;s;s;s;sw;s;e;n;ne;ne;ne;e;s;s;e;ne;ne;ne;e;e;e;se;e;se;e;se;e;e;e;e;e;d;search skeleton;keep amulet;wield sword;#delay {2} {#showme <aef>Now type isleth4 to return home.}};
 #alias {isleth4} {u;e;#5 se;e;#5 se;e;n;w;portal;home};
 
 
