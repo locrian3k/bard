@@ -11,7 +11,7 @@
 #action {There is no coins here.} {#delay {alphadelay} {kill letter} {$delaytime}}
 #act {There is no letter here.} {#if {"$alphabot" == "On"} {alphawalk}}
 
-#alias {alphastep1} {#showme Locrian yells at you: Beginning alphabet.;con;n;w;n;n;e;n;enter;e;e;d;mission ask;mission accept}
+#alias {alphastep1} {#showme Locrian yells at you: Beginning alphabet.;shop;w;n;w;n;n;e;n;enter;e;e;d;mission ask;mission accept}
 #alias {alphastep2} {mission accept}
 #alias {alphastep3} {mission accept}
 #alias {alphastep4} {mission accept}
@@ -43,6 +43,6 @@
 #alias {alphastep30} {ga;drop v;w;kill letter}
 #alias {alphastep31} {ga;drop u;e;n;kill letter}
 #alias {alphastep32} {ga;drop q;e;kill letter}
-#alias {alphastep33} {ga;drop r;w;s;e;e;e;n;n;w;w;n;n;w;w;n;mission return;u;w;w;vortex;s;w;s;s;e;s;pstats;#showme Locrian yells at you: Alphabet is done;#var alphabot Off;nobot}
+#alias {alphastep33} {ga;drop r;w;s;e;e;e;n;n;w;w;n;n;w;w;n;mission return;u;w;w;vortex;home;pstats;#showme Locrian yells at you: Alphabet is done;#var alphabot Off;nobot}
 
 #action {There is no letter here.} {#if {"$alphabot" == "On"} {alphawalk}}
