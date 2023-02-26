@@ -14,7 +14,7 @@
 	#if {"$fachanbot" == "On"} {#delay {fachandelay} {fachanwalk} {$delaytime}};
 	};
 
-#alias {fachanstep1} {con;#showme You yell out: Beginning fachan!;fantasy;portal;15e;leave;6e;4s;2w;s;s;s;lodge1;kill fachan};
+#alias {fachanstep1} {con;#showme You yell out: Beginning fachan!;fantasy;portal;#15 e;leave;#6 e;#4 s;#2 w;s;s;s;lodge1;kill fachan};
 #alias {fachanstep2} {out;lodge2;kill fachan};
 #alias {fachanstep3} {out;lodge3;kill fachan};
 #alias {fachanstep4} {out;lodge4;kill fachan};
