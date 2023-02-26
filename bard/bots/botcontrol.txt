@@ -85,6 +85,14 @@
         #showme {<120>You may now proceed to play chess<088>};psclear;chessbot;
         }
 
+#alias {fachanon} {
+        #var botting on;
+        #var icebot On;
+        #var whereami Fachan;
+        #class {bots} {read} {locrian/bots/fachanbot.txt};
+        #showme {<120>You may now proceed to slaughter a village.<088>};psclear;fachanbot;
+        }
+        
 #alias {iceon} {
         #var botting on;
         #var icebot On;
