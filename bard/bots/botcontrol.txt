@@ -89,7 +89,7 @@
         #var botting on;
         #var icebot On;
         #var whereami Fachan;
-        #class {bots} {read} {locrian/bots/fachanbot.txt};
+        #class {bots} {read} {tintin/bard/locrian/bots/fachanbot.txt};
         #showme {<120>You may now proceed to slaughter a village.<088>};psclear;fachanbot;
         }
         
