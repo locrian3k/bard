@@ -1,1 +1,39 @@
+#nop {Start from home}
 
+#alias {fachanbot} {#var fachanstepnumber 1;#var fachanbot On;#var delaytime 0;#delay {3}{fachanwalk}}
+#alias {delay %1} {#showme {Delay set to %1 seconds.};#var delaytime %1}
+#alias {fachanwalk} {fachanstep$fachanstepnumber;#math fachanstepnumber $fachanstepnumber +1}
+
+#action {There is no coins here.} {
+	#if {"$fachanbot" == "On"} {#delay {fachandelay} {fachanwalk} {$delaytime}};
+	};
+#action {There is no fanboy here.} {
+	#if {"$fachanbot" == "On"} {#delay {fachandelay} {fachanwalk} {$delaytime}};
+	};
+#action {There is no fachan here.} {
+	#if {"$fachanbot" == "On"} {#delay {fachandelay} {fachanwalk} {$delaytime}};
+	};
+#action {There is no development here.} {
+	#if {"$fachanbot" == "On"} {#delay {fachandelay} {fachanwalk} {$delaytime}};
+	};
+
+#action {BING! The button light goes off and the elevator doors open.} {
+	#if {"$fachanbot" == "On"} {enter};
+	};
+#action {The elevator jerks to a halt and the doors open.} {
+	#if {"$fachanbot" == "On"} {out;#delay {fachandelay} {fachanwalk} {$delaytime}};
+	};
+#action {You cannot go} {
+	#if {"$fachanbot" == "On"} {
+		nobot;#showme <120>Something is screwed up, fix your fachanbot.<088>
+		};
+		};
+
+#alias {fachanstep1} {con;#showme You yell out: Beginning fachan!;fantasy;portal;15e;leave;6e;4s;2w;s;s;s;lodge1;kill fachan};
+#alias {fachanstep2} {out;lodge2;kill fachan};
+#alias {fachanstep3} {out;lodge3;kill fachan};
+#alias {fachanstep4} {out;lodge4;kill fachan};
+#alias {fachanstep5} {out;lodge5;kill fachan};
+#alias {fachanstep6} {out;lodge6;kill fachan};
+#alias {fachanstep7} {out;s;s;w;s;d;kill dragon};
+#alias {fachanstep8} {out;n;e;#5 n;n;e;e;#4 n;#6 w;enter;#15 w;portal;home;dead;donate coffin;home;#showme You yell out: Fachan is done!;#var fachanbot Off;nobot};
