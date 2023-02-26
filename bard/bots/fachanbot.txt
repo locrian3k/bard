@@ -21,4 +21,4 @@
 #alias {fachanstep5} {out;lodge5;kill fachan};
 #alias {fachanstep6} {out;lodge6;kill fachan};
 #alias {fachanstep7} {out;s;s;w;s;d;kill dragon};
-#alias {fachanstep8} {out;n;e;#5 n;n;e;e;#4 n;#6 w;enter;#15 w;portal;home;dead;donate coffin;home;#showme You yell out: Fachan is done!;#var fachanbot Off;nobot};
+#alias {fachanstep8} {out;n;e;#5 n;e;e;#4 n;#6 w;enter;#15 w;portal;home;dead;donate coffin;home;#showme You yell out: Fachan is done!;#var fachanbot Off;nobot};
