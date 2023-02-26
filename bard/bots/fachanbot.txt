@@ -5,7 +5,7 @@
 #alias {fachanwalk} {fachanstep$fachanstepnumber;#math fachanstepnumber $fachanstepnumber +1}
 
 #action {There is no coins here.} {
-	#if {"$fachanbot" == "On"} {#delay {fachandelay} {fachanwalk} {$delaytime}};
+	#if {"$fachanbot" == "On"} {#delay {fachandelay} {kill fachan} {$delaytime}};
 	};
 #action {There is no fachan here.} {
 	#if {"$fachanbot" == "On"} {#delay {fachandelay} {fachanwalk} {$delaytime}};
@@ -20,5 +20,9 @@
 #alias {fachanstep4} {out;lodge4;kill fachan};
 #alias {fachanstep5} {out;lodge5;kill fachan};
 #alias {fachanstep6} {out;lodge6;kill fachan};
-#alias {fachanstep7} {out;s;s;w;s;d;kill dragon};
-#alias {fachanstep8} {out;n;e;#5 n;e;e;#4 n;#6 w;enter;#15 w;portal;home;dead;donate coffin;home;#showme You yell out: Fachan is done!;#var fachanbot Off;nobot};
+#alias {fachanstep7} {out;s;nw;kill fachan};
+#alias {fachanstep8} {out;ne;kill fachan};
+#alias {fachanstep9} {out;se;kill fachan};
+#alias {fachanstep10} {out;sw;kill fachan};
+#alias {fachanstep11} {out;s;w;s;d;kill dragon};
+#alias {fachanstep12} {out;n;e;#5 n;e;e;#4 n;#6 w;enter;#15 w;portal;home;dead;donate coffin;home;#showme You yell out: Fachan is done!;#var fachanbot Off;nobot};
