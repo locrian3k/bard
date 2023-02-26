@@ -1,5 +1,11 @@
 #nop { ============================= };
-#nop { ==== E X P L O R I N G ====== };
+#nop {      E X P L O R I N G        };
 #nop { ============================= };
 #alias {exs %1} {look at %1;search %1};
 #alias {sr} {search};
+
+
+#nop { ============================= };
+#nop {         R E B O O T           };
+#nop { ============================= };
+#alias {gearup} {dead;acquire;home;bank;deposit all;withdraw 150;home;chaos;enter;e;e;e;s;s;e;e;s;w;w;buy 4;buy 5;keep ticket;keep ticket 2;e;e;n;w;w;n;n;w;w;w;vortex;home};
