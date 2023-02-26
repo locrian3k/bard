@@ -160,7 +160,7 @@
 #nop { ========================= };
 #nop {      PORTAL OF LIFE       };
 #nop { ========================= };
-#alias {gopol} {shop;w;n;w;w;s;w;w;w;portal;#15 e;leave;e;ne;#6 e;portal;#delay {3} {#showme <fff>Arrived.}}
+#alias {gopol} {shop;w;n;w;w;s;w;w;w;portal;#15 e;leave;e;ne;#6 e;portal;#delay {3} {#showme <fff>Arrived.  <climb left tree> for POL2, <climb right tree> for POL3}}
 #alias {leavepol} {portal;#6 w;sw;w;enter;#15 w;portal;h}
 
 
@@ -174,7 +174,7 @@
 #nop { ========================= };
 #nop {    TREE OF LIFE 2.0       };
 #nop { ========================= };
-#alias {goangels} {shop;w;n;w;n;n;e;n;enter;w;w;w;w;embrace void;#delay {3} {#showme <fff>MAKE SURE ALL DEFENSES ARE UP! and then angelon}}
+#alias {goangels} {shop;w;n;w;n;n;e;n;enter;w;w;w;w;embrace void;#delay {3} {#showme <fff>MAKE SURE ALL DEFENSES ARE UP! and then angelson}}
 #alias {leaveangels} {leave;e;w;w;e;e;e;vortex;home}
 
 
