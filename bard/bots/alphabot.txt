@@ -11,7 +11,7 @@
 #action {There is no coins here.} {#delay {alphadelay} {kill letter} {$delaytime}}
 #act {There is no letter here.} {#if {"$alphabot" == "On"} {alphawalk}}
 
-#alias {alphastep1} {#showme Locrian yells at you: Beginning alphabet.;shop;w;n;w;n;n;e;n;enter;e;e;d;mission ask;mission accept}
+#alias {alphastep1} {shop;w;n;w;n;n;e;n;enter;e;e;d;mission ask;mission accept}
 #alias {alphastep2} {mission accept}
 #alias {alphastep3} {mission accept}
 #alias {alphastep4} {mission accept}
