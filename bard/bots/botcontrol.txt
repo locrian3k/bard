@@ -49,7 +49,7 @@
         #var whereami Anchorman;
         #class {bots} {read} {locrian/bots/anchormanbot.txt};
         scaler 81;
- #showme {<120>You may now proceed to kill newsy people.<088>};idleoff;psclear;anchormanbot;
+ #showme {<120>You may now proceed to kill newsy people.<088>};omon;hson;hlon;agon;psclear;anchormanbot;
         }
 
 #alias {androidon} {
@@ -58,7 +58,7 @@
         #var whereami Android-81;
         #class {bots} {read} {locrian/bots/androidbot.txt};
         scaler 81;
-        #showme {<120>You may now proceed to kill Google things.<088>};idleoff;psclear;androidbot;
+        #showme {<120>You may now proceed to kill Google things.<088>};omon;hson;hlon;agon;eon;psclear;androidbot;
         }
 
 #alias {angelson} {
