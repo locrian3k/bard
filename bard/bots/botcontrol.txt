@@ -25,23 +25,6 @@
 
 #action {Locrian yells at you:} {pstats;psclear};
 
-#alias {puppyon} {
-        #var botting on;
-        #var puppybot On;
-        #var whereami Puppies-30;
-        #class {bots} {read} {locrian/bots/bardpuppybot.txt};
-        scaler 30;
- #showme {<120>You may now proceed to play rescue puppies.<088>};pstats;psclear;puppybot;
-        }
-
-#alias {angelson} {
-        #var botting on;
-        #var spiritbot On;
-        #var whereami Spirit Angels;
-        #class {bots} {read} {tintin/bard/bots/spiritbot.txt};
-        #showme {<120>Killing angels, you evil person.<088>};pstats;psclear;spiritbot;
-        }
-
 #alias {aegison} {
         #var botting on;
         #var aegisbot On;
@@ -49,6 +32,15 @@
         #class {bots} {read} {tintin/bard/bots/aegisbot.txt};
         scaler 86;
         #showme {<120>You may now proceed to kill zombies and robots.<088>};omon;agon;von;hson;hlon;eon;non;hon;psclear;aegisbot;
+        }
+        
+#alias {alphaon} {
+        #var botting on;
+        #var alphabot On;
+        #var whereami Alphabet-150;
+        #class {bots} {read} {tintin/bard/bots/alphabot.txt};
+        scaler 150;
+        #showme {<120>You may now proceed to spell things.<088>};omon;hson;hlon;psclear;alphabot;
         }
 
 #alias {anchoron} {
@@ -69,15 +61,14 @@
         #showme {<120>You may now proceed to kill Google things.<088>};idleoff;psclear;androidbot;
         }
 
-#alias {alphaon} {
+#alias {angelson} {
         #var botting on;
-        #var alphabot On;
-        #var whereami Alphabet-150;
-        #class {bots} {read} {tintin/bard/bots/alphabot.txt};
-        scaler 150;
-        #showme {<120>You may now proceed to spell things.<088>};omon;hson;hlon;psclear;alphabot;
+        #var spiritbot On;
+        #var whereami Spirit Angels;
+        #class {bots} {read} {tintin/bard/bots/spiritbot.txt};
+        #showme {<120>Killing angels, you evil person.<088>};pstats;psclear;spiritbot;
         }
-
+        
 #alias {carebearon} {
         #var botting on;
         #var carebearbot On;
@@ -103,6 +94,24 @@
         #showme {<120>You may now proceed to slaughter a village.<088>};psclear;icebot;
         }
 
+#alias {majon} {
+        #var botting on;
+        #var majbot On;
+        #var whereami Mahjongg-70;
+        #class {bots} {read} {locrian/bots/bardmajbot.txt};
+        scaler 70;
+        #showme {<120>You may now proceed to kill Mahjongg (3 hour reset)<088>};idleoff;psclear;majbot;
+        }
+               
+#alias {puppyon} {
+        #var botting on;
+        #var puppybot On;
+        #var whereami Puppies-30;
+        #class {bots} {read} {locrian/bots/bardpuppybot.txt};
+        scaler 30;
+ #showme {<120>You may now proceed to play rescue puppies.<088>};pstats;psclear;puppybot;
+        }
+        
 #alias {smurfon} {
         #var botting on;
         #var smurfbot On;
@@ -111,15 +120,6 @@
         scaler 100;
         #showme {<120>You may now proceed to play slaughter smurfs.<088>};omon;hson;eon;gon;non;psclear;smurfbot;
         }
-
-#alias {majon} {
-        #var botting on;
-        #var majbot On;
-        #var whereami Mahjongg-70;
-        #class {bots} {read} {locrian/bots/bardmajbot.txt};
-        scaler 70;
-        #showme {<120>You may now proceed to kill Mahjongg (3 hour reset)<088>};idleoff;psclear;majbot;
-                }
                 
 #alias {tacoon} {
         #var botting on;
@@ -135,7 +135,7 @@
         #class {bots} {read} {locrian/bots/bardgolembot.txt};
         scaler 81;
         #showme {<120>You may now proceed to kill golems (2 hour reset)<088>};idleoff;psclear;golembot;
-                }
+        }
 
 #alias {leavegolem} {s;s;s;s;e;e;e;enter;#12 e;portal;h}
 
