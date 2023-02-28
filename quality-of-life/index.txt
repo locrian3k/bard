@@ -15,6 +15,10 @@
 #nop {Resistances:  Buff  Buff    40    20  None  None  Buff  High  None  None}
 
 
+#nop { EXPLORING }
+#highlight {You have never been here before.} {<338>};
+ 
+ 
 #nop { SETMOD }
 #nop { WHEN READING HELP FILES, ETC. THIS SHOULD ENABLE YOUR CHARACTER TO READ THE ENTIRE FILE INSTEAD OF SMALL BATCHES }
 setmod ROWS 1000
