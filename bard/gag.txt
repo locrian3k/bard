@@ -3,3 +3,8 @@
 #nop { CLAN };
 #gag {Linkdead Room (login)};
 #gag {Real Life, yea, right};
+
+
+#nop { GUILD};
+#gag {You've already cast a spell this round};
+#gag {You cast protection from};
