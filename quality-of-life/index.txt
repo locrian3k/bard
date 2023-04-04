@@ -36,3 +36,6 @@ setmod ROWS 1000
 
 #nop { ROSES }
 #action {^These roses are from %1} {#show {<119>Florist tells you: Roses from %1!}};
+
+#nop { EMOTES }
+#action {^From afar, %1 gives you a high-five} {emoteto %1 misses your high-five attempt but follows through like this was all planned for an awesome air-five instead.};
