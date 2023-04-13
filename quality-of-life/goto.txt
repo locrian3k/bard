@@ -25,7 +25,6 @@
         Death Taco          - gotaco,set scaler,e,tacoon\n
         Hotel Transylvania  - gohotel\n
         Land of the Verbeeg - goverbeeg\n
-        MP3 CD              - gomp3\n
         Nex Gear            - gonex\n
         Peeron's Castle     - gopeeron\n
         Phylactery          - goravenloft\n
@@ -42,6 +41,7 @@
         \n
         ITEMS:\n
         Ball Dispenser      - getdispenser\n
+        Music Gear          - getmusic\n
         Ravenloft Lantern   - getlantern\n
         Donate to Guild     - dguild\n
         }
@@ -162,7 +162,7 @@
 #nop {      MP3 CD               };
 #nop { ========================= };
 #alias {getmusic} {chaos;enter;w;w;w;s;s;listen cd;sing superman;sing house of fun;sing everybody;sing shape of my heart;sing several species of small furry animals gathered together in a cave and grooving with a pict;sing devil went down to georgia;sing always look on the bright side of life;sing blue;sing blister in the sun;sing lion sleeps tonight;sing why does it always rain on me;sing monster mash;sing joy to the world;sing 99 red balloons;sing in the ghetto;sing drops of jupiter;sing the riddle;#delay {3} {push button;get all;#showme <fff>Gear acquired. Now 'leavemusic'.}}
-#alias {leavemusic} {enter door;n;n;e;e;e;vortex;home}
+#alias {leavemusic} {sing we gotta get out of here;enter door;n;n;e;e;e;vortex;home}
 
 
 #nop { ========================= };
