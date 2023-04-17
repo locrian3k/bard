@@ -115,8 +115,8 @@
 #alias {goghoti} {shop;w;n;w;w;s;w;w;w;portal;#15 e;leave;e;se;#8 e;se;#7 s;w;w;s;d;d;d;#delay {3} {#showme <fff>Kill these monsters and type ghoti2}};
 #alias {ghoti2} {n;n;n;nw;w;w;w;s;s;s;#delay {3} {#showme <fff>Kill these monsters and type ghoti3}};
 #alias {ghoti3} {#7 s;e;e;e;se;ne;w;n;};
-#alias {leaveghoti} {u;u;u;n;e;e;n;n;n;n;n;n;n;nw;#8 w;nw;w;enter;#15 w;portal;e;e;e;n;e;e;s};
-#alias {leavebeloch} {u;u;u;n;e;e;n;n;n;n;n;n;n;nw;#8 w;nw;w;enter;#15 w;portal;e;e;e;n;e;e;s};
+#alias {leaveghoti} {};
+#alias {leavebeloch} {};
 
 
 #nop { ========================= };
