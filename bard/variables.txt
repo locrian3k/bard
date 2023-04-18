@@ -95,6 +95,7 @@
 	#var devil Off;
 		#alias {don} {#var devilsong On;}
 		#alias {doff} {#var devilsong Off;}
+	#var devilsong Off;
 	#nop {Don't Worry Be Happy };
 	#var worry Off;
 		#alias {dwon} {#var worry On;}
