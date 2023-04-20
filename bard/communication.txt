@@ -156,6 +156,7 @@
 
 #nop {========== BARD GUILD ========== };
 
+	#nop {==MAIN LINE==};
 	#high {^%w [%d]:} {<fca>};
 	#action {^%w [%d]: %3} {
 		#if {"%1" != "Locrian"} {
@@ -167,9 +168,8 @@
 			
 		};
 	};
-
-	#alias {gh} {bchat bard -h;#delay {2} {#var MissedGuildChat 0}};
-
+	
+	#nop {==BARD ADVANCE==};
 	#high {^[ADVANCE] %1} {<fca>};
 	#action {^[ADVANCE] %1} {
 		#if {"%1" != "Locrian"} {
@@ -178,6 +178,112 @@
                         #system 3ktell -p '$guildperson' -l '[BARD ADVANCE]' -m '$guildperson';
 		};
 	};
+	
+	#nop {==BCHAT 30 LINE==};
+	#high {^%w [HighBard]:} {<fca>};
+	#action {^%w [Highbard]: %3} {
+		#if {"%1" != "Locrian"} {
+			#math MissedGuildChat {(1 + $MissedGuildChat)};
+			#var guildperson %1;
+                        #var guildtext %3;
+                        #replace guildtext {\'}{};
+                        #system 3ktell -p '$guildperson' -l '[BARD]' -m '$guildtext';
+			
+		};
+	};
+	
+	#nop {==BCHAT 50 LINE==};
+	#high {^%w [Fifty]:} {<fca>};
+	#action {^%w [Fifty]: %3} {
+		#if {"%1" != "Locrian"} {
+			#math MissedGuildChat {(1 + $MissedGuildChat)};
+			#var guildperson %1;
+                        #var guildtext %3;
+                        #replace guildtext {\'}{};
+                        #system 3ktell -p '$guildperson' -l '[BARD]' -m '$guildtext';
+			
+		};
+	};
+	
+	#nop {==BCHAT 70 LINE==};
+	#high {^%w [Seventy]:} {<fca>};
+	#action {^%w [Seventy]: %3} {
+		#if {"%1" != "Locrian"} {
+			#math MissedGuildChat {(1 + $MissedGuildChat)};
+			#var guildperson %1;
+                        #var guildtext %3;
+                        #replace guildtext {\'}{};
+                        #system 3ktell -p '$guildperson' -l '[BARD]' -m '$guildtext';
+			
+		};
+	};
+	
+	#nop {==ELDER LINE==};
+	#high {^%w [Elder]:} {<fca>};
+	#action {^%w [Elder]: %3} {
+		#if {"%1" != "Locrian"} {
+			#math MissedGuildChat {(1 + $MissedGuildChat)};
+			#var guildperson %1;
+                        #var guildtext %3;
+                        #replace guildtext {\'}{};
+                        #system 3ktell -p '$guildperson' -l '[BARD]' -m '$guildtext';
+			
+		};
+	};
+	
+	#nop {==GALLANT LINE==};
+	#high {^%w [Gallant]:} {<fca>};
+	#action {^%w [Gallant]: %3} {
+		#if {"%1" != "Locrian"} {
+			#math MissedGuildChat {(1 + $MissedGuildChat)};
+			#var guildperson %1;
+                        #var guildtext %3;
+                        #replace guildtext {\'}{};
+                        #system 3ktell -p '$guildperson' -l '[BARD]' -m '$guildtext';
+			
+		};
+	};
+	
+	#nop {==MYSTIC LINE==};
+	#high {^%w [Mystic]:} {<fca>};
+	#action {^%w [Mystic]: %3} {
+		#if {"%1" != "Locrian"} {
+			#math MissedGuildChat {(1 + $MissedGuildChat)};
+			#var guildperson %1;
+                        #var guildtext %3;
+                        #replace guildtext {\'}{};
+                        #system 3ktell -p '$guildperson' -l '[BARD]' -m '$guildtext';
+			
+		};
+	};
+	
+	#nop {==LEADER LINE==};
+	#high {^%w [Lead]:} {<fca>};
+	#action {^%w [Lead]: %3} {
+		#if {"%1" != "Locrian"} {
+			#math MissedGuildChat {(1 + $MissedGuildChat)};
+			#var guildperson %1;
+                        #var guildtext %3;
+                        #replace guildtext {\'}{};
+                        #system 3ktell -p '$guildperson' -l '[BARD]' -m '$guildtext';
+			
+		};
+	};
+	
+	#nop {==RGA LINE==};
+	#high {^%w /{RGA/} } {<fca>};
+	#action {^%w /{RGA/}  %3} {
+		#if {"%1" != "Locrian"} {
+			#math MissedGuildChat {(1 + $MissedGuildChat)};
+			#var guildperson %1;
+                        #var guildtext %3;
+                        #replace guildtext {\'}{};
+                        #system 3ktell -p '$guildperson' -l '[BARD]' -m '$guildtext';
+			
+		};
+	};
+
+	#alias {gh} {bchat 30 -h;bchat 50 -h;bchat 70 -h;bchat elder -h;bchat gallant -h;bchat leader -h;bchat mystic -h;rga -h;#grep ADVANCE;bchat bard -h;#delay {2} {#var MissedGuildChat 0}};	
 
 #nop {========== ETERNALS ==========};
 	#action {^%w <.oO>: } {
