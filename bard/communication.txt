@@ -283,7 +283,7 @@
 		};
 	};
 
-	#alias {gh} {bchat 30 -h;bchat 50 -h;bchat 70 -h;bchat elder -h;bchat gallant -h;bchat leader -h;bchat mystic -h;rga -h;#grep ADVANCE;bchat bard -h;#delay {2} {#var MissedGuildChat 0}};	
+	#alias {gh} {#showme {CHECKING BCHAT 30 LINE};bchat 30 -h;#showme {CHECKING BCHAT 50 LINE};bchat 50 -h;#showme {CHECKING BCHAT 70 LINE};bchat 70 -h;#showme {CHECKING BCHAT ELDER LINE};bchat elder -h;#showme {CHECKING BCHAT GALLANT LINE};bchat gallant -h;#showme {CHECKING BCHAT LEADER LINE};bchat leader -h;#showme {CHECKING BCHAT MYSTIC LINE};bchat mystic -h;#showme {CHECKING RGA LINE};rga -h;#showme {CHECKING BARD ADVANCEMENT};#grep ADVANCE;bchat bard -h;#delay {2} {#var MissedGuildChat 0}};	
 
 #nop {========== ETERNALS ==========};
 	#action {^%w <.oO>: } {
