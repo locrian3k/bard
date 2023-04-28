@@ -1,4 +1,4 @@
-#nop {Start from COT}
+#nop {Start from HOME}
 
 #alias {androidbot} {#var androidstepnumber 1;#var androidbot On;#var delaytime 0;#delay {3}{androidwalk}}
 #alias {delay %1} {#showme {Delay set to %1 seconds.};#var delaytime %1}
@@ -29,7 +29,7 @@
 		};
 		};
 
-#alias {androidstep1} {con;#showme Locrian yells at you: Beginning android.;n;w;n;n;e;n;enter;e;e;e;s;s;e;e;n;n;flick switch;n;kill fanboy};
+#alias {androidstep1} {con;#showme Locrian yells at you: Beginning android.;chaos;enter;e;e;e;s;s;e;e;n;n;flick switch;n;kill fanboy};
 #alias {androidstep2} {stairs;w;n;kill android};
 #alias {androidstep3} {s;e;e;n;kill android};
 #alias {androidstep4} {s;w;w;kill android};
