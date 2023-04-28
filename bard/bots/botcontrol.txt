@@ -99,7 +99,7 @@
         #var whereami Golems;
         #class {bots} {read} {tintin/bard/bots/golembot.txt};
         scaler 81;
-        #showme {<120>You may now proceed to kill golems (2 hour reset)<088>};idleoff;psclear;golembot;
+        #showme {<120>You may now proceed to kill golems (2 hour reset)<088>};psclear;golembot;
         }
 
 #alias {leavegolem} {s;s;s;s;e;e;e;enter;#12 e;portal;h}
