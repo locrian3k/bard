@@ -1,4 +1,4 @@
-#nop {Start from cot}
+#nop {Start from HOME}
 
 #alias {smurfbot} {#var smurfstepnumber 1;#var smurfbot On;#var delaytime 0;#delay {3}{smurfwalk}}
 #alias {delay %1} {#showme {Delay set to %1 seconds.};#var delaytime %1}
@@ -8,7 +8,7 @@
 #action {You cannot go} {#if {"$smurfbot" == "On"} {nobot;{#showme <120>Something is screwed up, fix your smurfbot.<088>}}}
 #action {You have no offered missions.} {#if {"$smurfbot" == "On"} {smurfwalk}}
 
-#alias {smurfstep1} {#showme Locrian yells at you: Beginning smurfs.;con;n;w;n;n;e;n;enter;e;s;s;kill smurf}
+#alias {smurfstep1} {#showme Locrian yells at you: Beginning smurfs.;chaos;enter;e;s;s;kill smurf}
 #alias {smurfstep2} {ga;s;kill smurf}
 #alias {smurfstep3} {ga;s;mission ask;mission accept;#delay {3}{smurfwalk}}
 #alias {smurfstep4} {ga;w;kill smurf}
