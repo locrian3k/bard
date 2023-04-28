@@ -12,6 +12,14 @@
 #action {There is no clay golem here.} {#if {"$zellbot" == "On"} {zellwalk}}
 #alias {zellwalk} {zellstep$zellstepnumber;#math zellstepnumber $zellstepnumber +1}
 
+#gag {There is no flesh golem here}
+#gag {There is no steel golem here}
+#gag {There is no glass golem here}
+#gag {There is no straw golem here}
+#gag {There is no stone golem here}
+#gag {There is no mud golem here}
+#gag {There is no clay golem here}
+
 #alias {zellstep1} {#showme Locrian yells at you: Beginning golems.;fantasy;portal;#12 w;leave;w;w;w;n;n;n;n;enter;n;kill flesh golem;#showme <540>Room 1 of 78}
 #alias {zellstep2} {n;kill flesh golem;#showme <540>Room 2 of 78}
 #alias {zellstep3} {e;kill flesh golem;#showme <540>Room 3 of 78}
