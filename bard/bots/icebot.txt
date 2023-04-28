@@ -7,6 +7,10 @@
 #action {There is no coins here.} {
 	#if {"$icebot" == "On"} {#delay {icedelay} {kill ice} {$delaytime}};
 	};
+	
+#action {There is no elder here.} {
+	#if {"$icebot" == "On"} {#delay {icedelay} {icewalk} {$delaytime}};
+	};
 
 #action {There is no ice here.} {
 	#if {"$icebot" == "On"} {#delay {icedelay} {icewalk} {$delaytime}};
