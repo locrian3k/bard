@@ -1,4 +1,4 @@
-#nop {Start from COT}
+#nop {Start from HOME}
 
 #alias {alphabot} {#var alphastepnumber 1;#var alphabot On;#delay {3}{alphawalk}}
 
@@ -11,7 +11,7 @@
 #action {There is no coins here.} {#delay {alphadelay} {kill letter} {$delaytime}}
 #act {There is no letter here.} {#if {"$alphabot" == "On"} {alphawalk}}
 
-#alias {alphastep1} {shop;w;n;w;n;n;e;n;enter;e;e;d;mission ask;mission accept}
+#alias {alphastep1} {chaos;enter;e;e;d;mission ask;mission accept}
 #alias {alphastep2} {mission accept}
 #alias {alphastep3} {mission accept}
 #alias {alphastep4} {mission accept}
