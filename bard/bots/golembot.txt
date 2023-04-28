@@ -1,4 +1,4 @@
-#nop {Start from HOME
+#nop {Start from HOME}
 
 #alias {golembot} {#var zellstepnumber 1;#var zellbot On;#var delaytime 0;#delay {3}{zellwalk}}
 #alias {delay %1} {#showme {Delay set to %1 seconds.};#var delaytime %1}
