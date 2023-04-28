@@ -252,7 +252,7 @@
         #var icebot Off;
         #class bots kill;
         #var whereami Clear;
-        #var botting off;#read tintin/corpses/mycorpses.txt
+        #var botting off;
         }
 
 #action {You cannot go} {#if {"$botting" == "On"} {nobot;#showme <120>Something is screwed up, fix your bot.<088>}}
