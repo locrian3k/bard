@@ -56,7 +56,7 @@
         #var botting on;
         #var androidbot On;
         #var whereami Android-81;
-        #class {bots} {read} {locrian/bots/androidbot.txt};
+        #class {bots} {read} {tintin/bard/bots/androidbot.txt};
         scaler 150;
         #showme {<120>You may now proceed to kill Google things.<088>};omon;hson;hlon;agon;eon;psclear;androidbot;
         }
