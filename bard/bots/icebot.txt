@@ -1,1 +1,96 @@
+#nop {Start from COT}
 
+#alias {icebot} {#var icestepnumber 1;#var icebot On;#var delaytime 0;#delay {3}{icewalk}}
+#alias {delay %1} {#showme {Delay set to %1 seconds.};#var delaytime %1}
+#alias {icewalk} {icestep$icestepnumber;#math icestepnumber $icestepnumber +1}
+
+#action {There is no coins here.} {
+	#if {"$icebot" == "On"} {#delay {icedelay} {kill ice} {$delaytime}};
+	};
+
+#action {There is no ice here.} {
+	#if {"$icebot" == "On"} {#delay {icedelay} {icewalk} {$delaytime}};
+	};
+
+#alias {icestep1} {con;#showme Locrian yells at you: Beginning Land of the Ice People.;fantasy;portal;#12 n;leave;#11 n;#3 e;#9 n;portal;kill ice};
+#alias {icestep2} {s;get all;kill ice};
+#alias {icestep3} {s;get all;kill ice};
+#alias {icestep4} {s;get all;kill ice};
+#alias {icestep5} {s;get all;kill ice};
+#alias {icestep6} {s;get all;kill ice};
+#alias {icestep7} {s;get all;kill ice};
+#alias {icestep8} {s;get all;kill ice};
+#alias {icestep9} {e;get all;kill ice};
+#alias {icestep10} {e;get all;kill ice};
+#alias {icestep11} {put all in disc;n;get all;kill ice};
+#alias {icestep12} {w;get all;kill ice};
+#alias {icestep13} {e;n;get all;kill ice};
+#alias {icestep14} {e;get all;kill ice};
+#alias {icestep15} {e;get all;kill ice};
+#alias {icestep16} {s;get all;kill ice};
+#alias {icestep17} {w;get all;kill ice};
+#alias {icestep18} {s;get all;kill ice};
+#alias {icestep19} {e;get all;kill ice};
+#alias {icestep20} {w;n;e;n;w;w;n;get all;kill ice};
+#alias {icestep21} {put all in disc;w;get all;kill ice};
+#alias {icestep22} {n;get all;kill ice};
+#alias {icestep23} {e;get all;kill ice};
+#alias {icestep24} {n;get all;kill ice};
+#alias {icestep25} {e;get all;kill ice};
+#alias {icestep26} {s;get all;kill ice};
+#alias {icestep27} {e;get all;kill ice};
+#alias {icestep28} {s;get all;kill ice};
+#alias {icestep29} {w;get all;kill ice};
+#alias {icestep30} {e;n;w;n;e;get all;kill ice};
+#alias {icestep31} {n;get all;kill ice};
+#alias {icestep32} {put all in disc;search;e;get all;kill ice};
+#alias {icestep33} {w;w;get all;kill ice};
+#alias {icestep34} {n;get all;kill ice};
+#alias {icestep35} {e;get all;kill ice};
+#alias {icestep36} {n;get all;kill ice};
+#alias {icestep37} {w;get all;kill ice};
+#alias {icestep38} {w;get all;kill ice};
+#alias {icestep39} {w;get all;kill ice};
+#alias {icestep40} {s;get all;kill ice};
+#alias {icestep41} {put all in disc;e;get all;kill ice};
+#alias {icestep42} {s;get all;kill ice};
+#alias {icestep43} {w;get all;kill ice};
+#alias {icestep44} {s;get all;kill ice};
+#alias {icestep45} {n;e;n;w;n;e;e;e;s;w;s;e;s;w;w;s;w;s;e;s;s;s;w;w;w;get all;kill ice};
+#alias {icestep46} {w;get all;kill ice};
+#alias {icestep47} {n;get all;kill ice};
+#alias {icestep48} {e;get all;kill ice};
+#alias {icestep49} {n;get all;kill ice};
+#alias {icestep50} {w;get all;kill ice};
+#alias {icestep51} {put all in disc;n;get all;kill ice};
+#alias {icestep52} {w;get all;kill ice};
+#alias {icestep53} {w;get all;kill ice};
+#alias {icestep54} {e;s;get all;kill ice};
+#alias {icestep55} {w;get all;kill ice};
+#alias {icestep56} {s;get all;kill ice};
+#alias {icestep57} {e;get all;kill ice};
+#alias {icestep58} {s;get all;kill ice};
+#alias {icestep59} {w;get all;kill ice};
+#alias {icestep60} {e;n;w;n;e;n;e;e;get all;kill ice};
+#alias {icestep61} {put all in disc;n;get all;kill ice};
+#alias {icestep62} {w;get all;kill ice};
+#alias {icestep63} {n;get all;kill ice};
+#alias {icestep64} {e;get all;kill ice};
+#alias {icestep65} {n;get all;kill ice};
+#alias {icestep66} {w;get all;kill ice};
+#alias {icestep67} {n;get all;kill ice};
+#alias {icestep68} {s;e;n;get all;kill ice};
+#alias {icestep69} {n;get all;kill ice};
+#alias {icestep70} {w;get all;kill ice};
+#alias {icestep71} {put all in disc;w;get all;kill ice};
+#alias {icestep72} {s;get all;kill ice};
+#alias {icestep73} {w;get all;kill ice};
+#alias {icestep74} {n;get all;kill ice};
+#alias {icestep75} {s;e;s;get all;kill ice};
+#alias {icestep76} {w;get all;kill ice};
+#alias {icestep77} {s;get all;kill ice};
+#alias {icestep78} {e;get all;kill ice};
+#alias {icestep79} {s;get all;kill ice};
+#alias {icestep80} {w;get all;kill ice};
+#alias {icestep81} {search;w;get all;kill elder};
+#alias {icestep82} {e;e;n;w;n;e;n;n;e;e;s;s;s;w;s;e;s;w;s;e;s;w;s;e;e;n;n;n;n;n;n;n;portal;n;n;n;n;portal;home;newbie;w;w;s;s;donate coffin;n;n;e;e;home;wrap all;id ALL;drop all;get all from disc;id ALL;drop all;get all from disc;id ALL;drop all;nobot;#var icebot Off};
