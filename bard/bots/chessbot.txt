@@ -1,0 +1,81 @@
+#nop {Start from HOME}
+
+#alias {chessbot} {#var chessstepnumber 1;#var chessbot On;#var delaytime 0;#delay {3}{chesswalk}}
+#alias {delay %1} {#showme {Delay set to %1 seconds.};#var delaytime %1}
+#action {There is no coins here.} {#delay {chessdelay} {kill human} {$delaytime}}
+#alias {chesswalk} {chessstep$chessstepnumber;#math chessstepnumber $chessstepnumber +1}
+#act {There is no human here.} {#if {"$chessbot" == "On"} {kill animal}}
+#action {You cannot go} {#if {"$chessbot" == "On"} {nobot;{#showme <120>Something is screwed up, fix your chessbot.<088>}}}
+#action {There is no animal here.} {#if {"$chessbot" == "On"}{chesswalk}}
+#action {There is no elephant here.} {#if {"$chessbot" == "On"}{chesswalk}}
+#action {There is no horse here.} {#if {"$chessbot" == "On"}{chesswalk}}
+
+#gag {opens his palm and a ray of frost erupts}
+#gag {The Spork Lance}
+#gag {bleeds from where the spork tine is embedded in him!}
+#gag {bleeds from where the spork tine is embedded in it!}
+#gag {from it at you}
+#gag {sword bursts into flame as he viciously slices}
+#gag {sword bursts into flame as he viciously}
+#gag {into you!}
+#gag {rears up and slashes you with his sharpened}
+#gag {horseshoes!}
+#gag {preaches at you. Blood gushes from your ears!}
+#gag {The spork tine falls out of}
+#gag {crushes you with a mighty swipe of his}
+#gag {trunk!}
+#gag {smacks you with a befouled rag!}
+#gag {throws a vial of burning acid at you!}
+#gag {whips out a brightly glowing book and somehow}
+#gag {blasts you with pure energy!}
+#gag {rolls his chariot over you, slicing deeply!}
+#gag {holds up his sceptre and it begins to glow}
+#gag {eerily.  You look faint.}
+#gag {You look faint.}
+
+#alias {chessstep1} {con;#showme Locrian yells at you: Beginning chess.;chaos;enter;e;climb pipe;#3 w;#4 n;kill human}
+#alias {chessstep2} {e;e;kill human}
+#alias {chessstep3} {kill elephant}
+#alias {chessstep4} {e;kill human}
+#alias {chessstep5} {#2 e;kill human}
+#alias {chessstep6} {e;kill human}
+#alias {chessstep7} {e;s;kill human}
+#alias {chessstep8} {w;kill human}
+#alias {chessstep9} {w;kill human}
+#alias {chessstep10} {w;w;kill human;}
+#alias {chessstep11} {w;kill human}
+#alias {chessstep12} {w;kill human}
+#alias {chessstep13} {w;s;kill human}
+#alias {chessstep14} {e;e;kill human}
+#alias {chessstep15} {kill horse}
+#alias {chessstep16} {e;kill human}
+#alias {chessstep17} {kill elephant}
+#alias {chessstep18} {#2 e;kill human}
+#alias {chessstep19} {kill horse}
+#alias {chessstep20} {#2 e;kill human}
+#alias {chessstep21} {s;w;kill human}
+#alias {chessstep22} {kill elephant}
+#alias {chessstep23} {w;w;kill human}
+#alias {chessstep24} {w;kill human}
+#alias {chessstep25} {kill elephant}
+#alias {chessstep26} {w;w;kill human}
+#alias {chessstep27} {w;s;kill human}
+#alias {chessstep28} {e;e;kill human}
+#alias {chessstep29} {e;e;kill human}
+#alias {chessstep30} {e;e;e;kill human}
+#alias {chessstep31} {s;w;w;kill human}
+#alias {chessstep32} {kill horse}
+#alias {chessstep33} {w;w;kill human}
+#alias {chessstep34} {w;kill human}
+#alias {chessstep35} {kill horse}
+#alias {chessstep36} {w;w;s;kill human}
+#alias {chessstep37} {e;kill human}
+#alias {chessstep38} {e;kill human}
+#alias {chessstep39} {e;e;e;kill human}
+#alias {chessstep40} {e;kill human}
+#alias {chessstep41} {e;kill human}
+#alias {chessstep42} {s;w;kill human}
+#alias {chessstep43} {w;kill human}
+#alias {chessstep44} {w;w;kill human}
+#alias {chessstep45} {w;w;w;kill human}
+#alias {chessstep46} {e;e;e;n;n;n;climb down;w;vortex;s;w;s;s;w;s;s;e;s;s;s;e;s;w;w;s;s;donate coffin;n;n;e;e;n;w;n;n;n;e;n;#showme Locrian yells at you: Chess is done!;#var chessbot Off;nobot;pstats}
