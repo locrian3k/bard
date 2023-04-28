@@ -1,4 +1,4 @@
-#nop {Start from COT}
+#nop {Start from HOME}
 #nop {ADJUSTMENTS TO BE MADE FOR YOU: ADJUST STEPS 446-457 FOR FLIGHT}
 #alias {aegisbot} {#var aegisstepnumber 1;#var aegisbot On;#var delaytime 0;#delay {3}{aegiswalk}}
 #alias {delay %1} {#showme {Delay set to %1 seconds.};#var delaytime %1}
@@ -7,7 +7,7 @@
 #action {There is no robot here.} {#if {"$aegisbot" == "On"} {aegiswalk}}
 #alias {aegiswalk} {aegisstep$aegisstepnumber;#math aegisstepnumber $aegisstepnumber +1}
 
-#alias {aegisstep1} {s;e;e;n;e;e;enter;u;n;n;n;n;d;#18 n;#25 e;n;n;n;n;e;bridge;e;se;se;e;e;enter;e;kill zombie}
+#alias {aegisstep1} {science;enter;u;n;n;n;n;d;#18 n;#25 e;n;n;n;n;e;bridge;e;se;se;e;e;enter;e;kill zombie}
 #alias {aegisstep2} {e;kill zombie}
 #alias {aegisstep3} {w;s;kill zombie}
 #alias {aegisstep4} {e;kill zombie}
@@ -344,7 +344,7 @@
 #alias {aegisstep335} {w;kill zombie}
 #alias {aegisstep336} {w;kill zombie}
 #alias {aegisstep337} {s;kill zombie}
-#alias {aegisstep338} {pry plate;n;n;n;nod;get card;kill sergeant}
+#alias {aegisstep338} {pry plate;n;n;n;nod;get card}
 #alias {aegisstep339} {get flamethrower;s;s;s;exit;e;kill zombie;}
 #alias {aegisstep340} {e;kill zombie}
 #alias {aegisstep341} {e;kill zombie}
