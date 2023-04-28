@@ -81,7 +81,7 @@
         #var botting on;
         #var chessbot On;
         #var whereami Chess-110;
-        #class {bots} {read} {tintin/bard/bots/bardchessbot.txt};
+        #class {bots} {read} {tintin/bard/bots/chessbot.txt};
         scaler 150;
         #showme {<120>You may now proceed to play chess<088>};psclear;chessbot;
         }
