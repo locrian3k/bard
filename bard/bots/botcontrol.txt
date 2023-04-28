@@ -97,7 +97,7 @@
         #var botting on;
         #var icebot On;
         #var whereami Ice;
-        #class {bots} {read} {locrian/bots/icybluebot.txt};
+        #class {bots} {read} {tintin/bard/bots/icebot.txt};
         scaler 30;
         #showme {<120>You may now proceed to slaughter a village.<088>};psclear;icebot;
         }
