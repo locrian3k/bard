@@ -98,4 +98,5 @@
 #alias {zellstep76} {e;kill flesh golem;#showme <540>Room 76 of 78}
 #alias {zellstep77} {e;kill flesh golem;#showme <540>Room 77 of 78}
 #alias {zellstep78} {e;kill flesh golem;#showme <540>Room 78 of 78}
-#alias {zellstep79} {pstats;#var camefrom Zelligar;drop key;drop key;drop gloves;w;w;w;sw;s;w;w;w;w;se;e;e;e;s;ne;n;n;e;e;s;s;w;se;s;e;s;s;leave;s;s;s;s;e;e;e;enter;#12 e;portal;e;e;e;n;e;e;s;nobot;#showme Locrian yells at you: Golems done;}
+#alias {zellstep79} {n;kill zelligar;#showme <540>LAST ROOM}
+#alias {zellstep79} {pstats;#var camefrom Zelligar;drop key;drop key;drop gloves;s;w;w;w;sw;s;w;w;w;w;se;e;e;e;s;ne;n;n;e;e;s;s;w;se;s;e;s;s;leave;s;s;s;s;e;e;e;enter;#12 e;portal;e;e;e;n;e;e;s;nobot;#showme Locrian yells at you: Golems done;}
