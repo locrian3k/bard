@@ -1,4 +1,4 @@
-#nop {Start from COT}
+#nop {Start from HOME}
 
 #alias {icebot} {#var icestepnumber 1;#var icebot On;#var delaytime 0;#delay {3}{icewalk}}
 #alias {delay %1} {#showme {Delay set to %1 seconds.};#var delaytime %1}
