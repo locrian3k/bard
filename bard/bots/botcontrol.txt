@@ -28,9 +28,9 @@
 #alias {aegison} {
         #var botting on;
         #var aegisbot On;
-        #var whereami Aegis-76;
+        #var whereami Aegis;
         #class {bots} {read} {tintin/bard/bots/aegisbot.txt};
-        scaler 86;
+        scaler 83;
         #showme {<120>You may now proceed to kill zombies and robots.<088>};omon;agon;von;hson;hlon;eon;non;hon;psclear;aegisbot;
         }
         
@@ -48,7 +48,7 @@
         #var anchormanbot On;
         #var whereami Anchorman;
         #class {bots} {read} {locrian/bots/anchormanbot.txt};
-        scaler 81;
+        scaler 150;
  #showme {<120>You may now proceed to kill newsy people.<088>};omon;hson;hlon;agon;psclear;anchormanbot;
         }
 
@@ -57,7 +57,7 @@
         #var androidbot On;
         #var whereami Android-81;
         #class {bots} {read} {locrian/bots/androidbot.txt};
-        scaler 81;
+        scaler 150;
         #showme {<120>You may now proceed to kill Google things.<088>};omon;hson;hlon;agon;eon;psclear;androidbot;
         }
 
@@ -73,6 +73,7 @@
         #var botting on;
         #var carebearbot On;
         #var whereami Care Bears;
+        scaler 80;
         #class {bots} {read} {tintin/bard/bots/carebearsbot.txt};psclear;carebearbot;
         }
         
@@ -81,7 +82,7 @@
         #var chessbot On;
         #var whereami Chess-110;
         #class {bots} {read} {locrian/bots/bardchessbot.txt};
-        scaler 110;
+        scaler 150;
         #showme {<120>You may now proceed to play chess<088>};psclear;chessbot;
         }
 
@@ -98,7 +99,7 @@
                 #var golembot On;
         #var whereami Golems;
         #class {bots} {read} {tintin/bard/bots/golembot.txt};
-        scaler 81;
+        scaler 150;
         #showme {<120>You may now proceed to kill golems (2 hour reset)<088>};psclear;golembot;
         }
 
@@ -116,9 +117,9 @@
 #alias {majon} {
         #var botting on;
         #var majbot On;
-        #var whereami Mahjongg-70;
+        #var whereami Mahjongg;
         #class {bots} {read} {locrian/bots/bardmajbot.txt};
-        scaler 70;
+        scaler 80;
         #showme {<120>You may now proceed to kill Mahjongg (3 hour reset)<088>};idleoff;psclear;majbot;
         }
                
