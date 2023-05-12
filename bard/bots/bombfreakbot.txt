@@ -1,1 +1,39 @@
+#nop {Start from home}
 
+#alias {bombfreakbot} {#var bombfreakstepnumber 1;#var bombfreakbot On;#var delaytime 0;#delay {3}{bombfreakwalk}}
+#alias {delay %1} {#showme {Delay set to %1 seconds.};#var delaytime %1}
+#alias {bombfreakwalk} {bombfreakstep$bombfreakstepnumber;#math bombfreakstepnumber $bombfreakstepnumber +1}
+
+#action {There is no coins here.} {
+	#if {"$bombfreakbot" == "On"} {#delay {bombfreakdelay} {kill human} {$delaytime}};
+	};
+#action {There is no human here.} {
+	#if {"$bombfreakbot" == "On"} {#delay {bombfreakdelay} {bombfreakwalk} {$delaytime}};
+	};
+#action {There is no dragon here.} {
+	#if {"$bombfreakbot" == "On"} {#delay {bombfreakdelay} {bombfreakwalk} {$delaytime}};
+	};
+#action {Keith pushes you off the dais with a shove} {n};
+
+#alias {bombfreakstep1} {con;#showme You yell out: Beginning bombfreak!;science;enter;u;#4 n;d;#8 n;#2 e;path;kill human};
+#alias {bombfreakstep2} {e;kill human};
+#alias {bombfreakstep3} {n;kill human};
+#alias {bombfreakstep4} {w;kill human};
+#alias {bombfreakstep5} {n;kill keith};
+#alias {bombfreakstep6} {s;e;n;kill human};
+#alias {bombfreakstep7} {d;w;kill human};
+#alias {bombfreakstep8} {e;s;s;w;kill human};
+#alias {bombfreakstep9} {e;e;kill human};
+#alias {bombfreakstep10} {w;s;s;w;kill human};
+#alias {bombfreakstep11} {e;e;kill human};
+#alias {bombfreakstep12} {w;s;s;w;kill human};
+#alias {bombfreakstep13} {e;e;kill human};
+#alias {bombfreakstep14} {w;s;s;w;kill human};
+#alias {bombfreakstep15} {e;e;kill human};
+#alias {bombfreakstep16} {w;s;s;w;kill human};
+#alias {bombfreakstep17} {e;e;kill human};
+#alias {bombfreakstep18} {w;s;kill human};
+#alias {bombfreakstep19} {e;kill human};
+#alias {bombfreakstep20} {d;kill human};
+#alias {bombfreakstep21} {push button;d;e;look at barrels;search barrels};
+#alias {bombfreakstep22} {w;u;u;w;#11 n;u;w;s;s;w;s;path;w;w;#8 s;u;s;s;s;s;d;out;home;dead;donate coffin;home;#showme You yell out: bombfreak is done!;#var bombfreakbot Off;nobot};
