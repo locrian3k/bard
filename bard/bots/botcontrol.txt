@@ -69,6 +69,14 @@
         #showme {<120>Killing angels, you evil person.<088>};pstats;psclear;spiritbot;
         }
         
+#alias {bombfreakon} {
+        #var botting on;
+        #var bombfreakbot On;
+        #var whereami Bombfreaks' Abbey;
+        #class {bots} {read} {tintin/bard/bots/bombfreakbot.txt};
+        #showme {<120>Killing Bombfreaks.<088>};pstats;psclear;bombfreakbot;
+        }
+        
 #alias {carebearon} {
         #var botting on;
         #var carebearbot On;
