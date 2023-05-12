@@ -16,7 +16,7 @@
 #action {Keith pushes you off the dais with a shove} {n};
 
 #alias {bombfreakstep1} {con;#showme You yell out: Beginning bombfreak!;science;enter;u;#4 n;d;#8 n;#2 e;path;kill human};
-#alias {bombfreakstep2} {n, kill human};
+#alias {bombfreakstep2} {n; kill human};
 #alias {bombfreakstep3} {e;kill human};
 #alias {bombfreakstep4} {n;kill human};
 #alias {bombfreakstep5} {w;kill human};
