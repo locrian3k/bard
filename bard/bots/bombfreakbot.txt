@@ -10,7 +10,7 @@
 #action {There is no human here.} {
 	#if {"$bombfreakbot" == "On"} {#delay {bombfreakdelay} {bombfreakwalk} {$delaytime}};
 	};
-#action {There is no dragon here.} {
+#action {There is no keith here.} {
 	#if {"$bombfreakbot" == "On"} {#delay {bombfreakdelay} {bombfreakwalk} {$delaytime}};
 	};
 #action {Keith pushes you off the dais with a shove} {n};
