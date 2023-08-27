@@ -25,8 +25,8 @@
 #nop {HP:[633/310] SP:[713/713] K:[183/183] V:[68/100] G2N:[24] []}
 
 #nop { GAGGING THE HIT POINT BAR SO THAT IT'S NOT SPAMMY EVERY ROUND, COMMENTING OUT ALL ['s WITH A \ }
-#GAG {HP:\[%d/%d\] SP:\[%d/%d\] K:\[%d/%d\] V:\[%d/%d\] G2N:\[%d\] \[%12\]}
-#ACT {HP:\[%d/%d\] SP:\[%d/%d\] K:\[%d/%d\] V:\[%d/%d\] G2N:\[%d\] \[%12\]} 
+#GAG {HP:\[%d/%d\] SP:\[%d/%d\] K:\[%d/%d\] V:\[%d/%d\] G2N:\[%11\] \[%12\]}
+#ACT {HP:\[%d/%d\] SP:\[%d/%d\] K:\[%d/%d\] V:\[%d/%d\] G2N:\[%11\] \[%12\]} 
 {   #if {"$checking" == "on"} {#math {checkrounds} {$checkrounds + 1};#show {Checker at $checkrounds rounds.};look};
     #var hptmp %1;
     #math hpchange {$hptmp - $hpcur};
